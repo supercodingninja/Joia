@@ -1,5 +1,4 @@
 <h1 align="center">Rattanak</h1>
-##### ![script.js](Assets/Media/apple-touch-icon.png)
 ![Badge](https://img.shields.io/badge/GitHub-Pro%20%20%20-blue)&nbsp; <b><i>Rattanak</i></b> © 2021 All Rights Reserved.  ![Badge](https://img.shields.io/badge/License-APACHE%202.0-orange) All material must be cited or credited, when using material.
 
 ## Table of Contents
@@ -24,6 +23,16 @@ You live in a busy world; and thriving businesses are busier.  You don't have ti
 ## Usage Information
 ###### [Back to Table of Contents](#Table-of-Contents)
 This project can be used for projects, non-profit organizations, academic clubs; and much more!  Not for commercial use, unless granted by the authors.
+
+## Contributers
+<p align="center">
+  <a href="https://github.com/TBD"><img src="TBD..." height="120" width="120"/></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/TBD"><img src="TBD..." height="120" width="120"/></a>&nbsp;&nbsp;<a href="https://github.com/TBD"><img src="TBD..." height="120" width="120"/></a><a href="https://github.com/supercodingninja" height="120" width="120"><img src="media/apple-touch-icon.png"/></a>
+</p>
+
+<p align="left">
+  Select images above to visit the contributor's GitHub Profile.  Names following images left to right: Michael Bageant, Connor Favero, Rattanak Leng, and Frederick Thomas, Super Coding Ninja™
+</p>
+
 
 ## Contribution Guidelines
 ###### [Back to Table of Contents](#Table-of-Contents)
@@ -94,7 +103,7 @@ Make it a point to tackle new code, weekly (at least, periodaclly); and break it
 ## License
 ![Badge](https://img.shields.io/badge/License-APACHE%202.0-Click-To-View-orange)(https://www.apache.org/licenses/LICENSE-2.0)
 
-<b>Copyright<b>  © 2021 [Michael](Bageant), [Connor Favero](), [Rattanak Leng](), Frederick Thomas, [Super Coding Ninja™](https://github.com/supercodingninja).
+<b>Copyright<b>  © 2021 [MichaelBageant](), [Connor Favero](), [Rattanak Leng](), and Frederick Thomas, [Super Coding Ninja™](https://github.com/supercodingninja).
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
