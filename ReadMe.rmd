@@ -1,5 +1,6 @@
 <h1 align="center">Rattanak</h1>
-![Badge](https://img.shields.io/badge/GitHub-Pro%20%20%20-blue)&nbsp; <b><i>Rattanak</i></b> © 2021 All Rights Reserved.  ![Badge](https://img.shields.io/badge/License-APACHE%202.0-orange) All material must be cited or credited, when using material.
+
+![Badge](https://img.shields.io/badge/GitHub-Pro%20%20%20-blue) &nbsp; <b><i>Rattanak</i></b> © 2021 All Rights Reserved.  ![Badge](https://img.shields.io/badge/License-APACHE%202.0-orange) All material must be cited or credited, when using material.
 
 ## Table of Contents
 * [Repository Description](#Repository)
