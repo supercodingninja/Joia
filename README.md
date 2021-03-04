@@ -27,7 +27,7 @@ This project can be used for projects, non-profit organizations, academic clubs;
 
 ## Contributers
 <p align="center">
-  <a href="https://github.com/TBD"><img src="TBD..." height="120" width="120"/></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/con0fav"><img src="./client/public/media/Connor.jpeg" height="120" width="120"/></a>&nbsp;&nbsp;<a href="https://github.com/rattanakleng"><img src="https://ca.slack-edge.com/T01ASRJ804E-U01B4P3B4ET-4001d229d6c3-512" height="120" width="120"/></a><a href="https://github.com/supercodingninja" height="120" width="120"><img src="./client/public/media/FT.jpeg"/></a>
+  <a href="https://github.com/TBD"><img src="TBD..." height="120" width="120"/></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/con0fav"><img src="./client/public/media/Connor.jpeg" height="120" width="120"/></a>&nbsp;&nbsp;<a href="https://github.com/rattanakleng"><img src="https://ca.slack-edge.com/T01ASRJ804E-U01B4P3B4ET-4001d229d6c3-512" height="120" width="120"/></a><a href="https://github.com/supercodingninja"><img src="./client/public/media/FT.jpeg" height="120" width="120"></a>
 </p>
 
 <p align="left">
