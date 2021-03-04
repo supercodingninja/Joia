@@ -15,7 +15,7 @@ html, body {
 }
 
 .banner {
-  background: #30313d url(../images/bg-pattern.svg);
+  background: #30313d url(../Media/bg-pattern.svg);
   background-repeat: repeat;
 }
 
@@ -76,7 +76,7 @@ html, body {
 .resources li {
   width: 25%;
   float: left;
-  display: inline-block;
+  /* display: inline-block; */
   position: relative;
   transition: transform 0.4s;
   overflow: hidden;
