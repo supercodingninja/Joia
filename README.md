@@ -1,6 +1,6 @@
 <h1 align="center">Joia</h1>
 
-![Badge](https://img.shields.io/badge/GitHub-Pro%20%20%20-blue) &nbsp; <b><i>Rattanak</i></b> © 2021 All Rights Reserved.  ![Badge](https://img.shields.io/badge/License-APACHE%202.0-orange) All material must be cited or credited, when using material.
+![Badge](https://img.shields.io/badge/GitHub-Pro%20%20%20-blue) &nbsp; <b><i>Joia</i></b> © 2021 All Rights Reserved.  ![Badge](https://img.shields.io/badge/License-APACHE%202.0-orange) All material must be cited or credited, when using material.
 
 ## Table of Contents
 * [Repository Description](#Repository)
@@ -14,7 +14,7 @@
 
 ## Repository Description
 ###### [Back to Table of Contents](#Table-of-Contents)
-You live in a busy world; and thriving businesses are busier.  You don't have time .  Don't worry, WE got this: We're <span style="color:red">*Rattanak*</span>, "HELLO, WORLD!"
+You live in a busy world; and thriving businesses are busier.  You don't have time .  Don't worry, WE got this: We're <span style="color:red">*Joia*</span>, "HELLO, WORLD!"
 
 ## User Story
 ### As A Developer
@@ -104,7 +104,7 @@ Make it a point to tackle new code, weekly (at least, periodaclly); and break it
 ## License
 ![Badge](https://img.shields.io/badge/License-APACHE%202.0-Click-To-View-orange)(https://www.apache.org/licenses/LICENSE-2.0)
 
-<b>Copyright<b>  © 2021 [MichaelBageant](), [Connor Favero](), [Rattanak Leng](), and Frederick Thomas, [Super Coding Ninja™](https://github.com/supercodingninja).
+<b>Copyright<b>  © 2021 [Connor Favero](https://github.com/con0fav), [Rattanak Leng](https://github.com/rattanakleng), and Frederick Thomas, [Super Coding Ninja™](https://github.com/supercodingninja).
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
