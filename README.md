@@ -103,7 +103,7 @@ Make it a point to tackle new code, weekly (at least, periodaclly); and break it
 
 ## License
 
-[![Badge](https://img.shields.io/badge/License-APACHE%202.0-Click-To-View-orange)](https://www.apache.org/licenses/LICENSE-2.0)
+[![Badge](https://img.shields.io/badge/License-APACHE-2.0-To%20-View-orange)](https://www.apache.org/licenses/LICENSE-2.0)
 
 <b>Copyright<b>  © 2021 [Connor Favero](https://github.com/con0fav), [Rattanak Leng](https://github.com/rattanakleng), and Frederick Thomas, [Super Coding Ninja™](https://github.com/supercodingninja).
 
