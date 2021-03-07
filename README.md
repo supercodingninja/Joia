@@ -103,7 +103,7 @@ Make it a point to tackle new code, weekly (at least, periodaclly); and break it
 
 ## License
 
-<a href="https://www.apache.org/licenses/LICENSE-2.0" alt="License" title="APACHE 2.0 Information" target="_blank"><img src="https://img.shields.io/badge/License-APACHE-2.0-To%20-Click-To-View-orange" alt="APACHE 2.0 Information" height="auto" width="auto"/></a>
+<a href="./LICENSE/LICENSE" alt="LICENSE." title="APACHE 2.0 Information" target="_blank"><img align="center" src="https://img.shields.io/badge/License-Click to View APACHE 2.0-informational.svg" alt="GPL3.0 Information" height="auto" width="auto"/></a>
 
 <b>Copyright<b>  © 2021 [Connor Favero](https://github.com/con0fav), [Rattanak Leng](https://github.com/rattanakleng), and Frederick Thomas, [Super Coding Ninja™](https://github.com/supercodingninja).
 
