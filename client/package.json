@@ -11,6 +11,7 @@
     "@types/node": "^12.20.4",
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.2",
+    "mkdirp": "^0.5.5",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.3",
@@ -19,7 +20,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && mkdir -p ../build && mv ./build ../build/clientbuild",
+    "build": "react-scripts build && node node_modules/mkdirp/bin/cmd.js ../build && mv ./build ../build/clientbuild ",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
