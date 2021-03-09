@@ -5,10 +5,12 @@
   "main": "server.js",
   "scripts": {
     "start:prod": "node build/server.js",
-	"start:dev:serveronly":"cd server && npm run dev",
+    "start:dev:serveronly": "cd server && npm run dev",
+    "start:dev:clientonly": "cd client && npm run start",
+    "start:dev": "concurrently \"npm run start:dev:serveronly\" \"npm run start:dev:clientonly\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf ./build && cd server && npm run build",
-    "recursive-install":"node ./scripts/recursiveNpmi.js"
+    "build": "rm -rf ./build && cd server && npm run build && cd ../client && npm run build",
+    "recursive-install": "node ./scripts/recursiveNpmi.js"
   },
   "keywords": [],
   "author": "",

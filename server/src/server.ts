@@ -9,7 +9,7 @@ const port = process.env.PORT || 3001;
 let clientstaticpath = "";
 
 if(process.env.NODE_ENV == "production") {
-    clientstaticpath = "clientbuild"; // Verify this works once the client build works.
+    clientstaticpath = path.join(__dirname, "clientbuild");
 }
 else {
     console.log(`env.NODE_ENV is ${process.env.NODE_ENV}.  Express won't host the client site.`);
