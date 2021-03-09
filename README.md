@@ -6,7 +6,7 @@
 * [Repository Description](#Repository)
 * [User Story](#User)
 * [Usage Information](#Usage)
-* [Contributers](#Contributers)
+* [Authors](#Contributers)
 * [Contribution Guidelines](#Contribution)
 * [References](#Ref)
 * [Acknowledgements](#Ack)
@@ -25,7 +25,7 @@ You live in a busy world; and thriving businesses are busier.  You don't have ti
 ###### [Back to Table of Contents](#Table-of-Contents)
 This project can be used for projects, non-profit organizations, academic clubs; and much more!  Not for commercial use, unless granted by the authors.
 
-## Contributers
+## Authors
 <p align="center">
   <a href="https://github.com/con0fav"><img src="./client/public/media/Connor.jpeg" height="120" width="120"/></a>&nbsp;&nbsp;<a href="https://github.com/rattanakleng"><img src="https://ca.slack-edge.com/T01ASRJ804E-U01B4P3B4ET-4001d229d6c3-512" height="120" width="120"/></a>&nbsp;&nbsp;<a href="https://github.com/YouFarted"><img src="https://ca.slack-edge.com/T01ASRJ804E-U01BCQDU2EA-0800093131a2-512" height="120" width="120"/></a>&nbsp;&nbsp;<a href="https://github.com/supercodingninja"><img src="./client/public/media/FT.jpeg" height="120" width="120"></a>
 </p>
