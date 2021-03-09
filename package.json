@@ -1,0 +1,20 @@
+{
+  "name": "siblings",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start:prod": "node build/server.js",
+	"start:dev:serveronly":"cd server && npm run dev",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf ./build && cd server && npm run build",
+	"recursive-install":"node ./scripts/recursiveNpmi.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^6.0.0",
+    "nodemon": "^2.0.7"
+  }
+}
