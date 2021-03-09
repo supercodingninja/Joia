@@ -8,7 +8,7 @@
 	"start:dev:serveronly":"cd server && npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rm -rf ./build && cd server && npm run build",
-	"recursive-install":"node ./scripts/recursiveNpmi.js"
+    "recursive-install":"node ./scripts/recursiveNpmi.js"
   },
   "keywords": [],
   "author": "",
