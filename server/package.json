@@ -7,7 +7,7 @@
     "start:prod": "node ../build/server.js",
     "dev": "nodemon --config nodemon.json src/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf ../build && tsc && cp -r ./node_modules ../build"
+    "build": "tsc && cp -r ./node_modules ../build"
   },
   "keywords": [],
   "author": "",
