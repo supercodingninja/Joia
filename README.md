@@ -37,7 +37,7 @@ This project can be used for projects, non-profit organizations, academic clubs;
 
 ## Contribution Guidelines
 ###### [Back to Table of Contents](#Table-of-Contents)
-I hope you enjoy this repository, and the application's link, given above and below (I love developing new projects).  Please read and follow license instructions.  Thank you for viewing! - Frederick Thomas, [Super Coding Ninja™](https://github.com/supercodingninja).
+I hope you enjoy this repository, and the application's link, given above and below (I love developing new projects).  Please read and follow license instructions.  Thank you for viewing!
 
 ## Installation Instructions
 ###### [Back to Table of Contents](#Table-of-Contents)
@@ -119,13 +119,13 @@ This is a book about JavaScript, programming, and digital wonders. Read it onlin
 
 ## Repositiory End-Goal Criteria
 ###### [Back to Table of Contents](#Table-of-Contents)
-Make it a point to tackle new code, weekly (at least, periodaclly); and break it down.  Try to understand the concepts, yourself.  This only makes you more credible, and a stonger developer: because you've taken the tim to study!  Remember this also, as a developer, your goal should be designing NEW experiences that makes people's lives simple; because as developers, we solve problems that people didn't even knew they had- even better, in a way that they do not understand: We are the super heroes and heriones of tomorrow; so get coding, and I hope this repository helps you along your development.  Stay on task, Get Ahead, Change The World! - [Frederick Thomas](https://www.linkedin.com/in/discoverfrederickthomas/), Super Coding Ninja™
+Make it a point to tackle new code, weekly (at least, periodaclly); and break it down.  Try to understand the concepts, yourself.  This only makes you more credible, and a stonger developer: because you've taken the tim to study!  Remember this also, as a developer, your goal should be designing NEW experiences that makes people's lives simple; because as developers, we solve problems that people didn't even knew they had- even better, in a way that they do not understand: We are the super heroes and heriones of tomorrow; so get coding, and I hope this repository helps you along your development.  Stay on task, Get Ahead, Change The World!
 
 ## License
 
 <a href="./LICENSE/LICENSE" alt="LICENSE." title="APACHE 2.0 Information" target="_blank"><img align="center" src="https://img.shields.io/badge/License-Click to View APACHE 2.0-informational.svg" alt="GPL3.0 Information" height="auto" width="auto"/></a>
 
-<b>Copyright<b>  © 2021 [Connor Favero](https://github.com/con0fav), [Rattanak Leng](https://github.com/rattanakleng), [Andrew Olson](https://github.com/YouFarted), and Frederick Thomas, [Super Coding Ninja™](https://github.com/supercodingninja).
+<i>Joia</i><b>Copyright<b>  © 2021 [Connor Favero](https://github.com/con0fav), [Rattanak Leng](https://github.com/rattanakleng), [Andrew Olson](https://github.com/YouFarted), and Frederick Thomas, [Super Coding Ninja™](https://github.com/supercodingninja).
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
