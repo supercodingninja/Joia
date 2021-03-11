@@ -31,7 +31,7 @@ This project can be used for projects, non-profit organizations, academic clubs;
 </p>
 
 <p align="left">
-  Select images above to visit the contributor's GitHub Profile. The names following images left to right are: Connor Favero, Rattanak Leng, Andrew Olson, and Frederick Thomas, Super Coding Ninja™
+  Select images above to visit the author's GitHub Profile. The names following images left to right are: Connor Favero, Rattanak Leng, Andrew Olson, and Frederick Thomas, Super Coding Ninja™
 </p>
 
 
