@@ -6,7 +6,7 @@
 * [Repository Description](#Repository)
 * [User Story](#User)
 * [Usage Information](#Usage)
-* [Contributers](#Contributers)
+* [Authors](#Authors)
 * [Contribution Guidelines](#Contribution)
 * [References](#Ref)
 * [Acknowledgements](#Ack)
@@ -14,7 +14,7 @@
 
 ## Repository Description
 ###### [Back to Table of Contents](#Table-of-Contents)
-You live in a busy world; and thriving businesses are busier.  You don't have time .  Don't worry, WE got this: We're <span style="color:red">*Joia*</span>, "HELLO, WORLD!"
+You live in a busy world; and thriving businesses are busier.  You don't have time .  Don't worry, WE got this: We're <span style="color:red">*Joia*</span>, "HELLO, WORLD!"  Joia, pronounced as "Joy-ah," means gem or jewel.  Joia is your jewel eCommerce website for local art, where you can find your gem for your Jewel or Jim!
 
 ## User Story
 ### As A Developer
@@ -25,19 +25,19 @@ You live in a busy world; and thriving businesses are busier.  You don't have ti
 ###### [Back to Table of Contents](#Table-of-Contents)
 This project can be used for projects, non-profit organizations, academic clubs; and much more!  Not for commercial use, unless granted by the authors.
 
-## Contributers
+## Authors
 <p align="center">
   <a href="https://github.com/con0fav"><img src="./client/public/media/Connor.jpeg" height="120" width="120"/></a>&nbsp;&nbsp;<a href="https://github.com/rattanakleng"><img src="https://ca.slack-edge.com/T01ASRJ804E-U01B4P3B4ET-4001d229d6c3-512" height="120" width="120"/></a>&nbsp;&nbsp;<a href="https://github.com/YouFarted"><img src="https://ca.slack-edge.com/T01ASRJ804E-U01BCQDU2EA-0800093131a2-512" height="120" width="120"/></a>&nbsp;&nbsp;<a href="https://github.com/supercodingninja"><img src="./client/public/media/FT.jpeg" height="120" width="120"></a>
 </p>
 
 <p align="left">
-  Select images above to visit the contributor's GitHub Profile. The names following images left to right are: Connor Favero, Rattanak Leng, Andrew Olson, and Frederick Thomas, Super Coding Ninja™
+  Select images above to visit the author's GitHub Profile. The names following images left to right are: Connor Favero, Rattanak Leng, Andrew Olson, and Frederick Thomas, Super Coding Ninja™
 </p>
 
 
 ## Contribution Guidelines
 ###### [Back to Table of Contents](#Table-of-Contents)
-I hope you enjoy this repository, and the application's link, given above and below (I love developing new projects).  Please read and follow license instructions.  Thank you for viewing! - Frederick Thomas, [Super Coding Ninja™](https://github.com/supercodingninja).
+I hope you enjoy this repository, and the application's link, given above and below (I love developing new projects).  Please read and follow license instructions.  Thank you for viewing!
 
 ## Installation Instructions
 ###### [Back to Table of Contents](#Table-of-Contents)
@@ -92,22 +92,24 @@ TBD...
 
 2.  [Shields IO](https://shields.io/) provides documentations on how to add your shield, for creditbility.  Please feel free to view this resource, for your future developments.
 
-3.  [.saas || .scss || .css](https://www.geeksforgeeks.org/what-is-the-difference-between-scss-and-sass/#:~:text=What%20is%20the%20difference%20between%20SCSS%20and%20SASS%20%3F,-Last%20Updated%20%3A%2025&text=SASS%20(Syntactically%20Awesome%20Style%20Sheets,of%20the%20existing%20CSS%20syntax.) The comparisons and usages of Syntactically Awesome Style Sheets, SassScript; and Cascaded Style Sheets.
+3.  [.saas || .scss || .css](https://www.geeksforgeeks.org/what-is-the-difference-between-scss-and-sass/#:~:text=What%20is%20the%20difference%20between%20SCSS%20and%20SASS%20%3F,-Last%20Updated%20%3A%2025&text=SASS%20(Syntactically%20Awesome%20Style%20Sheets,of%20the%20existing%20CSS%20syntax.)) The comparisons and usages of Syntactically Awesome Style Sheets, SassScript; and Cascaded Style Sheets.
 
-4. ["CSS w/Super Powers"](https://sass-lang.com/)
+4. [SAAS || CSS](https://www.educba.com/sass-vs-css/) 
 
-5.  **[Eloquent JavaScript](https://eloquentjavascript.net/)**, 3rd edition (2018)
+5. ["CSS w/Super Powers"](https://sass-lang.com/)
+
+6.  **[Eloquent JavaScript](https://eloquentjavascript.net/)**, 3rd edition (2018)
 This is a book about JavaScript, programming, and digital wonders. Read it online here; or get your own paperback copy.  Written by Marijn Haverbeke.  Licensed under a Creative Commons attribution-noncommercial license. All code in this book may also be considered licensed under an MIT license.
 
-6.  [Guide to Handlebars: Templating Engine for Node/JavaScript](https://stackabuse.com/guide-to-handlebars-templating-engine-for-node/) explains that express is a routing, and middleware is a web framework; which has minimal functionality of its own (express applications are series of middleware function calls).
+7.  [Guide to Handlebars: Templating Engine for Node/JavaScript](https://stackabuse.com/guide-to-handlebars-templating-engine-for-node/) explains that express is a routing, and middleware is a web framework; which has minimal functionality of its own (express applications are series of middleware function calls).
 
-7.  [Using Middleware and Express](https://expressjs.com/en/guide/using-middleware.html) **Guide to Handlebars: Templating Engine for Node/JavaScript**, by Janith Kasun helps you understand Template Engines, Handlebars; and how to use them!
+8.  [Using Middleware and Express](https://expressjs.com/en/guide/using-middleware.html) **Guide to Handlebars: Templating Engine for Node/JavaScript**, by Janith Kasun helps you understand Template Engines, Handlebars; and how to use them!
 
-8.  [Web Application Architecture](https://hackr.io/blog/web-application-architecture-definition-models-types-and-more) describes architecture, Models of Web Componets,Types of Web Application Architecture; and Web App Development Tips!
+9.  [Web Application Architecture](https://hackr.io/blog/web-application-architecture-definition-models-types-and-more) describes architecture, Models of Web Componets,Types of Web Application Architecture; and Web App Development Tips!
 
-9.  [Markdown Syntax](https://www.markdownguide.org/basic-syntax/) provides documentations on how to add your shield, for creditbility.  Please feel free to view this resource, for your future developments.
+10.  [Markdown Syntax](https://www.markdownguide.org/basic-syntax/) provides documentations on how to add your shield, for creditbility.  Please feel free to view this resource, for your future developments.
 
-10.  *eCommerce Styles & Ideas*
+11.  *eCommerce Styles & Ideas*
     -   [How to Code an Ecommerce Site (Week 10 of 12)](https://www.youtube.com/watch?v=DfbmMjO3Y7o) by [Mackenzie Child](https://www.youtube.com/channel/UCfWZwsP8trUy5uHJg8gcGIQ)
     -   [10 stunning hover effects with sass](https://codepen.io/caraujo/pen/LVPzxO) by [Renan C. Araujo](https://codepen.io/caraujo)
 
@@ -117,13 +119,13 @@ This is a book about JavaScript, programming, and digital wonders. Read it onlin
 
 ## Repositiory End-Goal Criteria
 ###### [Back to Table of Contents](#Table-of-Contents)
-Make it a point to tackle new code, weekly (at least, periodaclly); and break it down.  Try to understand the concepts, yourself.  This only makes you more credible, and a stonger developer: because you've taken the tim to study!  Remember this also, as a developer, your goal should be designing NEW experiences that makes people's lives simple; because as developers, we solve problems that people didn't even knew they had- even better, in a way that they do not understand: We are the super heroes and heriones of tomorrow; so get coding, and I hope this repository helps you along your development.  Stay on task, Get Ahead, Change The World! - [Frederick Thomas](https://www.linkedin.com/in/discoverfrederickthomas/), Super Coding Ninja™
+Make it a point to tackle new code, weekly (at least, periodaclly); and break it down.  Try to understand the concepts, yourself.  This only makes you more credible, and a stonger developer: because you've taken the tim to study!  Remember this also, as a developer, your goal should be designing NEW experiences that makes people's lives simple; because as developers, we solve problems that people didn't even knew they had- even better, in a way that they do not understand: We are the super heroes and heriones of tomorrow; so get coding, and I hope this repository helps you along your development.  Stay on task, Get Ahead, Change The World!
 
 ## License
 
-<a href="./LICENSE/LICENSE" alt="LICENSE." title="APACHE 2.0 Information" target="_blank"><img align="center" src="https://img.shields.io/badge/License-Click to View APACHE 2.0-informational.svg" alt="GPL3.0 Information" height="auto" width="auto"/></a>
+<a href="/LICENSE" alt="LICENSE." title="APACHE 2.0 Information" target="_blank"><img align="center" src="https://img.shields.io/badge/License-Click to View APACHE 2.0-informational.svg" alt="GPL3.0 Information" height="auto" width="auto"/></a>
 
-<b>Copyright<b>  © 2021 [Connor Favero](https://github.com/con0fav), [Rattanak Leng](https://github.com/rattanakleng), and Frederick Thomas, [Super Coding Ninja™](https://github.com/supercodingninja).
+<i>Joia</i> <b>©</b> 2021 [Connor Favero](https://github.com/con0fav), [Rattanak Leng](https://github.com/rattanakleng), [Andrew Olson](https://github.com/YouFarted), and Frederick Thomas, [Super Coding Ninja™](https://github.com/supercodingninja).
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
