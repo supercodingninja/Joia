@@ -1,3 +1,9 @@
+# editor temporary files
+*~
+*swp
+
+build
+
 node_modules
 *.rbc
 capybara-*.html

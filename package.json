@@ -1,20 +1,25 @@
 {
-  "name": "rattanak",
+  "name": "siblings",
   "version": "1.0.0",
-  "description": "![Badge](https://img.shields.io/badge/GitHub-Pro%20%20%20-blue)&nbsp; <b><i>Rattanak</i></b> © 2021 All Rights Reserved.  ![Badge](https://img.shields.io/badge/License-APACHE%202.0-orange) All material must be cited or credited, when using material.",
-  "main": "index.js",
+  "description": "",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/supercodingninja/Rattanak.git"
+    "clean": "npm run clean:build && npm run clean:modules",
+    "clean:modules": "rm -rf ./client/node_modules && rm -rf ./server/node_modules && rm -rf ./node_modules",
+    "clean:build": "rm -rf ./build",
+    "start:prod": "node build/server.js",
+    "start:dev:serveronly": "cd server && npm run dev",
+    "start:dev:clientonly": "cd client && npm run start",
+    "start:dev": "concurrently \"npm run start:dev:serveronly\" \"npm run start:dev:clientonly\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf ./build && cd server && npm run build && cd ../client && npm run build",
+    "install": "cd server && npm install && cd ../client && npm install"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/supercodingninja/Rattanak/issues"
-  },
-  "homepage": "https://github.com/supercodingninja/Rattanak#readme"
+  "devDependencies": {
+    "concurrently": "^6.0.0",
+    "nodemon": "^2.0.7"
+  }
 }

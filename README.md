@@ -10,7 +10,7 @@
 * [Contribution Guidelines](#Contribution)
 * [References](#Ref)
 * [Acknowledgements](#Ack)
-* [Repositiory End-Goal Criterea](#Criterea)
+* [Repositiory End-Goal Criteria](#Criterea)
 
 ## Repository Description
 ###### [Back to Table of Contents](#Table-of-Contents)
@@ -41,7 +41,7 @@ I hope you enjoy this repository, and the application's link, given above and be
 
 ## Installation Instructions
 ###### [Back to Table of Contents](#Table-of-Contents)
-1.  Ensure that your application includes the require dependacies, by typing the command in your integrated terminal
+1.  Ensure that your application includes the require dependencies, by typing the command in your integrated terminal
     -   npm install inquirer
     -   sass source/stylesheets/index.scss build/stylesheets/index.css
     -   npm install -g sass
@@ -58,6 +58,24 @@ I hope you enjoy this repository, and the application's link, given above and be
 2.  Create a .gitignore file and include node_modules/ and .DS_Store/ so that your node_modules directory isn't tracked or uploaded to GitHub.
 3.  Run “node [fileName].js”
 
+## Development Instructions
+1.  Ensure that you have all the node modules installed by typing
+    - npm i
+    - npm run recursive-install
+2.  Launch your editor to run in one or both development directories
+    - cd client
+    - code .
+    AND/OR
+    - cd ..  # if necessary to get you to the project root
+    - cd server
+    - code .
+3.  Launch the projects to run locally in development mode:
+    - cd ..  # if necessary to get you to the project root
+    - npm run start:dev
+4.  Edit the client/server projects in their respective editors.
+
+    Things will rebuild and relaunch automatically as you edit the code
+    to ensure the running code reflects the code changes as you make them.
 
 ## Overview: What We Accomplished!
 ###### Workflow [Back to Table of Contents](#Table-of-Contents)
@@ -99,7 +117,7 @@ This is a book about JavaScript, programming, and digital wonders. Read it onlin
 ###### [Back to Table of Contents](#Table-of-Contents)
 [University of Washington](https://www.pce.uw.edu/), and [Trilogy Education](https://www.trilogyed.com/) (a 2U, Inc. brand),  in coorelation to their Seattle Partnership [UW Coding Bootcamp](https://bootcamp.uw.edu/).
 
-## Repositiory End-Goal Criterea
+## Repositiory End-Goal Criteria
 ###### [Back to Table of Contents](#Table-of-Contents)
 Make it a point to tackle new code, weekly (at least, periodaclly); and break it down.  Try to understand the concepts, yourself.  This only makes you more credible, and a stonger developer: because you've taken the tim to study!  Remember this also, as a developer, your goal should be designing NEW experiences that makes people's lives simple; because as developers, we solve problems that people didn't even knew they had- even better, in a way that they do not understand: We are the super heroes and heriones of tomorrow; so get coding, and I hope this repository helps you along your development.  Stay on task, Get Ahead, Change The World! - [Frederick Thomas](https://www.linkedin.com/in/discoverfrederickthomas/), Super Coding Ninja™
 
