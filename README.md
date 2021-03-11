@@ -74,7 +74,7 @@ TBD...
 
 2.  [Shields IO](https://shields.io/) provides documentations on how to add your shield, for creditbility.  Please feel free to view this resource, for your future developments.
 
-3.  [.saas || .scss || .css](https://www.geeksforgeeks.org/what-is-the-difference-between-scss-and-sass/#:~:text=What%20is%20the%20difference%20between%20SCSS%20and%20SASS%20%3F,-Last%20Updated%20%3A%2025&text=SASS%20(Syntactically%20Awesome%20Style%20Sheets,of%20the%20existing%20CSS%20syntax.) The comparisons and usages of Syntactically Awesome Style Sheets, SassScript; and Cascaded Style Sheets.
+3.  [.saas || .scss || .css](https://www.geeksforgeeks.org/what-is-the-difference-between-scss-and-sass/#:~:text=What%20is%20the%20difference%20between%20SCSS%20and%20SASS%20%3F,-Last%20Updated%20%3A%2025&text=SASS%20(Syntactically%20Awesome%20Style%20Sheets,of%20the%20existing%20CSS%20syntax.)) The comparisons and usages of Syntactically Awesome Style Sheets, SassScript; and Cascaded Style Sheets.
 
 4. ["CSS w/Super Powers"](https://sass-lang.com/)
 
