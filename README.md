@@ -123,7 +123,7 @@ Make it a point to tackle new code, weekly (at least, periodaclly); and break it
 
 ## License
 
-<a href="./LICENSE/LICENSE" alt="LICENSE." title="APACHE 2.0 Information" target="_blank"><img align="center" src="https://img.shields.io/badge/License-Click to View APACHE 2.0-informational.svg" alt="GPL3.0 Information" height="auto" width="auto"/></a>
+<a href="/LICENSE" alt="LICENSE." title="APACHE 2.0 Information" target="_blank"><img align="center" src="https://img.shields.io/badge/License-Click to View APACHE 2.0-informational.svg" alt="GPL3.0 Information" height="auto" width="auto"/></a>
 
 <i>Joia</i> <b>©</b> 2021 [Connor Favero](https://github.com/con0fav), [Rattanak Leng](https://github.com/rattanakleng), [Andrew Olson](https://github.com/YouFarted), and Frederick Thomas, [Super Coding Ninja™](https://github.com/supercodingninja).
 
