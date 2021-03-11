@@ -6,7 +6,7 @@
 * [Repository Description](#Repository)
 * [User Story](#User)
 * [Usage Information](#Usage)
-* [Authors](#Contributers)
+* [Authors](#Authors)
 * [Contribution Guidelines](#Contribution)
 * [References](#Ref)
 * [Acknowledgements](#Ack)
