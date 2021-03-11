@@ -21,6 +21,10 @@ if(clientstaticpath != "") {
     app.use(express.static(clientstaticpath));
 }
 
+app.get("/api/whocares", (req, res) => {
+    res.send("something");
+})
+
 // start the Express server
 app.listen( port, () => {
     console.log( `server started at http://localhost:${ port }` );

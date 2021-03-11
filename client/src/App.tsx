@@ -1,10 +1,13 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import ButtonBlah from './components/ButtonBlah';
 
 function App() {
   return (
     <div className="App">
+      <h1>This is my H1</h1>
+      <ButtonBlah></ButtonBlah>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
