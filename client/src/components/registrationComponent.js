@@ -1,4 +1,4 @@
-I am still working on this code.  This is the login part from the tutorial https://www.youtube.com/watch?v=QoLUB0QkUaE  It is interchageable/reusable for the registration component. //
+// This is a copied of the login omponent, and is meant to be interchangeable/reusable with the code.  I am still working on this part.  I need to remove certain sign-up creditials.  Change login to registration, etc.; but this code is still meant to be interchangeable.  Ref. https://www.youtube.com/watch?v=QoLUB0QkUaE //
 import React, { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import axios from "axios";
