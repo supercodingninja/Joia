@@ -1,0 +1,65 @@
+/* Dynamic Flower, by Frederick Thomas, Super Coding Ninja™ (https://github.com/supercodingninja), Adaptation of Flower Ref. https://blog.logrocket.com/using-border-radius-to-make-shapes-how-to-build-a-flower/ */
+:root {
+    /* Awesome Dynamics, by Frederick Thomas, Super Coding Ninja™ (https://github.com/supercodingninja) */
+    --main-flower: linear-gradient(
+    45deg,
+    #ff00ee,
+    #0000ff,
+    #00ff00,
+    #ff0000,
+    #ff00ee,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000
+  );
+    --nose: #ffc0cb;
+    --stem: #51d691;
+    --pot: #FF7043;
+    --pot-shadow: #d66f51;
+}
+
+.flower {
+  position: relative;
+}
+
+.flower__head {
+  width: 120px;
+  height: 40px;
+  border-radius: 20px;
+  margin-top: 50px;
+  background: var(--main-flower);
+  background-size: 400%;
+  z-index: -1;
+  animation: animate 20s linear infinite;
+}
+
+.flower__head::after, .flower__head::before {
+  content: '';
+  position: absolute;
+  background: var(--main-flower);
+  background-size: 400%;
+  z-index: -1;
+  animation: animate 20s linear infinite;
+  border-radius: 20px;
+  width: 120px;
+  height: 40px;
+  transform: rotate(60deg);
+}
+
+.flower__head::before {
+  transform: rotate(-60deg);
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
