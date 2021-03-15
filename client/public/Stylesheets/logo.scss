@@ -1,0 +1,264 @@
+/* Dynamic Flower, by Frederick Thomas, Super Coding Ninja™ (https://github.com/supercodingninja), Adaptation of Flower Ref. https://blog.logrocket.com/using-border-radius-to-make-shapes-how-to-build-a-flower/ */
+.frame {
+    background-image: url(/assets/Media/logo/8Tx85kXTp.jpeg)
+}
+
+/* Dynamic Flower, by Frederick Thomas, Super Coding Ninja™ (https://github.com/supercodingninja), Adaptation of Flower Ref. https://blog.logrocket.com/using-border-radius-to-make-shapes-how-to-build-a-flower/ */
+/* Flower's Head + Animation */
+:root {
+    /* Awesome Dynamics, by Frederick Thomas, Super Coding Ninja™ (https://github.com/supercodingninja) */
+    --main-flower: linear-gradient(
+      45deg,
+      #ff00ee,
+      #0000ff,
+      #00ff00,
+      #ff0000,
+      #ff00ee,
+      #0000ff,
+      #00ff00,
+      #ffff00,
+      #ff0000
+    );
+    --nose: #ffc0cb;
+    --stem: #51d691;
+    --pot: #ff7043;
+    --pot-shadow: #d66f51;
+}
+  
+.flower {
+position: relative;
+}
+
+.flower__head {
+width: 120px;
+height: 40px;
+border-radius: 20px;
+margin-top: 50px;
+background: var(--main-flower);
+background-size: 400%;
+z-index: -1;
+animation: animate 20s linear infinite;
+}
+
+.flower__head::after,
+.flower__head::before {
+content: "";
+position: absolute;
+background: var(--main-flower);
+background-size: 400%;
+z-index: -1;
+animation: animate 20s linear infinite;
+border-radius: 20px;
+width: 120px;
+height: 40px;
+transform: rotate(60deg);
+}
+
+.flower__head::before {
+transform: rotate(-60deg);
+}
+
+@keyframes animate {
+0% {
+    background-position: 0 0;
+}
+50% {
+    background-position: 400% 0;
+}
+100% {
+    background-position: 0 0;
+}
+}
+
+/* Flower's Eyes + Animation */
+.flower__eye {
+position: absolute;
+width: 20px;
+height: 20px;
+z-index: 1;
+background: #fff;
+border-radius: 50%;
+}
+.flower__eye.left {
+left: 2.5%;
+}
+.flower__eye.right {
+left: 4.5%;
+}
+.flower__eye span {
+position: absolute;
+width: 10px;
+height: 10px;
+margin-left: 5px;
+margin-top: 5px;
+background: black;
+border-radius: 50%;
+}
+
+@keyframes blink {
+0%,
+100% {
+    transform: scale(1, 0.05);
+}
+5%,
+95% {
+    transform: scale(1, 1);
+}
+}
+
+.flower__eye {
+position: absolute;
+width: 20px;
+height: 20px;
+z-index: 1;
+background: #fff;
+border-radius: 50%;
+animation: blink 2s infinite;
+}
+
+@-webkit-keyframes slide {
+from {
+    left: 3.5%;
+}
+to {
+    left: 4.2%;
+}
+}
+
+/* Flower's Nose + Animation */
+.flower__nose {
+position: absolute;
+left: 3.5%;
+transform: translateX(-50%);
+top: 50%;
+width: 15px;
+height: 15px;
+z-index: 1;
+background: var(--nose);
+animation: slide 3s infinite;
+border-radius: 50%;
+}
+
+@-webkit-keyframes slide {
+from {
+    left: 3.5%;
+}
+to {
+    left: 4.2%;
+}
+}
+
+
+/* Leaves and Stem */
+.flower__stem {
+position: absolute;
+top: 135%;
+height: 150px;
+width: 8px;
+background: var(--stem);
+border-radius: 4px;
+left: 4.15%;
+transform: translateX(-50%);
+z-index: -1;
+}
+
+.flower__leaf {
+width: 30px;
+height: 30px;
+background: var(--stem);
+position: absolute;
+top: 130px;
+left: 21px;
+border-radius: 50px;
+border-top-right-radius: 0;
+transform: var(--transform-leaves-left);
+}
+
+.flower__leaf--shadow {
+position: absolute;
+background: rgba(0, 0, 0, 0.25);
+height: 15px;
+width: 15px;
+top: 144px;
+left: 29px;
+border-radius: 50px;
+border-top-right-radius: 0;
+transform: var(--transform-leaves-left);
+}
+
+.flower__leaf--shadow.oposite {
+top: 164px;
+left: 75px;
+transform: var(--transform-leaves-right);
+}
+
+.flower__leaf.oposite {
+top: 150px;
+left: 70px;
+transform: var(--transform-leaves-right);
+}
+
+
+/* Flower's Pot */
+.flower__pot {
+width: 100px;
+height: 20px;
+background-color: var(--pot);
+position: absolute;
+top: 190px;
+left: 4.2%;
+transform: translateX(-50%);
+}
+
+.flower__pot--shadow {
+width: 72px;
+position: absolute;
+border-left: 5px solid transparent;
+border-right: 5px solid transparent;
+border-top: 10px solid var(--pot-shadow);
+top: 20px;
+left: 50%;
+transform: translateX(-50%);
+}
+
+.flower__pot--bottom {
+width: 50px;
+height: 0px;
+position: absolute;
+border-left: 15px solid transparent;
+border-right: 15px solid transparent;
+border-top: 50px solid var(--pot);
+top: 20px;
+z-index: -1;
+left: 50%;
+transform: translateX(-50%);
+}
+
+.Class {
+position: absolute;
+top: 0px;
+left: 10%;
+}
+
+.Joia {
+position: absolute;
+top: 20px;
+left: 27%;
+}
+
+.Devs {
+position: absolute;
+left: 24%;
+top: 40px;
+}
+
+
+.audience,  .overlay {
+  position: absolute; 
+  bottom: 0; 
+/*   width: 100%; */
+  transition: .5s ease;
+  opacity:0;
+  font-size: 20px;
+  padding: 20px;
+}
