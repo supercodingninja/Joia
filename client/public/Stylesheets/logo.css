@@ -1,4 +1,5 @@
 /* Dynamic Flower, by Frederick Thomas, Super Coding Ninja™ (https://github.com/supercodingninja), Adaptation of Flower Ref. https://blog.logrocket.com/using-border-radius-to-make-shapes-how-to-build-a-flower/ */
+/* Flower's Head + Animation */
 :root {
     /* Awesome Dynamics, by Frederick Thomas, Super Coding Ninja™ (https://github.com/supercodingninja) */
     --main-flower: linear-gradient(
@@ -63,6 +64,8 @@
   }
 }
 
+
+/* Flower's Eyes + Animation */
 .flower__eye {
   position: absolute;
   width: 20px;
@@ -85,4 +88,23 @@
   margin-top: 5px;
   background: black;
   border-radius: 50%;
+}
+
+@keyframes blink {
+  0%, 100% {
+    transform: scale(1, 0.05);
+  }
+  5%, 95% {
+    transform: scale(1, 1);
+  }
+}
+
+.flower__eye {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+  background: #fff;
+  border-radius: 50%;
+  animation: blink 2s infinite; // animation added
 }
