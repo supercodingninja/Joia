@@ -7,6 +7,7 @@ import Post from '../src/Pages/Post'
 import Account from '../src/Pages/Account'
 import Login from '../src/Pages/Login';
 import Signup from '../src/Pages/Signup'
+import Footer from "./components/shared/Footer/Footer";
 
 function App() {
   return (
@@ -20,8 +21,9 @@ function App() {
             <Route exact path="/account" component={Account} />
             <Route exact path="/Login" component={Login} />
             <Route exact path="/Signup" component={Signup} />
-         </Switch>   
-     
+         </Switch>
+
+         <Footer />      
   </Router>
   );
 }
