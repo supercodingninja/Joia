@@ -106,5 +106,38 @@
   z-index: 1;
   background: #fff;
   border-radius: 50%;
-  animation: blink 2s infinite; // animation added
+  animation: blink 2s infinite;
+}
+
+@-webkit-keyframes slide {
+    from{
+        left: 3.5%;
+    }
+    to{
+        left: 4.2%;
+    }
+}
+
+
+/* Flower's Nose + Animation */
+.flower__nose {
+  position: absolute;
+  left: 3.5%;
+  transform: translateX(-50%);
+  top: 50%;
+  width: 15px;
+  height: 15px;
+  z-index: 1;
+  background: var(--nose);
+  animation: slide 3s infinite;
+  border-radius: 50%;
+}
+
+@-webkit-keyframes slide {
+    from{
+        left: 3.5%;
+    }
+    to{
+        left: 4.2%;
+    }
 }
