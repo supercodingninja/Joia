@@ -1,4 +1,9 @@
 /* Dynamic Flower, by Frederick Thomas, Super Coding Ninja™ (https://github.com/supercodingninja), Adaptation of Flower Ref. https://blog.logrocket.com/using-border-radius-to-make-shapes-how-to-build-a-flower/ */
+.frame {
+    background-image: url(/assets/Media/logo/8Tx85kXTp.jpeg)
+}
+
+/* Dynamic Flower, by Frederick Thomas, Super Coding Ninja™ (https://github.com/supercodingninja), Adaptation of Flower Ref. https://blog.logrocket.com/using-border-radius-to-make-shapes-how-to-build-a-flower/ */
 /* Flower's Head + Animation */
 :root {
     /* Awesome Dynamics, by Frederick Thomas, Super Coding Ninja™ (https://github.com/supercodingninja) */
@@ -245,4 +250,15 @@ left: 27%;
 position: absolute;
 left: 24%;
 top: 40px;
+}
+
+
+.audience,  .overlay {
+  position: absolute; 
+  bottom: 0; 
+/*   width: 100%; */
+  transition: .5s ease;
+  opacity:0;
+  font-size: 20px;
+  padding: 20px;
 }
