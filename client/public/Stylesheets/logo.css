@@ -63,3 +63,26 @@
   }
 }
 
+.flower__eye {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+  background: #fff;
+  border-radius: 50%;
+}
+.flower__eye.left {
+  left: 2.5%;
+}
+.flower__eye.right {
+  left: 4.5%;
+}
+.flower__eye span {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  margin-left: 5px;
+  margin-top: 5px;
+  background: black;
+  border-radius: 50%;
+}
