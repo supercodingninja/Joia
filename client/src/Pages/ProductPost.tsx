@@ -12,9 +12,9 @@ const ProductPost = () => {
 
             <form></form>
 
-            <button>Submit</button>
+            <button className='submit'>Submit</button>
             
-            <button>Cancel</button>
+            <button className='cancel'>Cancel</button>
 
             <footer></footer>
         </>
@@ -28,6 +28,23 @@ const bodyStyles: CSS.Properties = {
     backgroundSize: 'cover'
 };
   
+const updateBtnStyle: CSS.Properties = {
+    backgroundColor: '#F2C94C',
+};
+
+const cancelBtnStyle: CSS.Properties = {
+    borderColor: '#F2C94C',
+    backgroundColor: '#E5E5E5'
+};
+  
 export function Heading({ title } : { title: string} ) {
     return <body style={bodyStyles}>{title}</body>;
+}
+
+export function updateBtn({ title } : { title: string} ) {
+    return <button style={updateBtnStyle}>{title}</button>;
+}
+
+export function cancelBtn({ title } : { title: string} ) {
+    return <button style={cancelBtnStyle}>{title}</button>;
 }

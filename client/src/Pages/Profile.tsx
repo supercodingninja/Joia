@@ -34,6 +34,7 @@ const updateBtnStyle: CSS.Properties = {
 
 const sellBtnStyle: CSS.Properties = {
     borderColor: '#F2C94C',
+    backgroundColor: '#E5E5E5'
 };
   
 export function Heading({ title } : { title: string} ) {
