@@ -8,7 +8,7 @@ const Login = () => {
             <nav></nav>
 
             <div>
-                <h1>Ready to sell your artworks?</h1>
+                <h1>Ready to login to sell your artworks?</h1>
             </div>
 
             <div>
