@@ -7,7 +7,7 @@
     "start:prod": "node ../build/server.js",
     "dev": "nodemon --config nodemon.json src/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc && cp -r ./node_modules ../build"
+    "build": "tsc && cp -r ./node_modules ../build && cp -r src/nonReact_publics ../build"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "dotenv": "^8.2.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.12.0"
   }
 }
