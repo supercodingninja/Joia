@@ -6,7 +6,7 @@ const About = () => {
         <>
             <nav></nav>
 
-            <div>
+            <div className='upperDiv'>
                 <div>
                     <h2>About Us</h2>
                 </div>
