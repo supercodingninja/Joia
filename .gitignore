@@ -2,6 +2,10 @@
 *~
 *swp
 
+# these villianous files cause package install problems after git merges since
+# merges always conflict resulting in meyhem
+package-lock.json
+
 build
 
 node_modules
