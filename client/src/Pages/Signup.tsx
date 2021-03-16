@@ -5,13 +5,19 @@ import CSS from 'csstype';
 const Signup = () => {
     return (
         <>
-        <div>
-            <h1>Ready to sell your artworks?</h1>
-        </div>
+            <nav></nav>
 
-        <div>
-            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</span>
-        </div>
+            <div>
+                <h1>Ready to sell your artworks?</h1>
+            </div>
+
+            <div>
+                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</span>
+            </div>
+
+            <form></form>
+
+            <footer></footer>
         </>
     )
 }
