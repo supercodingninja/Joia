@@ -7,7 +7,9 @@ const Login = () => {
             <nav></nav>
 
             <div>
-                <h1>Ready to sell your artworks?</h1>
+
+                <h1>Ready to login to sell your artwork?</h1>
+
             </div>
 
             <div>
@@ -21,8 +23,6 @@ const Login = () => {
     )
 }
 
-export default Login
-
 const bodyStyles: CSS.Properties = {
     backgroundColor: '#E5E5E5',
     backgroundSize: 'cover'
@@ -31,3 +31,5 @@ const bodyStyles: CSS.Properties = {
 export function Heading({ title } : { title: string} ) {
     return <body style={bodyStyles}>{title}</body>;
 }
+
+export default Login;
