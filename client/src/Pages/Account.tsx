@@ -1,11 +1,12 @@
-import React from 'react'
+import HomePageMain from '../components/HomePageMain/HomePageMain'
 
-const Account = () => {
-    return (
-        <div>
-            <h1>This is account page</h1>
-        </div>
-    )
+export default function Account() {
+  return (
+
+    <>
+    <h1>account page placeholder</h1>
+    <HomePageMain />
+    </>
+     
+  )
 }
-
-export default Account
