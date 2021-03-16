@@ -8,7 +8,7 @@ const Signup = () => {
             <nav></nav>
 
             <div>
-                <h1>Ready to sell your artworks?</h1>
+                <h1>Ready to sign up to sell your artwork?</h1>
             </div>
 
             <div>
