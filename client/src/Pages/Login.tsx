@@ -1,5 +1,4 @@
 import React from 'react'
-// import { Header } from "./header"; // Speak to the team about this. //
 import CSS from 'csstype';
 
 const Login = () => {
@@ -8,7 +7,9 @@ const Login = () => {
             <nav></nav>
 
             <div>
+
                 <h1>Ready to login to sell your artwork?</h1>
+
             </div>
 
             <div>
@@ -22,14 +23,13 @@ const Login = () => {
     )
 }
 
-export default Login
-
-
 const bodyStyles: CSS.Properties = {
-  backgroundColor: '#E5E5E5',
-  backgroundSize: 'cover'
+    backgroundColor: '#E5E5E5',
+    backgroundSize: 'cover'
 };
-
+  
 export function Heading({ title } : { title: string} ) {
     return <body style={bodyStyles}>{title}</body>;
 }
+
+export default Login;
