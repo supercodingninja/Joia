@@ -22,7 +22,7 @@ const Signup = () => {
     )
 }
 
-// export default Signup
+export default Signup
 
 // // Ref. https://stackoverflow.com/questions/41628247/how-to-include-css-file-in-tsx-typescript //
 // export class Home extends React.Component<{}, {}> {
@@ -46,7 +46,11 @@ const Signup = () => {
 //     }
 // }
 
-const h1Styles: CSS.Properties = {
-  backgroundColor: '#E5E5E5',
-  backgroundSize: 'cover'
+const bodyStyles: CSS.Properties = {
+    backgroundColor: '#E5E5E5',
+    backgroundSize: 'cover'
 };
+  
+export function Heading({ title } : { title: string} ) {
+    return <body style={bodyStyles}>{title}</body>;
+}
