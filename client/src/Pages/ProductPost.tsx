@@ -1,7 +1,7 @@
 import React from 'react'
 import CSS from 'csstype';
 
-const Profile = () => {
+const ProductPost = () => {
     return (
         <>
             <nav></nav>
@@ -21,7 +21,7 @@ const Profile = () => {
     )
 }
 
-export default Profile
+export default ProductPost
 
 const bodyStyles: CSS.Properties = {
     backgroundColor: '#E5E5E5',

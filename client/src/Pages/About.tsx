@@ -1,11 +1,33 @@
 import React from 'react'
+import CSS from 'csstype';
 
 const About = () => {
     return (
-        <div>
-            <h1>This is about</h1>
-        </div>
+        <>
+            <nav></nav>
+
+            <div>
+                <h2>Artworks Information </h2>
+            </div>
+
+            <form></form>
+
+            <button>Submit</button>
+            
+            <button>Cancel</button>
+
+            <footer></footer>
+        </>
     )
 }
 
 export default About
+
+const bodyStyles: CSS.Properties = {
+    backgroundColor: '#E5E5E5',
+    backgroundSize: 'cover'
+};
+  
+export function Heading({ title } : { title: string} ) {
+    return <body style={bodyStyles}>{title}</body>;
+}
