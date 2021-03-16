@@ -2,12 +2,12 @@
 import React, { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import axios from "axios";
-import Home from "./Home";
+import Home from "./home";
 import Dashboard from "./Dashboard";
 
 export default class Registration extends Component {
-  render() {
-    return <div>Registration goes here.</div>;
+  constructor(props) {
+    super(props);
   }
 }
 
@@ -16,15 +16,28 @@ export default class App extends Component {
     super();
 
     this.state = {
-      loggedInStatus: "NOT_LOGGED_IN",
-      user: {}
+      email: "",
+      password: "",
+      password_confirmation: "",
+      registrationErrors: "",
     };
 
-    this.handleLogin = this.handleLogin.bind(this);
+    this.handleRegistration = this.handleRegistration.bind(this);
     this.handleLogout = this.handleLogout.bind(this);
+
+    handleSubmit(e) {
+      console.log("Form Submitted");
+      e.preventDefault();
+    }
+
+    this.render() {
+      return (<div>
+        <form onSubmit={}
+      </div>)
+    }
   }
 
-  checkLoginStatus() {
+  checkRegistrationStatus() {
     axios
       .get("http://localhost:4000/logged_in", { withCredentials: true })
       .then(response => {
@@ -47,12 +60,12 @@ export default class App extends Component {
         }
       })
       .catch(error => {
-        console.log("check login error", error);
+        console.log("check Registration error", error);
       });
   }
 
   componentDidMount() {
-    this.checkLoginStatus();
+    this.checkRegistrationStatus();
   }
 
   handleLogout() {
@@ -62,7 +75,7 @@ export default class App extends Component {
     });
   }
 
-  handleLogin(data) {
+  handleRegistration(data) {
     this.setState({
       loggedInStatus: "LOGGED_IN",
       user: data.user
@@ -80,7 +93,7 @@ export default class App extends Component {
               render={props => (
                 <Home
                   {...props}
-                  handleLogin={this.handleLogin}
+                  handleRegistration={this.handleRegistration}
                   handleLogout={this.handleLogout}
                   loggedInStatus={this.state.loggedInStatus}
                 />
