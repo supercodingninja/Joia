@@ -63,7 +63,7 @@ const bodyStyles: CSS.Properties = {
     backgroundSize: 'cover'
 };
 
-const bottomDivStyle: CSS.Properties = {
+const bottomDivStyleRule: CSS.Properties = {
     backgroundColor: '#F2C94C'
 };
   
@@ -72,5 +72,5 @@ export function Heading({ title } : { title: string} ) {
 }
 
 export function bottomDivStyle({ title } : { title: string} ) {
-    return <div className='bottomDiv' style={bottomDivStyle}>{title}</div>;
+    return <div className='bottomDiv' style={bottomDivStyleRule}>{title}</div>;
 }
