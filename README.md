@@ -109,6 +109,13 @@ file named ".env" and settings values in there.  I have one such .env
 sitting in my Joia directory with one line
 "MONGODB_URI=mongod+svr://myatlasusername:myatlaspassword@cluster0.va5bm.mongodb.net/myFirstDatabase"
 
+A final variation that reflects the Heroku environment is replacing the
+command at step 1 with:
+npm install --only=prod
+
+Heroku minimizes the number of node_modules installed by avoiding downloading
+the devDependencies
+
 Doing this or even knowing about it is *unnecessary* for local development
 and is only probably worth knowing in case connectivity problems come up
 which you're trying to diagnose.
