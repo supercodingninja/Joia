@@ -107,7 +107,8 @@ but this can get messy.  So instead, we use a node package, dotEnv, that
 allows for effective environment settings to be specified by creating a 
 file named ".env" and settings values in there.  I have one such .env
 sitting in my Joia directory with one line
-"MONGODB_URI=mongod+svr://myatlasusername:myatlaspassword@cluster0.va5bm.mongodb.net/myFirstDatabase"
+
+MONGODB_URI=mongod+svr://myatlasusername:myatlaspassword@cluster0.va5bm.mongodb.net/myFirstDatabase
 
 A final variation that reflects the Heroku environment is replacing the
 command at step 1 with:

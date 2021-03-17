@@ -3,7 +3,7 @@ import './App.css';
 import { Navbar } from './components/shared/Navbar/Navbar';
 import Home from '../src/Pages/Home';
 import About from '../src/Pages/About'
-import Post from '../src/Pages/Post'
+import Post from './Pages/Profile'
 import Account from '../src/Pages/Account'
 import Login from '../src/Pages/Login';
 import Signup from '../src/Pages/Signup'
