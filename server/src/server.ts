@@ -1,29 +1,40 @@
 import express from "express";
 import path from "path";
 import * as dotenv from "dotenv";
-dotenv.config();
+import routes from "./routes/index";
+import mongoose from "mongoose";
+
+let production = process.argv.find(el => el == "--production");
+
+if(production) {
+    console.log("We're running in production");
+} else {
+    console.log("We're NOT running in production");
+}
+
+// I may need to do something different for production
+let envPath = production ? path.join(__dirname, "..", ".env") : path.join(__dirname, "..", "..", ".env");
+
+dotenv.config({path: envPath});
 
 const app:express.Application = express();
 const port = process.env.PORT || 3001;
 
-let clientstaticpath = "";
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(routes);
 
-if(process.env.NODE_ENV == "production") {
-    clientstaticpath = path.join(__dirname, "clientbuild");
-}
-else {
-    console.log(`env.NODE_ENV is ${process.env.NODE_ENV}.  Express won't host the client site.`);
-}
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/populate", { useNewUrlParser: true });
 
-console.log(`clientstaticpath is set to '${clientstaticpath}'`)
+let clientstaticpath = production ? path.join(__dirname, "clientbuild") : "";
 
 if(clientstaticpath != "") {
     app.use(express.static(clientstaticpath));
 }
 
-app.get("/api/whocares", (req, res) => {
-    res.send("something");
-})
+let nonReactPublicsPath = path.join(__dirname,"nonReact_publics");
+
+app.use("/nonReact",express.static(nonReactPublicsPath));
 
 // start the Express server
 app.listen( port, () => {
