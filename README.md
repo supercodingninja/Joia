@@ -59,23 +59,68 @@ I hope you enjoy this repository, and the application's link, given above and be
 3.  Run “node [fileName].js”
 
 ## Development Instructions
+from under the Joia directory:
 1.  Ensure that you have all the node modules installed by typing
     - npm i
-    - npm run recursive-install
-2.  Launch your editor to run in one or both development directories
-    - cd client
-    - code .
-    AND/OR
-    - cd ..  # if necessary to get you to the project root
-    - cd server
+2.  Launch your editor
     - code .
 3.  Launch the projects to run locally in development mode:
-    - cd ..  # if necessary to get you to the project root
-    - npm run start:dev
-4.  Edit the client/server projects in their respective editors.
+    - npm run start
 
-    Things will rebuild and relaunch automatically as you edit the code
-    to ensure the running code reflects the code changes as you make them.
+Things will rebuild and relaunch automatically as you edit the code
+to ensure the running code reflects the code changes as you make them.
+
+The above development setup will be suitable for most or all development.
+You may stop reading now if you just want to do some light development.
+The above is the convienent and recommended way or doing development.
+That said, there are some minor variations on this that may be interesting
+to know about for the bored or adventurous.  One variation on the above is
+included for use in "production" (on Heroku, as we're using it).  The
+following steps mirror how Heroku deployment works:
+
+from under the Joia directory:
+1.  Ensure that you have all the node modules installed by typing
+    - npm i
+2.  Build the project
+    - npm run build
+3.  Launch the node server
+    - npm run start
+4.  Launch a browser and navigate to http://localhost:3001/
+
+The differences you'll observe will be that there will be a /build/
+directory under Joia after step 2 and also step 3 will launch node to
+run under this /build/ directory.  The server will be running at
+http://localhost:3001/ and you'll need to launch a browser and go there
+since one won't launch automatically in the third step.  Hence the fourth.
+
+Another variation that reflects how it is run on Heroku is to specify the
+MONGODB_URI, the connection string used by mongoose to figure out how to 
+connect to the database.  If it is not deliberately set to be otherwise,
+the string used will be "mongodb://localhost/populate" which specifies to
+use your local install of mongo in a database named "populate".  And this
+is perfectly fine for development purposes.  But Heroku will not have a
+mongo instance.  We set it to use an ATLAS instance when running there.
+How so?  This is set in an environment variable on Heroku, for which Heroku
+has a "dashboard" that allows for configuration.  We may mimic this process
+locally if we choose.  We *could* set environment variables on our machine
+but this can get messy.  So instead, we use a node package, dotEnv, that
+allows for effective environment settings to be specified by creating a 
+file named ".env" and settings values in there.  I have one such .env
+sitting in my Joia directory with one line
+
+MONGODB_URI=mongod+svr://myatlasusername:myatlaspassword@cluster0.va5bm.mongodb.net/myFirstDatabase
+
+A final variation that reflects the Heroku environment is replacing the
+command at step 1 with:
+npm install --only=prod
+
+Heroku minimizes the number of node_modules installed by avoiding downloading
+the devDependencies
+
+Doing this or even knowing about it is *unnecessary* for local development
+and is only probably worth knowing in case connectivity problems come up
+which you're trying to diagnose.
+
 
 ## Overview: What We Accomplished!
 ###### Workflow [Back to Table of Contents](#Table-of-Contents)

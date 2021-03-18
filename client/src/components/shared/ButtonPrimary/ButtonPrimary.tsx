@@ -3,13 +3,12 @@ import './ButtonPrimary.css';
 
 interface IButtonPrimaryProps {
   text: string;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
-export const ButtonPrimary: React.FC<IButtonPrimaryProps> = ( props: IButtonPrimaryProps): React.ReactElement<IButtonPrimaryProps> => {
+export const ButtonPrimary  = ( props: IButtonPrimaryProps) => {
   const {text, onClick} = props;
-
-
+  
   return (
       <button className="btn btn-warning" onClick={onClick}>{text}</button>
   );

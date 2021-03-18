@@ -7,6 +7,7 @@ import './Navbar.css'
 
 export const Navbar = () => {
   const [click, setClick] = useState(false)
+  // const [active, setActive] = useState(true)
   // const [showButton, setShowButton] = useState(true)
 
   const handleClick = () => setClick(!click) // make it toggle between true and false
@@ -57,14 +58,13 @@ export const Navbar = () => {
               </Link>
             </li>
 
+            
             <li className="nav-item">
-              <Link
-                to="/account"
-                onClick={closeMobileMenu}
-              >
+              <Link to="/account" className="nav-links" onClick={closeMobileMenu}>
                 Account
               </Link>
             </li>
+ 
 
             <li>
               <Link to="/login" className="nav-links">
