@@ -8,12 +8,12 @@ interface IContainerProps {
     fluid?: string;
     children: any;
     backGround?: string;
-    padingTop?: string | number;
+    py?: string;
 }
 
 export const Container = (props: IContainerProps) => {
-    const {fluid, children, backGround, padingTop} = props;
-  return <div className={`container${fluid ? "" : "-fluid"}  bg${backGround ? "" : "-light"} mp${padingTop ? "" : "-5"}`}>{children}</div>;
+    const {fluid, children, backGround, py} = props;
+  return <div className={`container${fluid ? "" : "-fluid"} bg${backGround ? "" : "-light"} py${py}`}>{children}</div>;
 }
 
 // This Row component lets us use a bootstrap row without having to think about class names
@@ -21,12 +21,13 @@ export const Container = (props: IContainerProps) => {
 interface IRowProps {
     fluid?: string;
     children: any;
+    py?: string;
 }
 
 export const Row  = ( props: IRowProps) => {
-    const {fluid, children} = props;
+    const {fluid, children, py} = props;
 
-    return <div className={`row${fluid ? "-fluid" : ""}`}>{children}</div>;
+    return <div className={`row${fluid ? "-fluid" : ""} py${py}`}>{children}</div>;
 }
 
 // This Col component lets us size bootstrap columns with less syntax

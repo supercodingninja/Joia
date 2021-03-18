@@ -9,7 +9,7 @@ function handleInputChange() {
 }
 
 function handleFormSubmit() {
-  // submit form
+  // submit form 
 }
 
 function handleFormClear() {

@@ -14,12 +14,11 @@ export const TextArea = (props: any) => {
    
     return (
         <div className="form-group">
-            <input className="form-control" {...props} />
+            <textarea className="form-control" {...props} />
         </div>
     )
 }
  
-
 interface IFormBtnProps {
     children: string;
     onClick: () => void;
