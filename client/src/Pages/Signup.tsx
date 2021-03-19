@@ -4,8 +4,6 @@ import CSS from 'csstype';
 const Signup = () => {
     return (
         <>
-            <nav></nav>
-
             <div>
                 <h1>Ready to sign up to sell your artwork?</h1>
             </div>
@@ -15,8 +13,6 @@ const Signup = () => {
             </div>
 
             <form></form>
-
-            <footer></footer>
         </>
     )
 }

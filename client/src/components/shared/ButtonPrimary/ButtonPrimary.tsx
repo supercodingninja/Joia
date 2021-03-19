@@ -8,8 +8,7 @@ interface IButtonPrimaryProps {
 
 export const ButtonPrimary  = ( props: IButtonPrimaryProps) => {
   const {text, onClick} = props;
-
-
+  
   return (
       <button className="btn btn-warning" onClick={onClick}>{text}</button>
   );

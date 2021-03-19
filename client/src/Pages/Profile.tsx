@@ -1,50 +1,72 @@
-import React from 'react'
-import CSS from 'csstype';
+/* eslint-disable jsx-a11y/alt-text */
+import { Row, Col, Container } from '../LayoutComponents/Grid/Grid'
+import {
+  Input,
+  TextArea,
+  FormBtn,
+  FormBtnOutline,
+} from '../components/shared/Form/Form'
+
+function handleInputChange() {
+  // const { name, value } = event.target;
+  // setFormObject({...formObject, [name]: value})
+}
+
+function handleFormClear() {
+  // clear form function
+}
 
 const Profile = () => {
-    return (
-        <>
-            <nav></nav>
+  return (
+    <Container py="-5">
+      <div className="container">
+        <h1 className="text-center"> Profile </h1>
+        <Row py="-5">
+          <Col size="md-4 sm-12">
+            <img
+              className="img-fluid pr-4 mt-3"
+              src="./assets/img/profile.jpg"
+            />
+          </Col>
 
-            <div>
-                <h2>Profile</h2>
-            </div>
+          <Col size="md-8 sm-12">
+            <form>
+              <h5>Name</h5>
+              <Input
+                onChange={handleInputChange}
+                name="Name"
+              />
 
-            <form></form>
+              <h5>Email</h5>
+              <Input
+                onChange={handleInputChange}
+                name="type"
+              />
 
-            <button className='update'>Update Profile</button>
-            
-            <button className='sell'>Sell Your Artwork</button>
+              <h5>Location</h5>
+              <Input
+                onChange={handleInputChange}
+                name="location"
+                />
 
-            <footer></footer>
-        </>
-    )
+              <h5>Phone</h5>
+              <Input onChange={handleInputChange} name="phone" />
+
+              <h5>Place holder for artwork for sale list</h5>
+              <Input onChange={handleInputChange} name="phone" placeHolder="List of artwork for sale" /> 
+              <Input onChange={handleInputChange} name="phone" placeHolder="List of artwork for sale" />
+              <Input onChange={handleInputChange} name="phone" placeHolder="List of artwork for sale" /> 
+
+              <FormBtnOutline onClick={handleFormClear}>Sell Artwork</FormBtnOutline>
+
+              <FormBtn onClick={handleFormClear}>Update Profile</FormBtn>
+            </form>
+          </Col>
+        </Row>
+      </div>
+    </Container>
+  )
 }
 
 export default Profile
 
-const bodyStyles: CSS.Properties = {
-    backgroundColor: '#E5E5E5',
-    backgroundSize: 'cover'
-};
-
-const updateBtnStyle: CSS.Properties = {
-    backgroundColor: '#F2C94C',
-};
-
-const sellBtnStyle: CSS.Properties = {
-    borderColor: '#F2C94C',
-    backgroundColor: '#E5E5E5'
-};
-  
-export function Heading({ title } : { title: string} ) {
-    return <body style={bodyStyles}>{title}</body>;
-}
-
-export function updateBtn({ title } : { title: string} ) {
-    return <button style={updateBtnStyle}>{title}</button>;
-}
-
-export function sellBtn({ title } : { title: string} ) {
-    return <button style={sellBtnStyle}>{title}</button>;
-}
