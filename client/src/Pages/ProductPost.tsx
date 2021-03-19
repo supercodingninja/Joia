@@ -1,50 +1,89 @@
-import React from 'react'
-import CSS from 'csstype';
+/* eslint-disable jsx-a11y/alt-text */
+import { Row, Col, Container } from '../LayoutComponents/Grid/Grid'
+import {
+  Input,
+  TextArea,
+  FormBtn,
+  FormBtnOutline,
+} from '../components/shared/Form/Form'
+
+function handleInputChange() {
+  // const { name, value } = event.target;
+  // setFormObject({...formObject, [name]: value})
+}
+
+function handleFormClear() {
+  // clear form function
+}
 
 const ProductPost = () => {
-    return (
-        <>
-            <nav></nav>
+  return (
+    <Container py="-5">
+      <div className="container">
+        <h1 className="text-center"> Artworks Information </h1>
+        <Row py="-5">
+          <Col size="md-6 sm-12">
+            <img
+              className="img-fluid pr-4 mt-3"
+              src="./assets/img/enzo-tommasi-wlxJ4idMTUk-unsplash.jpg"
+            />
+          </Col>
 
-            <div>
-                <h2>Artworks Information </h2>
-            </div>
+          <Col size="md-6 sm-12">
+            <form>
+              <h5>Artwork title</h5>
+              <Input
+                onChange={handleInputChange}
+                name="title"
+                placeHolder="Artwork title"
+              />
 
-            <form></form>
+              <h5>Description</h5>
+              <TextArea
+                onChange={handleInputChange}
+                name="description"
+                placeHolder="Description"
+              />
 
-            <button className='submit'>Submit</button>
-            
-            <button className='cancel'>Cancel</button>
+              <h5>Type</h5>
+              <Input
+                onChange={handleInputChange}
+                name="type"
+                placeHolder="Type"
+              />
 
-            <footer></footer>
-        </>
-    )
+              <h5>Category</h5>
+              <Input
+                onChange={handleInputChange}
+                name="category"
+                placeHolder="Select Category"
+              />
+
+              <h5>Size</h5>
+              <Input onChange={handleInputChange} name="size" />
+
+              <h5>Price</h5>
+              <Input onChange={handleInputChange} name="price" />
+
+              <h5>Location</h5>
+              <Input
+                onChange={handleInputChange}
+                name="location"
+                placeHolder="Select location"
+              />
+
+              <h5>Artist Name</h5>
+              <Input onChange={handleInputChange} name="location" />
+
+              <FormBtnOutline onClick={handleFormClear}>Cancel</FormBtnOutline>
+
+              <FormBtn onClick={handleFormClear}>Submit</FormBtn>
+            </form>
+          </Col>
+        </Row>
+      </div>
+    </Container>
+  )
 }
 
 export default ProductPost
-
-const bodyStyles: CSS.Properties = {
-    backgroundColor: '#E5E5E5',
-    backgroundSize: 'cover'
-};
-  
-const updateBtnStyle: CSS.Properties = {
-    backgroundColor: '#F2C94C',
-};
-
-const cancelBtnStyle: CSS.Properties = {
-    borderColor: '#F2C94C',
-    backgroundColor: '#E5E5E5'
-};
-  
-export function Heading({ title } : { title: string} ) {
-    return <body style={bodyStyles}>{title}</body>;
-}
-
-export function updateBtn({ title } : { title: string} ) {
-    return <button style={updateBtnStyle}>{title}</button>;
-}
-
-export function cancelBtn({ title } : { title: string} ) {
-    return <button style={cancelBtnStyle}>{title}</button>;
-}
