@@ -6,6 +6,7 @@ import {
   FormBtn,
   FormBtnOutline,
 } from '../components/shared/Form/Form'
+import './Profile';
 
 function handleInputChange() {
   // const { name, value } = event.target;
