@@ -1,6 +1,12 @@
 import React from 'react';
 import './Signup.css';
-import { Container, Row } from '../LayoutComponents/Grid/Grid'
+import { Row, Col, Container } from '../LayoutComponents/Grid/Grid'
+import {
+  Input,
+  TextArea,
+  FormBtn,
+  FormBtnOutline,
+} from '../components/shared/Form/Form'
 
 const Signup = () => {
     return (
