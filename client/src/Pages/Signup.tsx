@@ -1,5 +1,6 @@
-import React from 'react'
-import CSS from 'csstype';
+import React from 'react';
+import './Signup.css';
+import { Container, Row } from '../LayoutComponents/Grid/Grid'
 
 const Signup = () => {
     return (
@@ -21,13 +22,4 @@ const Signup = () => {
     )
 }
 
-export default Signup
-
-const bodyStyles: CSS.Properties = {
-    backgroundColor: '#E5E5E5',
-    backgroundSize: 'cover'
-};
-  
-export function Heading({ title } : { title: string} ) {
-    return <body style={bodyStyles}>{title}</body>;
-}
+export default Signup;
