@@ -1,6 +1,6 @@
 // import React from 'react'
 import './About.css'
-import { Container, Row } from '../LayoutComponents/Grid/Grid'
+import {Row} from '../LayoutComponents/Grid/Grid'
 
 const About = () => {
   return (
@@ -34,30 +34,22 @@ const About = () => {
 
         <div className="text-center">
           <p>
-            
-            1- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-            aut fugit, sed quia consequuntur magni dolores eos qui ratione
-            voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.
+            1- User create an account.
           </p>
 
           <p>
-            
-            2- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-            aut fugit, sed quia consequuntur magni dolores eos qui ratione
-            voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.
+            2- After signup go to Profile page and click on sell product button.
           </p>
 
           <p>
-            3- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-            aut fugit, sed quia consequuntur magni dolores eos qui ratione
-            voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.
+            3- Fill out artwork information in art information form and select submit.
           </p>
 
-          <p>
+          {/* <p>
             4- Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
             aut fugit, sed quia consequuntur magni dolores eos qui ratione
             voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.
-          </p>
+          </p> */}
         </div>
       </div>
     </>

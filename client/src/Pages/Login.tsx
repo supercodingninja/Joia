@@ -25,9 +25,9 @@ const Login = () => {
             <nav></nav>
 
             
-            <h1>Ready to login to sell your artwork?</h1>
+            <h1 className="text-center mb-3">Ready to login to sell your artwork?</h1>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+            <p className="text-center mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
         
 
             <div className="container px-3">
