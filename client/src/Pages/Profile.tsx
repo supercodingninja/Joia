@@ -16,6 +16,13 @@ function handleFormClear() {
   // clear form function
 }
 
+function handleFormSubmit() {
+// submit form function
+// include display aler
+// clearform after submitting
+}
+
+
 const Profile = () => {
   return (
     <Container py="-5">
@@ -59,7 +66,7 @@ const Profile = () => {
 
               <FormBtnOutline onClick={handleFormClear}>Sell Artwork</FormBtnOutline>
 
-              <FormBtn onClick={handleFormClear}>Update Profile</FormBtn>
+              <FormBtn onClick={handleFormSubmit}>Update Profile</FormBtn>
             </form>
           </Col>
         </Row>

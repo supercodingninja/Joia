@@ -1,6 +1,5 @@
 import React from 'react'
-import './About.css'
-import { Container, Row } from '../LayoutComponents/Grid/Grid'
+import { Row } from '../LayoutComponents/Grid/Grid'
 
 const About = () => {
   return (

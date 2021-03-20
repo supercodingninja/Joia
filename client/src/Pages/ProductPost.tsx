@@ -16,6 +16,12 @@ function handleFormClear() {
   // clear form function
 }
 
+function handleFormSubmit() {
+  // submit form function
+  // include display aler
+  // clearform after submitting
+  }
+
 const ProductPost = () => {
   return (
     <Container py="-5">
@@ -77,7 +83,7 @@ const ProductPost = () => {
 
               <FormBtnOutline onClick={handleFormClear}>Cancel</FormBtnOutline>
 
-              <FormBtn onClick={handleFormClear}>Submit</FormBtn>
+              <FormBtn onClick={handleFormSubmit}>Submit</FormBtn>
             </form>
           </Col>
         </Row>
