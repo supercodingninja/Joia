@@ -2,12 +2,14 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ButtonPrimary } from '../ButtonPrimary/ButtonPrimary'
 import { ButtonSecondary } from '../ButtonSecondary/ButtonSecondary'
+
+
 const Footer = () => {
     const [click, setClick] = useState(false);
 
-    const handleClick = () => setClick(!click)
+    const handleClick = () => setClick(!click);
 
-    const closeMobileMenu = () => setClick(false)
+    const closeMobileMenu = () => setClick(false);
 
     return (
 
@@ -19,14 +21,16 @@ const Footer = () => {
 
                     <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
                         <ul className="list-unstyled mb-0">
-                            <li>
-                                <a href="#!" className="text-dark">Link 1</a>
+                            <li className="nav-item">
+                                <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                                    Home
+                                </Link>
                             </li>
                             <li>
-                                <a href="#!" className="text-dark">Link 2</a>
+                                <a href="#!" className="text-dark">Contact Us</a>
                             </li>
                             <li>
-                                <a href="#!" className="text-dark">Link 3</a>
+                                <a href="#!" className="text-dark">Our Team</a>
                             </li>
                         </ul>
                     </div>
@@ -42,14 +46,18 @@ const Footer = () => {
 
                         <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
                             <ul className="list-unstyled">
-                                <li>
-                                    <a href="#!" className="text-dark">Link 1</a>
+                                <li className="nav-item">
+                                    <Link to="/about" className="nav-links" onClick={closeMobileMenu}>
+                                        About
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#!" className="text-dark">Link 2</a>
+                                    <a href="#!" className="text-dark">Search</a>
                                 </li>
-                                <li>
-                                    <a href="#!" className="text-dark">Link 3</a>
+                                <li className="nav-item">
+                                    <Link to="/post" className="nav-links" onClick={closeMobileMenu}>
+                                        Sell
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
