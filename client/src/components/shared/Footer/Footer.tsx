@@ -14,28 +14,24 @@ const Footer = () => {
     return (
 
 
-        <footer className="bg-light text-center text-lg-start">
-            <div className="container p-4">
+        <footer className="bg-light">
+            <div className="container p-4 d-flex flex-row justify-content-around">
 
-                <div className="row">
+                <ul className="list-unstyled d-flex flex-row">
 
-                    <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
-                        <ul className="list-unstyled mb-0">
-                            <li className="nav-item">
-                                <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-                                    Home
-                                </Link>
-                            </li>
-                            <li>
-                                <a href="#!" className="text-dark">Contact Us</a>
-                            </li>
-                            <li>
-                                <a href="#!" className="text-dark">Our Team</a>
-                            </li>
-                        </ul>
-                    </div>
+                    <li className="nav-item">
+                        <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                            Home
+                        </Link>
+                    </li>
+                    <li className="nav-item">
+                        <a href="#!" className="text-dark">Contact Us</a>
+                    </li>
+                    <li className="nav-item">
+                        <a href="#!" className="text-dark">Our Team</a>
+                    </li>
 
-                    <div className="navbar-container">
+                    <li>
                         <Link to="/" className="navbar-logo">
                             <img
                                 className="navbar-logo"
@@ -43,35 +39,33 @@ const Footer = () => {
                                 alt="Logo"
                             />
                         </Link>
-
-                        <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
-                            <ul className="list-unstyled">
-                                <li className="nav-item">
-                                    <Link to="/about" className="nav-links" onClick={closeMobileMenu}>
-                                        About
-                                    </Link>
-                                </li>
-                                <li>
-                                    <a href="#!" className="text-dark">Search</a>
-                                </li>
-                                <li className="nav-item">
-                                    <Link to="/post" className="nav-links" onClick={closeMobileMenu}>
-                                        Sell
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
-
-                    </div>
-
-                </div>
+                    </li>
 
 
-                <div className="text-center p-3">
-                    © 2020 Copyright:
-                <a className="text-dark" href="https://mdbootstrap.com/">Joia Group</a>
-                </div>
+                    <li className="nav-item">
+                        <Link to="/about" className="nav-links" onClick={closeMobileMenu}>
+                            About
+                         </Link>
+                    </li>
+                    <li className="nav-item">
+                        <a href="#!" className="text-dark">Search</a>
+                    </li>
+                    <li className="nav-item">
+                        <Link to="/post" className="nav-links" onClick={closeMobileMenu}>
+                            Sell
+                        </Link>
+                    </li>
+                </ul>
+
             </div>
+
+            <hr></hr>
+
+            <div className="text-center p-3">
+                © 2020 Copyright:
+                <a className="text-dark" href="#">Joia Group</a>
+            </div>
+
         </footer>
 
 
