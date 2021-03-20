@@ -1,3 +1,5 @@
+// import React from 'react';
+
 /* eslint-disable jsx-a11y/alt-text */
 import { Row, Col, Container } from '../LayoutComponents/Grid/Grid'
 import {
@@ -6,6 +8,7 @@ import {
   FormBtn,
   FormBtnOutline,
 } from '../components/shared/Form/Form'
+import './Profile';
 
 function handleInputChange() {
   // const { name, value } = event.target;

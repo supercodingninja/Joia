@@ -1,35 +1,50 @@
-import React from 'react'
-import CSS from 'csstype';
+// import React from 'react'
+import './Login.css';
+
+import {
+    Input,
+    FormBtnOutline,
+    FormBtn,
+} from '../components/shared/Form/Form'
+
+function handleInputOnchange () {
+    // function
+};
+
+function handleFormClear() {
+    // clear form function
+};
+
+function handleFormSubmit() {
+    // submit form function
+};
 
 const Login = () => {
     return (
         <>
             <nav></nav>
 
-            <div>
+            
+            <h1 className="text-center mb-3">Ready to login to sell your artwork?</h1>
 
-                <h1>Ready to login to sell your artwork?</h1>
+            <p className="text-center mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+        
 
+            <div className="container px-3">
+                <form className="border border-warning py-5 mx-3 px-5">
+                    <h5>Email:</h5>
+                    <Input onChange={handleInputOnchange} name="email" />
+                    
+                    <h5>Password:</h5>
+                    <Input onChange={handleInputOnchange} name="password" />
+
+                    <FormBtnOutline className="text-center" onClick={handleFormClear}>Cancel</FormBtnOutline>
+                
+                    <FormBtn className="text-center" onClick={handleFormSubmit}>Register</FormBtn>
+                </form>
             </div>
-
-            <div>
-                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</span>
-            </div>
-
-            <form></form>
-
-            <footer></footer>
         </>
     )
-}
-
-const bodyStyles: CSS.Properties = {
-    backgroundColor: '#E5E5E5',
-    backgroundSize: 'cover'
-};
-  
-export function Heading({ title } : { title: string} ) {
-    return <body style={bodyStyles}>{title}</body>;
 }
 
 export default Login;
