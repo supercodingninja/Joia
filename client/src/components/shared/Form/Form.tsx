@@ -5,7 +5,7 @@ export const Input = (props: any) => {
     
     return (
         <div className="form-group">
-            <input className="form-control" {...props} />
+            <input className="form-control border border-warning" {...props} />
         </div>
     )
 }
@@ -14,12 +14,11 @@ export const TextArea = (props: any) => {
    
     return (
         <div className="form-group">
-            <input className="form-control" {...props} />
+            <textarea className="form-control border border-warning" {...props} />
         </div>
     )
 }
  
-
 interface IFormBtnProps {
     children: string;
     onClick: () => void;
@@ -33,7 +32,6 @@ export const FormBtn = (props: IFormBtnProps) => {
     );
     
 }
-
 
 interface IFormBtnOutlineProps {
     children: string;
