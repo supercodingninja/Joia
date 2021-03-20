@@ -48,7 +48,7 @@ const HomePageMain = () => {
       <Container>
         <h2 className="text-center pt-5"> Artwork in Seattle</h2>
 
-        <h4 className="text-center my-5">Place holder for card components</h4>
+        <h4 className="text-center py-5">Place holder for card components</h4>
       </Container>
     </>
   )

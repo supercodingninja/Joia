@@ -1,11 +1,13 @@
+// import React from 'react';
+
 /* eslint-disable jsx-a11y/alt-text */
 import { Row, Col, Container } from '../LayoutComponents/Grid/Grid'
 import {
   Input,
-  TextArea,
   FormBtn,
   FormBtnOutline,
 } from '../components/shared/Form/Form'
+import './Profile';
 
 function handleInputChange() {
   // const { name, value } = event.target;
@@ -21,7 +23,6 @@ function handleFormSubmit() {
 // include display aler
 // clearform after submitting
 }
-
 
 const Profile = () => {
   return (
