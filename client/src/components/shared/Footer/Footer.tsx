@@ -19,16 +19,20 @@ const Footer = () => {
 
                 <ul className="list-unstyled d-flex flex-row">
 
-                    <li className="nav-item">
+                    <li className="nav-item p-2">
                         <Link to="/" className="nav-links" onClick={closeMobileMenu}>
                             Home
                         </Link>
                     </li>
-                    <li className="nav-item">
-                        <a href="#!" className="text-dark">Contact Us</a>
+                    <li className="nav-item p-2">
+                        <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                            Contact Us
+                        </Link>
                     </li>
-                    <li className="nav-item">
-                        <a href="#!" className="text-dark">Our Team</a>
+                    <li className="nav-item p-2">
+                        <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                            Our Team
+                        </Link>
                     </li>
 
                     <li>
@@ -42,15 +46,17 @@ const Footer = () => {
                     </li>
 
 
-                    <li className="nav-item">
+                    <li className="nav-item p-2">
                         <Link to="/about" className="nav-links" onClick={closeMobileMenu}>
                             About
-                         </Link>
+                        </Link>
                     </li>
-                    <li className="nav-item">
-                        <a href="#!" className="text-dark">Search</a>
+                    <li className="nav-item p-2">
+                        <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                            Search
+                        </Link>
                     </li>
-                    <li className="nav-item">
+                    <li className="nav-item p-2">
                         <Link to="/post" className="nav-links" onClick={closeMobileMenu}>
                             Sell
                         </Link>
@@ -62,8 +68,7 @@ const Footer = () => {
             <hr></hr>
 
             <div className="text-center p-3">
-                © 2020 Copyright:
-                <a className="text-dark" href="#">Joia Group</a>
+                © 2020 Copyright: Joia Group
             </div>
 
         </footer>
