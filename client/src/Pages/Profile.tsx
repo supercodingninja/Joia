@@ -4,7 +4,6 @@
 import { Row, Col, Container } from '../LayoutComponents/Grid/Grid'
 import {
   Input,
-  TextArea,
   FormBtn,
   FormBtnOutline,
 } from '../components/shared/Form/Form'
@@ -17,6 +16,12 @@ function handleInputChange() {
 
 function handleFormClear() {
   // clear form function
+}
+
+function handleFormSubmit() {
+// submit form function
+// include display aler
+// clearform after submitting
 }
 
 const Profile = () => {
@@ -62,7 +67,7 @@ const Profile = () => {
 
               <FormBtnOutline onClick={handleFormClear}>Sell Artwork</FormBtnOutline>
 
-              <FormBtn onClick={handleFormClear}>Update Profile</FormBtn>
+              <FormBtn onClick={handleFormSubmit}>Update Profile</FormBtn>
             </form>
           </Col>
         </Row>

@@ -1,6 +1,4 @@
-// import React from 'react'
-import './Login.css';
-
+import { Container } from "../LayoutComponents/Grid/Grid"
 import {
     Input,
     FormBtnOutline,
@@ -21,29 +19,25 @@ function handleFormSubmit() {
 
 const Login = () => {
     return (
-        <>
-            <nav></nav>
+        <Container>                
+            <h1 className="text-center py-5">Ready to login to sell your artwork?</h1>
 
-            
-            <h1 className="text-center mb-3">Ready to login to sell your artwork?</h1>
+            <p className="text-center mb-3 pb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
 
-            <p className="text-center mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
-        
-
-            <div className="container px-3">
-                <form className="border border-warning py-5 mx-3 px-5">
+            <div className="container px-3 pb-5">
+                <form className="border border-warning py-5 mx-3 my-5 px-5">
                     <h5>Email:</h5>
                     <Input onChange={handleInputOnchange} name="email" />
                     
                     <h5>Password:</h5>
                     <Input onChange={handleInputOnchange} name="password" />
 
-                    <FormBtnOutline className="text-center" onClick={handleFormClear}>Cancel</FormBtnOutline>
+                    <FormBtnOutline onClick={handleFormClear}>Cancel</FormBtnOutline>
                 
-                    <FormBtn className="text-center" onClick={handleFormSubmit}>Register</FormBtn>
+                    <FormBtn onClick={handleFormSubmit}>Register</FormBtn>
                 </form>
             </div>
-        </>
+        </Container>
     )
 }
 

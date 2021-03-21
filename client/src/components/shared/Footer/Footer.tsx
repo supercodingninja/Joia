@@ -1,36 +1,29 @@
-import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ButtonPrimary } from '../ButtonPrimary/ButtonPrimary'
-import { ButtonSecondary } from '../ButtonSecondary/ButtonSecondary'
-
+import './Footer.css'
 
 const Footer = () => {
-    const [click, setClick] = useState(false);
-
-    const handleClick = () => setClick(!click);
-
-    const closeMobileMenu = () => setClick(false);
 
     return (
 
-
-        <footer className="bg-light">
+        <footer className="bg-white">
             <div className="container p-4 d-flex flex-row justify-content-around">
 
                 <ul className="list-unstyled d-flex flex-row">
 
                     <li className="nav-item p-2">
-                        <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                        <Link to="/" className="nav-links">
                             Home
                         </Link>
                     </li>
+
                     <li className="nav-item p-2">
-                        <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                        <Link to="/" className="nav-links">
                             Contact Us
                         </Link>
                     </li>
+
                     <li className="nav-item p-2">
-                        <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                        <Link to="/about" className="nav-links">
                             Our Team
                         </Link>
                     </li>
@@ -45,19 +38,18 @@ const Footer = () => {
                         </Link>
                     </li>
 
-
                     <li className="nav-item p-2">
-                        <Link to="/about" className="nav-links" onClick={closeMobileMenu}>
+                        <Link to="/about" className="nav-links">
                             About
                         </Link>
                     </li>
                     <li className="nav-item p-2">
-                        <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                        <Link to="/" className="nav-links">
                             Search
                         </Link>
                     </li>
                     <li className="nav-item p-2">
-                        <Link to="/post" className="nav-links" onClick={closeMobileMenu}>
+                        <Link to="/post" className="nav-links">
                             Sell
                         </Link>
                     </li>
@@ -65,7 +57,7 @@ const Footer = () => {
 
             </div>
 
-            <hr></hr>
+            <hr className="border-warning"/>
 
             <div className="text-center p-3">
                 © 2020 Copyright: Joia Group
