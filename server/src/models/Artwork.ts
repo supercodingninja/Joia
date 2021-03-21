@@ -1,6 +1,7 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
+const { Schema } = mongoose;
 
-const ArtworkSchema = mongoose.Schema({
+const ArtworkSchema = new mongoose.Schema({
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'users'
@@ -34,4 +35,5 @@ const ArtworkSchema = mongoose.Schema({
   }
 });
 
-module.exports = mongoose.model('artwork', ArtworkSchema);
+let Artwork = mongoose.model('artwork', ArtworkSchema);
+export default Artwork;
