@@ -7,6 +7,7 @@
     "start:prod": "node ../build/server.js",
     "dev": "nodemon --config nodemon.json src/server.ts",
     "test": "jest",
+    "testDetectOpenHandles": "jest --detectOpenHandles",
     "coverage": "jest --coverage",
     "build": "tsc && cp -r ./node_modules ../build && cp -r src/nonReact_publics ../build"
   },
@@ -15,6 +16,7 @@
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^26.0.21",
+    "@types/supertest": "^2.0.10",
     "jest": "^26.6.3",
     "nodemon": "^2.0.7",
     "supertest": "^6.1.3",
