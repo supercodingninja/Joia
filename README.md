@@ -66,6 +66,9 @@ from under the Joia directory:
     - code .
 3.  Launch the projects to run locally in development mode:
     - npm run start
+BONUS: under the server directory, run tests.  Particularly if you've made any server changes:
+    - cd server
+    - npm test
 
 Things will rebuild and relaunch automatically as you edit the code
 to ensure the running code reflects the code changes as you make them.
