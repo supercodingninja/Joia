@@ -12,7 +12,7 @@ describe("a test", () => {
 });
 
 function createTimeoutPromise(milliseconds: number) {
-    let ret: Promise<Number> = new Promise(function(resolve, reject) {
+    let ret: Promise<number> = new Promise(function(resolve, reject) {
 
         setTimeout(() => {resolve(milliseconds)}, milliseconds);
     });
