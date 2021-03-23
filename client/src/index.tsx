@@ -3,12 +3,24 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
+import { StoreProvider } from "./store";
+
+// DO NOT REMOVE lines 8 through 16 "ReactDOM.render( );"  This is an updated and required function.
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <StoreProvider>
+            <App />
+        </StoreProvider>
+    </React.StrictMode>,
+    document.getElementById('root')
 );
+
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>,
+//   document.getElementById('root')
+// );
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
