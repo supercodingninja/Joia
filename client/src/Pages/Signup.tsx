@@ -15,7 +15,7 @@ function handleFormClear() {
 
 const Signup = () => {
 
-    // I need to set upan api folder...use AB'S starter code
+    // I need to set up an api folder...use AB'S starter code
 
     // Either
     // A. Set up ref objects (useRef hook) for each input
