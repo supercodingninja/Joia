@@ -1,4 +1,4 @@
-import configureApp from "../app";
+import app, {lateConfigureAppRoutes} from "../app";
 import express from "express";
 import request from "supertest";
 import http from "http";
@@ -21,7 +21,7 @@ function createTimeoutPromise(milliseconds: number) {
 
 describe("an app test", () => {
 
-    let app: express.Application = configureApp(false);
+    lateConfigureAppRoutes(app, false);
     let server: http.Server;
 
     

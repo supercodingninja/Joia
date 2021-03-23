@@ -9,8 +9,10 @@ import Profile from '../src/Pages/Profile'
 import Login from '../src/Pages/Login';
 import Signup from '../src/Pages/Signup'
 import Footer from "./components/shared/Footer/Footer";
+import { useAuthTokenStore}  from "./utils/auth";
 
 function App() {
+  useAuthTokenStore();
   return (
     <Router>
          <Navbar />
