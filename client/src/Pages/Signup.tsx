@@ -1,5 +1,4 @@
 // import React from 'react';
-import { Signup } from 'react-stormpath';
 
 import './Signup.css';
 // import {container } from '../LayoutComponents/Grid/Grid'
@@ -18,11 +17,53 @@ function handleFormClear() {
     // clear form function
 };
 
-function handleFormSubmit() {
-    // submit form function
-};
 
 const Signup = () => {
+
+    // I need to set upan api folder...use AB'S starter code
+
+    // Either
+    // A. Set up ref objects (useRef hook) for each input
+    // const firstNameRef = useRef();
+    // B. Create a state (useState hook) and update the state from each input
+    // const [newUser,setNewUser] = useState({
+    //     first: "",
+    //     last: "",
+    //     email: "",
+    //     phone: "",
+    //     password: ""
+    // });
+
+    async function api_register(userData: any) {
+        // pretend we do a post in here
+        return;
+    }
+
+    async function handleFormSubmit(event:any) {
+
+        // submit form function
+        event.preventDefault();
+
+        // Build `newUserData` from ref objects or state stores
+        const newUserData = {
+            firstName: "Bob",
+            lastName: "Thorton",
+            email: "whatever",
+            phone: "123456789",
+            password: "secret"
+        };
+
+        await api_register(newUserData);
+
+        // const first = firstNameRef.current.value;
+
+        // Pass `newUserData`
+        // await api.register( /* newUserData */ );
+
+        // login({ email, password });
+    
+    }
+
     return (
         <>
   
@@ -31,7 +72,7 @@ const Signup = () => {
             <p className="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
         
             <div className="container px-3">
-                <form className="border border-warning py-5 mx-3 px-5">
+                <form className="border border-warning py-5 mx-3 px-5" onSubmit= {handleFormSubmit}>
                     <h5 className="">First Name:</h5>
                     <Input onChange={handleInputOnchange} name="firstName" />
                     
@@ -47,7 +88,7 @@ const Signup = () => {
                     <h5>Password:</h5>
                     <Input onChange={handleInputOnchange} name="password" />
 
-                    <FormBtnOutline className="text-center" onClick={handleFormClear}>Cancel</FormBtnOutline>
+                    <a className="text-center" href="/">Cancel</a>
                 
                     <FormBtn className="text-center" onClick={handleFormSubmit}>Register</FormBtn>
                 </form>
@@ -56,45 +97,5 @@ const Signup = () => {
     )
 };
 
-
-Signup.post('/me', bodyParser.json(), stormpath.loginRequired, function (req, res) {
-    function writeError(message) {
-      res.status(400);
-      res.json({ message: message, status: 400 });
-      res.end();
-    }
-  
-    function saveAccount () {
-      req.user.givenName = req.body.givenName;
-      req.user.surname = req.body.surname;
-      req.user.email = req.body.email;
-  
-      req.user.save(function (err) {
-        if (err) {
-          return writeError(err.userMessage || err.message);
-        }
-        res.end();
-      });
-    }
-  
-    if (req.body.password) {
-      var application = req.app.get('stormpathApplication');
-  
-      application.authenticateAccount({
-        username: req.user.username,
-        password: req.body.existingPassword
-      }, function (err) {
-        if (err) {
-          return writeError('The existing password that you entered was incorrect.');
-        }
-  
-        req.user.password = req.body.password;
-  
-        saveAccount();
-      });
-    } else {
-      saveAccount();
-    }
-  });
 
 export default Signup;
