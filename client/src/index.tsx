@@ -5,7 +5,7 @@ import App from './App';
 
 import { StoreProvider } from "./store";
 
-// DO NOT REMOVE lines 8 through 16 "ReactDOM.render( );"  This is an updated and required function.
+// DO NOT REMOVE lines 8 through 16 "ReactDOM.render( );"  This is an updated and required function.  We want everything to have access to the store, including App so we are going to import into index.js and wrap it around everything. //
 ReactDOM.render(
     <React.StrictMode>
         <StoreProvider>
@@ -14,13 +14,6 @@ ReactDOM.render(
     </React.StrictMode>,
     document.getElementById('root')
 );
-
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>,
-//   document.getElementById('root')
-// );
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
