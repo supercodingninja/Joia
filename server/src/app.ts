@@ -6,6 +6,8 @@ export default function configureApp(production: boolean) : express.Application 
 
     const app:express.Application = express();
 
+    app.use( "/api", require("./routes/authentication") );
+
     app.use(express.urlencoded({ extended: true }));
     app.use(express.json());
     app.use(routes);
