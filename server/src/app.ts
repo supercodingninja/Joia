@@ -31,4 +31,17 @@ export default function configureApp(production: boolean) : express.Application 
     }));
 
     return app;
-}
+};
+
+
+// Including the useAuthTokenStore. //
+// Import the useAuthTokenStore hook. //
+import { useAuthTokenStore } from "./utils/auth";
+
+function App() {
+
+    // Use the hook to reauthenticate stored tokens.
+    useAuthTokenStore();
+
+    /** Rest of your App component code here */
+};
