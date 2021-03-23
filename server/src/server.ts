@@ -6,6 +6,13 @@ import configureApp from "./app";
 import passport from "express";
 
 
+const passport = require("passport");
+// Please help with assignig this necessary declaration. //
+app.use(passport.initialize());
+// Passport config
+passport.use( require("./config/jwtPassportStrategy") );
+
+
 let JWT_SECRET = "A random string, which is used to help generate unique keys. This can be anything you want, quotes, a short passage from a book, random letters."
 
 
