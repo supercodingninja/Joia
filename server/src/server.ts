@@ -3,6 +3,8 @@ import path from "path";
 import * as dotenv from "dotenv";
 import mongoose from "mongoose";
 import configureApp from "./app";
+import passport from "express";
+
 
 let JWT_SECRET = "A random string, which is used to help generate unique keys. This can be anything you want, quotes, a short passage from a book, random letters."
 
