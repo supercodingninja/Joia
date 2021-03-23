@@ -6,6 +6,9 @@ import configureApp from "./app";
 
 let JWT_SECRET = "A random string, which is used to help generate unique keys. This can be anything you want, quotes, a short passage from a book, random letters."
 
+
+require("dotenv").config();
+
 // this is the server's main entrypoint from the beginning
 // It is responsible for setting up the entire app environment
 // as it was launched, including mongo setup and calling .listen
