@@ -2,7 +2,7 @@
 
 import { Container } from '../LayoutComponents/Grid/Grid'
 import { Input, FormBtnOutline, FormBtn } from '../components/shared/Form/Form'
->>>>>>> 38dc9d061f1bfd722b4e5da51140c8a3c1b10bdd
+
 
 function handleInputOnchange() {
   // function
