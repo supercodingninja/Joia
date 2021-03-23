@@ -1,21 +1,16 @@
 // import React from 'react';
 
-import './Signup.css';
-// import {container } from '../LayoutComponents/Grid/Grid'
-import {
-  Input,
-  FormBtnOutline,
-  FormBtn,
-} from '../components/shared/Form/Form'
+import { Container } from '../LayoutComponents/Grid/Grid'
+import { Input, FormBtnOutline, FormBtn } from '../components/shared/Form/Form'
+>>>>>>> 38dc9d061f1bfd722b4e5da51140c8a3c1b10bdd
 
-
-function handleInputOnchange () {
-    // function
-};
+function handleInputOnchange() {
+  // function
+}
 
 function handleFormClear() {
-    // clear form function
-};
+  // clear form function
+}
 
 
 const Signup = () => {
@@ -98,4 +93,4 @@ const Signup = () => {
 };
 
 
-export default Signup;
+export default Signup

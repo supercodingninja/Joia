@@ -1,5 +1,4 @@
 /* eslint-disable jsx-a11y/alt-text */
-// import React from 'react';
 import { Row, Col, Container } from '../LayoutComponents/Grid/Grid'
 import {
   Input,
@@ -16,6 +15,12 @@ function handleInputChange() {
 function handleFormClear() {
   // clear form function
 }
+
+function handleFormSubmit() {
+  // submit form function
+  // include display aler
+  // clearform after submitting
+  }
 
 const ProductPost = () => {
   return (
@@ -78,7 +83,7 @@ const ProductPost = () => {
 
               <FormBtnOutline onClick={handleFormClear}>Cancel</FormBtnOutline>
 
-              <FormBtn onClick={handleFormClear}>Submit</FormBtn>
+              <FormBtn onClick={handleFormSubmit}>Submit</FormBtn>
             </form>
           </Col>
         </Row>

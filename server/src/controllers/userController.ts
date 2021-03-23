@@ -14,9 +14,10 @@ export async function create(req: express.Request, res: express.Response) {
     try {
         let newUser = await db.User.create(req.body);
 
-        console.log("req.body in createuser: ", req.body);
+        //These console.log's are spammy in the tests
+        //console.log("req.body in createuser: ", req.body);
 
-        console.log("newUser: ", newUser);
+        //console.log("newUser: ", newUser);
         res.json(newUser);
     } catch(err) {
         res.status(422).json(err);
