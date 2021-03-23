@@ -2,10 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-
 import { StoreProvider } from "./store";
 
-// DO NOT REMOVE lines 8 through 16 "ReactDOM.render( );"  This is an updated and required function.  We want everything to have access to the store, including App so we are going to import into index.js and wrap it around everything. //
+// DO NOT REMOVE lines 7 through 15 "ReactDOM.render( );"  This is an updated and required function.  We want everything to have access to the store, including App so we are going to import into index.js and wrap it around everything. //
 ReactDOM.render(
     <React.StrictMode>
         <StoreProvider>

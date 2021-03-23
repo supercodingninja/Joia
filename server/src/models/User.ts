@@ -1,7 +1,9 @@
-import mongoose from 'mongoose';
-const { Schema } = mongoose;
+import { Document, Model, model, Types, Schema, Query } from "mongoose"
 
-const UserSchema = new mongoose.Schema({
+// clever way of doing it found here:
+// https://medium.com/@agentwhs/complete-guide-for-typescript-for-mongoose-for-node-js-8cc0a7e470c1
+
+const UserSchema = new Schema<UserDocument, UserModel>({
   name: {
     type: String,
     required: true
@@ -29,6 +31,32 @@ const UserSchema = new mongoose.Schema({
   }
 });
 
-const User = mongoose.model("User", UserSchema);
+export interface User {
+  name: string;
+  email: string;
+  password: string;
+  phone: string;
+  location: string
+  date?: Date
+}
 
-export default User;
+export interface UserBaseDocument extends User, Document{
+}
+
+export interface UserDocument extends UserBaseDocument {
+  //add fields that may be populated later
+}
+
+export interface UserModel extends Model<UserDocument> {
+  extendedFunction(x: number): number
+}
+
+UserSchema.statics.extendedFunction = function(
+  this: Model<UserDocument>,
+  x: number
+) {
+  // I could use "this" to populate extended fields late
+  return x+1;
+}
+
+export default model<UserDocument, UserModel>("User", UserSchema);

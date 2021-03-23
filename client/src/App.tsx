@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-// import React from 'react';
+import React from 'react';
 import './App.css';
 import { Navbar } from './components/shared/Navbar/Navbar';
 import Home from '../src/Pages/Home';
@@ -9,16 +9,14 @@ import Profile from '../src/Pages/Profile'
 import Login from '../src/Pages/Login';
 import Signup from '../src/Pages/Signup'
 import Footer from "./components/shared/Footer/Footer";
+import { useAuthTokenStore}  from "./utils/auth";
 
 
 // Ref. https://jasonwatmore.com/post/2019/04/06/react-jwt-authentication-tutorial-example //
-import { history } from '@/_helpers';
-import { authenticationService } from '@/_services';
-import { PrivateRoute } from '@/_components';
-
-
-// Import the useAuthTokenStore hook. //  // WHERE IS THIS MODULE: WE NEED IT/NEED TO FIGURE OUT HOW TO MERGE IT. //
-import { useAuthTokenStore } from "./utils/auth";
+// NEED TO THINK ABOUT. //
+// import { history } from '@/_helpers';
+// import { authenticationService } from '@/_services';
+// import { PrivateRoute } from '@/_components';
 
 
 // Including the useAuthTokenStore. //
@@ -54,6 +52,7 @@ class App extends React.Component {
 
   render() {
     const { currentUser } = this.state;
+    
     return (
       <Router>
         <Navbar />
