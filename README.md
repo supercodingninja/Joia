@@ -60,6 +60,10 @@ I hope you enjoy this repository, and the application's link, given above and be
 
 ## Development Instructions
 from under the Joia directory:
+1.  Create a file named ".env" in the project root directory (probably "Joia")
+    adding the single line "JWT_SECRET=<any-string>" where <any-string> is,
+    well, ANY STRING,  I have "JWT_SECRET=123456789".  It doesn't really 
+    matter what the string is set to so long as it is set.
 1.  Ensure that you have all the node modules installed by typing
     - npm i
 2.  Launch your editor

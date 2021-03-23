@@ -2,10 +2,12 @@ import express from "express";
 import path from "path";
 import routes from "./routes/index";
 
-export default function configureApp(production: boolean) : express.Application {
 
-    const app:express.Application = express();
+const app:express.Application = express();
+export default app;
 
+
+export function lateConfigureAppRoutes(app:express.Application, production: boolean) {
     app.use(express.urlencoded({ extended: true }));
     app.use(express.json());
     app.use(routes);
