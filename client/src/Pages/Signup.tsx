@@ -1,9 +1,7 @@
 import { Container } from '../LayoutComponents/Grid/Grid'
 import { Input, FormBtnOutline, FormBtn } from '../components/shared/Form/Form'
 import React, { useRef } from 'react';
-import { isEmail } from "validator";
-
-// WE NEED something like `import AuthService from "../services/auth.service";` here.  Please see reference https://bezkoder.com/react-hooks-jwt-auth/  Thank you. //
+// WE NEED something like `import AuthService from "../services/auth.service";` and `import { isEmail } from "validator";` here.  Please see reference https://bezkoder.com/react-hooks-jwt-auth/  Thank you. //
 
 const Signup = () => {
     // Set up ref objects (useRef hook) for each input.  Use API Map Directory server/src/routes/api; and use Ref. https://i.stack.imgur.com/fYFze.png //
