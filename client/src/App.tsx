@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import React from 'react';
+import React, { useRef } from 'react';
 import './App.css';
 import { Navbar } from './components/shared/Navbar/Navbar';
 import Home from '../src/Pages/Home';
@@ -9,14 +9,7 @@ import Profile from '../src/Pages/Profile'
 import Login from '../src/Pages/Login';
 import Signup from '../src/Pages/Signup'
 import Footer from "./components/shared/Footer/Footer";
-import { useAuthTokenStore}  from "./utils/auth";
-
-
-// Ref. https://jasonwatmore.com/post/2019/04/06/react-jwt-authentication-tutorial-example //
-// NEED TO THINK ABOUT. //
-// import { history } from '@/_helpers';
-// import { authenticationService } from '@/_services';
-// import { PrivateRoute } from '@/_components';
+import { useAuthTokenStore, useLogin, useLogout}  from "./utils/auth";
 
 
 // Including the useAuthTokenStore. //
@@ -70,7 +63,6 @@ function App () {
 
             // Handle error responses from the API
             if( err.response && err.response.data ) console.log(err.response.data);
-
       }
     }
 
@@ -82,6 +74,14 @@ function App () {
             <button>Submit</button>
         </form>
     )
+  }
+
+  function LogoutButton() {
+
+    const logout = useLogout();
+
+    return <button onClick={logout}>Logout</button>
+
   }
 };
 
