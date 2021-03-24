@@ -7,6 +7,8 @@ import {useAuthTokenStore, useIsAuthenticated, useAuthenticatedUser, useLogin, u
 const Signup = () => {
     
     // Set up ref objects (useRef hook) for each input.  Use API Map Directory server/src/routes/api; and use Ref. https://i.stack.imgur.com/fYFze.png //
+
+    // see Class Video 22.3 and 23.1
     function RegistrationForm() {
         
         const CustomTextInput = () => {
@@ -102,7 +104,6 @@ const Signup = () => {
             </Container>
         ) 
     }
-
 
     // Function will clear all form input fields; and redirect user to Home.tsx Ref. https://stackoverflow.com/questions/14589193/clearing-my-form-inputs-after-submission; Ref. https://stackoverflow.com/questions/1655065/redirecting-to-a-relative-url-in-javascript; Ref. https://www.w3schools.com/jsref/met_form_submit.asp; and Ref. https://www.javatpoint.com/javascript-reset#:~:text=In%20JavaScript%2C%20the%20reset(),does%20not%20return%20any%20value. //
     function handleFormClear() {

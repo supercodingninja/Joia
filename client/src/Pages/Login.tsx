@@ -9,7 +9,16 @@ function handleInputOnchange () {
 
  // Unamious (3:1) Group Decision: funtion will clear all form input fields; and redirect user to Home.tsx //
  function handleFormClear() {
-    // ... //
+
+    let clearForm = document.getElementsByName('signupForm')[0];
+
+    let userCancels = document.getElementById('goHome').submit();
+
+    clearForm.submit();
+    
+    clearForm.reset(userCancels);  // Resets all input fields. //
+    
+    return false;  // This will prevent the page from refreshing. //
 };
 
 function unusedHandleFormSubmit() {
