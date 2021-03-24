@@ -1,14 +1,11 @@
-import React, { useRef } from 'react';
-import { Container } from '../LayoutComponents/Grid/Grid'
-import { Input, FormBtnOutline, FormBtn } from '../components/shared/Form/Form'
-import { useAuthTokenStore, useIsAuthenticated, useAuthenticatedUser, useLogin, useLogout } from '../utils/auth'
+import React, {useRef} from 'react';
+import {Container} from '../LayoutComponents/Grid/Grid'
+import {Input, FormBtnOutline, FormBtn} from '../components/shared/Form/Form'
+import {useAuthTokenStore, useIsAuthenticated, useAuthenticatedUser, useLogin, useLogout} from '../utils/auth'
 
+// Ref. https://github.com/supercodingninja/mern-jwt-auth-setup#prerequisites forked from ac524/mern-jwt-auth-setup //
 const Signup = () => {
-    // Unamious (3:1) Group Decision: function will clear all form input fields; and redirect user to Home.tsx Ref. https://stackoverflow.com/questions/14589193/clearing-my-form-inputs-after-submission; and Ref. ``  //
-    function handleFormClear() {
-        // ... //
-    };
-
+    
     // Set up ref objects (useRef hook) for each input.  Use API Map Directory server/src/routes/api; and use Ref. https://i.stack.imgur.com/fYFze.png //
     function RegistrationForm() {
         
@@ -36,7 +33,7 @@ const Signup = () => {
 
         }
     
-        // This is the Submit Form Function, where an alert will display, 'Welcome to <i>Joia</i>! Your profile has been generated!'  Once the user has select 'Continue' (title of modal button), this will clear all form inputs; and redirect user to Profile.tsx //
+        // This is the Submit Form Function, where an alert will display, 'Welcome to <i>Joia</i>! Your profile has been generated!'  Once the user has select 'Continue' (title of modal button), this will clear all form inputs; and redirect user to Profile.tsx  Ref. https://stackoverflow.com/questions/503093/how-do-i-redirect-to-another-webpage/506004#506004 //
         let handleFormSubmit = async e => {
             e.preventDefault();
     
@@ -46,10 +43,10 @@ const Signup = () => {
             try {
     
                 // Register the user. //
-                await api.register({ email, password });
+                await api.register({email, password});
     
                 // User has been successfully registered, now log them in with the same information. //
-                await login({ email, password });
+                await login({email, password});
     
                 
                 // USE MODAL, HERE: User has been successfully registered, logged in and added to state. Additional actions will be performed, here, to redirect Profile.tsx, while transferring the data, also.  Use const handleInputOnchange; here. //
@@ -58,11 +55,12 @@ const Signup = () => {
             } catch(err) {
     
                  // Handle error responses from the API. This will include
-                 if( err.response && err.response.data ) console.log(err.response.data);
+                 if(err.response && err.response.data) console.log(err.response.data);
                  
             }
         }
     
+        // ... //
         return (
             <Container>
                 <h1 className='text-center py-5'>
@@ -74,25 +72,25 @@ const Signup = () => {
                 </p>
     
                 <div className='container px-3 mb-5 pb-5'>
-                    <form className='border border-warning py-5 mx-3 px-5'>
+                    <form name='signupForm' className='border border-warning py-5 mx-3 px-5'>
                         
                         <h5>First Name:</h5>
-                        <Input type='text' ref={textInput} onChange={handleInputOnchange} name='firstName' />
+                        <Input type='button' value='Submit' ref={textInput} onChange={handleInputOnchange} name='firstName'/>
     
                         <h5>Last Name:</h5>
-                        <Input type='text' ref={textInput} onChange={handleInputOnchange} name='lastName' />
+                        <Input type='button' value='Submit' ref={textInput} onChange={handleInputOnchange} name='lastName'/>
     
                         <h5>Email:</h5>
-                        <Input type='text' ref={textInput} onChange={handleInputOnchange} name='email' />
+                        <Input type='button' value='Submit' ref={textInput} onChange={handleInputOnchange} name='email'/>
     
                         <h5>Phone:</h5>
-                        <Input type='text' ref={textInput} onChange={handleInputOnchange} name='phone' />
+                        <Input type='button' value='Submit' ref={textInput} onChange={handleInputOnchange} name='phone'/>
     
                         <h5>Password:</h5>
-                        <Input type='text' ref={textInput} onChange={handleInputOnchange} name='password' />
+                        <Input type='button' value='Submit' ref={textInput} onChange={handleInputOnchange} name='password'/>
 
                         {/* Unamious Group Decision (3:1), this will clear all form inputs; and redirect user to Home.tsx */}
-                        <FormBtnOutline onClick={handleFormClear}>
+                        <FormBtnOutline id='goHome' onClick={handleFormClear}>
                             Cancel
                         </FormBtnOutline>
     
@@ -105,7 +103,34 @@ const Signup = () => {
         ) 
     }
 
-    handleFormClear();
+
+    // Function will clear all form input fields; and redirect user to Home.tsx Ref. https://stackoverflow.com/questions/14589193/clearing-my-form-inputs-after-submission; Ref. https://stackoverflow.com/questions/1655065/redirecting-to-a-relative-url-in-javascript; Ref. https://www.w3schools.com/jsref/met_form_submit.asp; and Ref. https://www.javatpoint.com/javascript-reset#:~:text=In%20JavaScript%2C%20the%20reset(),does%20not%20return%20any%20value. //
+    function handleFormClear() {
+
+        let clearForm = document.getElementsByName('signupForm')[0];
+
+        let userCancels = document.getElementById('goHome').submit();
+
+        clearForm.submit();
+        
+        clearForm.reset(userCancels);  // Resets all input fields. //
+        
+        return false;  // This will prevent the page from refreshing. //
+    };
+
+    if (handleFormClear) {
+        // Redirects user to Home.tsx //
+        function redirectToHome() {
+
+            // Redirects user to Home.tsx  "window.location.replace(...) is better than using window.location.href, because replace() does not keep the originating page in the session history..." - see Ref. https://stackoverflow.com/questions/503093/how-do-i-redirect-to-another-webpage/506004#506004 //
+        
+            window.location.replace('/');
+        }
+
+        redirectToHome();
+
+    } // Continue executing application.  Omitting the else is like leaving an empty else statement; however, this approach prevents possible error of accidently providing a value the else condition.  Ref. https://stackoverflow.com/questions/6397250/if-else-statement-how-to-say-donothing-or-continue // 
+
     RegistrationForm();
 };
 
