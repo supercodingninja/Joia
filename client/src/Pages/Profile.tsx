@@ -2,11 +2,7 @@
 
 /* eslint-disable jsx-a11y/alt-text */
 import { Row, Col, Container } from '../LayoutComponents/Grid/Grid'
-import {
-  Input,
-  FormBtn,
-  FormBtnOutline,
-} from '../components/shared/Form/Form'
+import { Input, FormBtn, FormBtnOutline } from '../components/shared/Form/Form'
 import './Profile';
 
 function handleInputChange() {
@@ -14,9 +10,10 @@ function handleInputChange() {
   // setFormObject({...formObject, [name]: value})
 }
 
+// Unamious (3:1) Group Decision: funtion will clear all form input fields; and redirect user to Home.tsx //
 function handleFormClear() {
-  // clear form function
-}
+  // ... //
+};
 
 function handleFormSubmit() {
 // submit form function
