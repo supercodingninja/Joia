@@ -1,36 +1,25 @@
-import { Container } from "../LayoutComponents/Grid/Grid"
-import { Input, FormBtnOutline, FormBtn } from '../components/shared/Form/Form'
-import { useRef } from "react";
-import { useLogin } from "../utils/auth";
-
-function handleInputOnchange () {
-     // Redirects User To Profile.tsx //
-};
-
- // Unamious (3:1) Group Decision: funtion will clear all form input fields; and redirect user to Home.tsx //
- function handleFormClear() {
-
-    let clearForm = document.getElementsByName('signupForm')[0];
-
-    let userCancels = document.getElementById('goHome').submit();
-
-    clearForm.submit();
-    
-    clearForm.reset(userCancels);  // Resets all input fields. //
-    
-    return false;  // This will prevent the page from refreshing. //
-};
+import React, {useState} from 'react';
+import {Container} from '../LayoutComponents/Grid/Grid'
+import {Input, FormBtnOutline, FormBtn} from '../components/shared/Form/Form'
+import {useAuthTokenStore, useIsAuthenticated, useAuthenticatedUser, useLogin, useLogout} from '../utils/auth';
+import API from '../utils/api';
+import { useHistory } from "react-router-dom";
+//import { useLogin } from "../utils/auth";
 
 function unusedHandleFormSubmit() {
     // Submit form function. //
 };
 
 const Login = () => {
-    const emailRef = useRef<HTMLInputElement>();
-    console.log("emailRef = ", emailRef);
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
     
-    const passwordRef = useRef<HTMLInputElement>();
-    console.log("passwordRef = ", passwordRef);
+    const history = useHistory();
+
+    function handleFormClear(e) {
+        e.preventDefault();
+        history.push("/");
+    };  
 
     // Get the helper login function from the `useLogin` hook.
     const login = useLogin();
@@ -41,29 +30,16 @@ const Login = () => {
         e.preventDefault();
         console.log("you submitted the form so handleSubmit fired off.");
 
-        const email = emailRef.current.value;
-        const password = passwordRef.current.value;
+     
 
         try {
 
             await login({ email, password });
 
-            // User has been successfully logged in and added to state. Perform any additional actions you need here such as redirecting to a new page.
-            // Frederick, where do we go after the login page?
-            // We worked on the flow of the site, but I forget if we ever actually arrived at the decision.
-
-
         } catch(err) {
              // Handle error responses from the API
              if( err.response && err.response.data ) console.log(err.response.data);
         }
-    }
-
-    const handleSubmitButtonClick = async () => {
-        // Note where this is used in the form inside a FormBtn's onClick handler.
-        // It is NOT a form submit event because that is registered as the form element's onSubmit handler
-        // hence there is no incoming event and it is impossible to do a .preventDefault which is okay here because it is inaplicable.
-        console.log("you clicked on the submit button so handleSubmitButtonClick fired off.");
     }
 
     return (
@@ -75,14 +51,14 @@ const Login = () => {
             <div className="container px-3 pb-5">
                 <form className="border border-warning py-5 mx-3 my-5 px-5" onSubmit={handleSubmit}>
                     <h5>Email:</h5>
-                    <Input ref={emailRef} onChange={handleInputOnchange} placeHolder="enter your email" name="email" />
+                    <Input type='text' onChange={(e)=>setEmail(e.target.value)} name='email'/>
                     
                     <h5>Password:</h5>
-                    <Input ref={passwordRef} onChange={handleInputOnchange} placeholder="qwerty" name="password" />
+                    <Input type='text' onChange={(e)=>setPassword(e.target.value)} name='password'/>
 
                     <FormBtnOutline onClick={handleFormClear}>Cancel</FormBtnOutline>
                 
-                    <FormBtn onClick={handleSubmitButtonClick}>Register</FormBtn>
+                    <FormBtn>Login</FormBtn>
                 </form>
             </div>
         </Container>

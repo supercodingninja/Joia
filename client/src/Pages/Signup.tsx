@@ -20,8 +20,6 @@ const Signup = () => {
     const [phone, setPhone] = useState('');
     const [password, setPassword] = useState('');
 
-    // console.log(firstNameRef);
-
     function handleFormClear(e) {
         e.preventDefault();
         history.push("/");
