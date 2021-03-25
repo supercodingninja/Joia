@@ -4,11 +4,6 @@ import {Input, FormBtnOutline, FormBtn} from '../components/shared/Form/Form'
 import {useAuthTokenStore, useIsAuthenticated, useAuthenticatedUser, useLogin, useLogout} from '../utils/auth';
 import API from '../utils/api';
 import { useHistory } from "react-router-dom";
-//import { useLogin } from "../utils/auth";
-
-function unusedHandleFormSubmit() {
-    // Submit form function. //
-};
 
 const Login = () => {
     const [email, setEmail] = useState('');

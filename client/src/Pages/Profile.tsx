@@ -25,6 +25,9 @@ const Profile = () => {
   return (
     <Container py="-5">
       <div className="container">
+        <h1>This page sucks.  The user registered with much of this information.
+          Why support so many changes?  It should contain mostly uneditable text that just reflects what was already entered
+        </h1>
         <h1 className="text-center"> Profile </h1>
         <Row py="-5">
           <Col size="md-4 sm-12">
