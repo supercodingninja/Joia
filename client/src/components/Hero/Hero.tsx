@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import { ButtonPrimary } from '../shared/ButtonPrimary/ButtonPrimary'
 import './Hero.css'
@@ -12,9 +13,12 @@ export const Hero = () => {
           <h1 className="text-center"> The largest community</h1>
           <h1 className="text-center"> of art enthusiasts</h1>
 
-          <div className="mx-auto mt-4">
-            <ButtonPrimary text={'Join Today'} />
-          </div>
+          <Link to="/signup" className="mx-auto mt-4" >
+            <div>
+              <ButtonPrimary text={'Join Today'} />
+            </div>
+          </Link>
+
         </div>
       </div>
 

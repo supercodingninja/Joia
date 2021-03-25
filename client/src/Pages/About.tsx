@@ -13,7 +13,11 @@ const About = () => {
           </p>
 
           <p>
-            We're a smooth, groove, "Leave-the-door-open" (artwise), kind of group: where you, "The Artist," can Promote Your Art by Making an Amazing Online Portfolio (using our Time-Saving Website Builder). We make it easy for you to Curate Your Content, Ace Your Artist Statement, and paint your About Me Page how you see it!
+            We're a smooth, groove, "Leave-the-door-open" (artwise), kind of group: 
+            where you, "The Artist," can Promote Your Art by Making an Amazing Online 
+            Portfolio (using our Time-Saving Website Builder). We make it easy 
+            for you to Curate Your Content, Ace Your Artist Statement, and paint 
+             your About Me Page how you see it!
           </p>
 
           <p>
