@@ -19,6 +19,7 @@ const Signup = () => {
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
     const [password, setPassword] = useState('');
+    const [emailAlreadyTaken, setEmailAlreadyTaken] = useState(false);
 
     function handleFormClear(e) {
         e.preventDefault();
@@ -46,6 +47,8 @@ const Signup = () => {
             // User has been successfully registered, now log them in with the same information. //
             await login({email, password});
 
+            history.push('/account');
+
             
             // USE MODAL, HERE: User has been successfully registered, logged in and added to state. Additional actions will be performed, here, to redirect Profile.tsx, while transferring the data, also.  Use const handleInputOnchange; here. //
             
@@ -53,7 +56,14 @@ const Signup = () => {
         } catch(err) {
 
              // Handle error responses from the API. This will include
-             if(err.response && err.response.data) console.log(err.response.data);
+             if(err.response && err.response.data) {
+                 console.log(err.response.data);
+
+                 if(err.response.data.email && err.response.data.email === "Email already exists.")
+                 {
+                    setEmailAlreadyTaken(true);
+                 }
+             }
              
         }
     }
@@ -78,6 +88,7 @@ const Signup = () => {
                         <Input type='text' onChange={(e)=>setLastName(e.target.value)} name='lastName'/>
     
                         <h5>Email:</h5>
+                        {emailAlreadyTaken && (<h1 style={{color:"red"}}>Try a different email.  That one is taken</h1>)}
                         <Input type='text' onChange={(e)=>setEmail(e.target.value)} name='email'/>
     
                         <h5>Phone:</h5>
