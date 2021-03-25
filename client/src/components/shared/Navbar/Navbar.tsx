@@ -53,18 +53,22 @@ export const Navbar = () => {
             </li>
 
             <li className="nav-item">
+              <a href="mailto: joia@live.com" className="nav-links" onClick={closeMobileMenu}>Contact Us</a>
+            </li>
+
+            <li className="nav-item">
               <Link to="/post" className="nav-links" onClick={closeMobileMenu}>
                 Sell
               </Link>
             </li>
 
-            
+
             <li className="nav-item">
               <Link to="/account" className="nav-links" onClick={closeMobileMenu}>
                 Account
               </Link>
             </li>
- 
+
 
             <li>
               <Link to="/login" className="nav-links">
@@ -74,7 +78,7 @@ export const Navbar = () => {
 
             <li>
               <Link to="/signup" className="nav-links">
-              <ButtonPrimary onClick={closeMobileMenu} text="Register" />
+                <ButtonPrimary onClick={closeMobileMenu} text="Register" />
               </Link>
             </li>
           </ul>
