@@ -1,7 +1,10 @@
 import validatorFactory from "./validatorFactory";
 
 let registerValidator = validatorFactory({
-  email: { type: "email" },
+  location: { type: 'string' },
+  name: { type: 'string' },
+  email: { type: 'string' },
+  phone: { type: "string", empty: false },
   password: { type: "string", empty: false }
 });
 

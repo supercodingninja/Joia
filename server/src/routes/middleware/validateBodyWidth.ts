@@ -14,6 +14,8 @@ export default function validateBodyWith(validator: any) {
     // Body data valid! Continue to the next step...
     if( true === result ) return next();
 
+    console.log(result);
+
     // Validation failed! Send and error response.
     res.status(400).json( mapValidationErrors(result) );
    }

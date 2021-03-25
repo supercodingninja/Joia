@@ -31,8 +31,8 @@ function App () {
           <Route exact path="/about" component={About} />
           <Route exact path="/post" component={ProductPost} />
           <Route exact path="/account" component={Profile} />
-          <Route exact path="/Login" component={Login} />
-          <Route exact path="/Signup" component={Signup} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/signup" component={Signup} />
       </Switch>
 
       <Footer />      

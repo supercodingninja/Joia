@@ -4,8 +4,11 @@ import routes from "./routes/index";
 
 
 const app:express.Application = express();
-export default app;
 
+// Define middleware here
+// app.use(express.urlencoded({ extended: true }));
+// app.use(express.json());
+export default app;
 
 export function lateConfigureAppRoutes(app:express.Application, production: boolean) {
     app.use(express.urlencoded({ extended: true }));
