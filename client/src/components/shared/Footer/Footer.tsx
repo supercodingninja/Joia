@@ -24,7 +24,7 @@ const Footer = () => {
 
             </div>
 
-            <hr className="border-warning"/>
+            <hr className="border-warning" />
 
             <div className="text-center p-3">
                 © 2020 Copyright: Joia Group

@@ -62,13 +62,11 @@ export const Navbar = () => {
               </Link>
             </li>
 
-
             <li className="nav-item">
               <Link to="/account" className="nav-links" onClick={closeMobileMenu}>
                 Account
               </Link>
             </li>
-
 
             <li>
               <Link to="/login" className="nav-links">
