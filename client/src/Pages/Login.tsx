@@ -1,22 +1,28 @@
 import { Container } from "../LayoutComponents/Grid/Grid"
-import {
-    Input,
-    FormBtnOutline,
-    FormBtn,
-} from '../components/shared/Form/Form'
+import { Input, FormBtnOutline, FormBtn } from '../components/shared/Form/Form'
 import { useRef } from "react";
 import { useLogin } from "../utils/auth";
 
 function handleInputOnchange () {
-    // function
+     // Redirects User To Profile.tsx //
 };
 
-function handleFormClear() {
-    // clear form function
+ // Unamious (3:1) Group Decision: funtion will clear all form input fields; and redirect user to Home.tsx //
+ function handleFormClear() {
+
+    let clearForm = document.getElementsByName('signupForm')[0];
+
+    let userCancels = document.getElementById('goHome').submit();
+
+    clearForm.submit();
+    
+    clearForm.reset(userCancels);  // Resets all input fields. //
+    
+    return false;  // This will prevent the page from refreshing. //
 };
 
 function unusedHandleFormSubmit() {
-    // submit form function
+    // Submit form function. //
 };
 
 const Login = () => {
@@ -43,7 +49,7 @@ const Login = () => {
             await login({ email, password });
 
             // User has been successfully logged in and added to state. Perform any additional actions you need here such as redirecting to a new page.
-            // Fredrick, where do we go after the login page?
+            // Frederick, where do we go after the login page?
             // We worked on the flow of the site, but I forget if we ever actually arrived at the decision.
 
 

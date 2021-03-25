@@ -4,8 +4,11 @@ import routes from "./routes/index";
 
 
 const app:express.Application = express();
-export default app;
 
+// Define middleware here
+// app.use(express.urlencoded({ extended: true }));
+// app.use(express.json());
+export default app;
 
 export function lateConfigureAppRoutes(app:express.Application, production: boolean) {
     app.use(express.urlencoded({ extended: true }));
@@ -31,4 +34,17 @@ export function lateConfigureAppRoutes(app:express.Application, production: bool
     }));
 
     return app;
-}
+};
+
+
+// // Including the useAuthTokenStore. //
+// // Import the useAuthTokenStore hook. //
+// import { useAuthTokenStore } from "./utils/auth";
+
+// function App() {
+
+//     // Use the hook to reauthenticate stored tokens.
+//     useAuthTokenStore();
+
+//     /** Rest of your App component code here */
+// };
