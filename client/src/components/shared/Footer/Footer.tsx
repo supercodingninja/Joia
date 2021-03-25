@@ -10,24 +10,6 @@ const Footer = () => {
 
                 <ul className="list-unstyled d-flex flex-row">
 
-                    <li className="nav-item p-2">
-                        <Link to="/" className="nav-links">
-                            Home
-                        </Link>
-                    </li>
-
-                    <li className="nav-item p-2">
-                        <Link to="/" className="nav-links">
-                            Contact Us
-                        </Link>
-                    </li>
-
-                    <li className="nav-item p-2">
-                        <Link to="/about" className="nav-links">
-                            Our Team
-                        </Link>
-                    </li>
-
                     <li>
                         <Link to="/" className="navbar-logo">
                             <img
@@ -38,26 +20,11 @@ const Footer = () => {
                         </Link>
                     </li>
 
-                    <li className="nav-item p-2">
-                        <Link to="/about" className="nav-links">
-                            About
-                        </Link>
-                    </li>
-                    <li className="nav-item p-2">
-                        <Link to="/" className="nav-links">
-                            Search
-                        </Link>
-                    </li>
-                    <li className="nav-item p-2">
-                        <Link to="/post" className="nav-links">
-                            Sell
-                        </Link>
-                    </li>
                 </ul>
 
             </div>
 
-            <hr className="border-warning"/>
+            <hr className="border-warning" />
 
             <div className="text-center p-3">
                 © 2020 Copyright: Joia Group

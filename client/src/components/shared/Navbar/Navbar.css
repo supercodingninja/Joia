@@ -56,10 +56,6 @@
   color: #000000;
 }
 
-.fa- {
-  color: #000000;
-}
-
 .nav-links-mobile {
   display: none;
 }
@@ -123,7 +119,7 @@
   }
 
   .fa-times {
-    color: #fff;
+    color: #000000;
     font-size: 2rem;
   }
 
