@@ -23,15 +23,19 @@ const ArtworkSchema = new mongoose.Schema({
   },
   price: {
     type: String,
-    default: 'Painting'
+    default: '$100'
   },
   location: {
     type: String,
-    default: 'Painting'
+    default: 'Heaven'
   },
   date: {
     type: Date,
     default: Date.now
+  },
+  imagePath: {
+    type: String,
+    default: "https://www.kindpng.com/picc/m/492-4929040_mystery-clipart-mystery-prize-question-mark-clip-art.png"
   }
 });
 

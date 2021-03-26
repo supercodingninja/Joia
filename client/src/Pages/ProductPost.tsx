@@ -5,7 +5,7 @@ import {
   TextArea,
   FormBtn,
   FormBtnOutline,
-} from '../components/shared/Form/Form'
+} from '../components/Form/Form'
 
 function handleInputChange() {
   // const { name, value } = event.target;

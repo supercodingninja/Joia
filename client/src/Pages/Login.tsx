@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Container} from '../LayoutComponents/Grid/Grid'
-import {Input, FormBtnOutline, FormBtn} from '../components/shared/Form/Form'
+import {Input, FormBtnOutline, FormBtn} from '../components/Form/Form'
 import {useAuthTokenStore, useIsAuthenticated, useAuthenticatedUser, useLogin, useLogout} from '../utils/auth';
 import API from '../utils/api';
 import { useHistory } from "react-router-dom";
@@ -14,7 +14,11 @@ const Login = () => {
     function handleFormClear(e) {
         e.preventDefault();
         history.push("/");
-    };  
+    };
+
+    function handleOnClickByDoingNothing() {
+
+    }
 
     // Get the helper login function from the `useLogin` hook.
     const login = useLogin();
@@ -51,9 +55,9 @@ const Login = () => {
                     <h5>Password:</h5>
                     <Input type='text' onChange={(e)=>setPassword(e.target.value)} name='password'/>
 
-                    <FormBtnOutline onClick={handleFormClear}>Cancel</FormBtnOutline>
+                    <FormBtnOutline onClick={handleOnClickByDoingNothing}>Cancel</FormBtnOutline>
                 
-                    <FormBtn>Login</FormBtn>
+                    <FormBtn onClick={handleOnClickByDoingNothing}>Login</FormBtn>
                 </form>
             </div>
         </Container>

@@ -2,7 +2,7 @@
 
 /* eslint-disable jsx-a11y/alt-text */
 import { Row, Col, Container } from '../LayoutComponents/Grid/Grid'
-import { Input, FormBtn, FormBtnOutline } from '../components/shared/Form/Form'
+import { Input, FormBtn, FormBtnOutline } from '../components/Form/Form'
 import './Profile';
 
 function handleInputChange() {

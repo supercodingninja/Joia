@@ -2,7 +2,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import { ButtonPrimary } from '../shared/ButtonPrimary/ButtonPrimary'
+import { ButtonPrimary } from '../ButtonPrimary/ButtonPrimary'
 import './Hero.css'
 
 export const Hero = () => {
