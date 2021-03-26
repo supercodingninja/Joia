@@ -12,7 +12,7 @@ function handleInputChange() {
 
 function handleFormClear(e) {
   e.preventDefault();
-  history.push('/');
+  // history.push('/');
 };
 
 function handleFormSubmit() {
