@@ -5,7 +5,6 @@ import {useAuthTokenStore, useIsAuthenticated, useAuthenticatedUser, useLogin, u
 import API from '../utils/api';
 import { useHistory } from 'react-router-dom'
 
-
 const Signup = () => {
 
     // Get the helper login function from the `useLogin` hook. //
