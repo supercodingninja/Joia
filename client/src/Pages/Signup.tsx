@@ -23,15 +23,11 @@ const Signup = () => {
 
     function handleFormClear(e) {
         e.preventDefault();
-        history.push("/");
+        history.push('/');
     };
 
     const handleFormSubmit = async ( e ) => {
         e.preventDefault();
-
-        // const email = emailRef.current.value;
-        // const password = passwordRef.current.value;
-    
 
         try {
 
@@ -47,10 +43,9 @@ const Signup = () => {
             // User has been successfully registered, now log them in with the same information. //
             await login({email, password});
 
-            history.push('/account');
-
             
-            // USE MODAL, HERE: User has been successfully registered, logged in and added to state. Additional actions will be performed, here, to redirect Profile.tsx, while transferring the data, also.  Use const handleInputOnchange; here. //
+            // USE MODAL, HERE: User has been successfully registered, logged in and added to state. Additional actions will be performed, here, to redirect Profile.tsx, while transferring the data, also.  Use history.push('./account');; here. //
+
             
 
         } catch(err) {
@@ -59,13 +54,15 @@ const Signup = () => {
              if(err.response && err.response.data) {
                  console.log(err.response.data);
 
-                 if(err.response.data.email && err.response.data.email === "Email already exists.")
+                 if(err.response.data.email && err.response.data.email === 'Email already exists.')
                  {
                     setEmailAlreadyTaken(true);
                  }
              }
              
         }
+
+        history.push('./account');
     }
 
     return (
@@ -75,7 +72,7 @@ const Signup = () => {
                 </h1>
     
                 <p className='text-center mt-2 mb-5'>
-                    <i>'We're the gem for your Jewel, or Jim!'</i>
+                    <i>Joia</i> is your jewel eCommerce website for local art, where you can find your gem for your Jewel or Jim!
                 </p>
     
                 <div className='container px-3 mb-5 pb-5'>
@@ -88,7 +85,7 @@ const Signup = () => {
                         <Input type='text' onChange={(e)=>setLastName(e.target.value)} name='lastName'/>
     
                         <h5>Email:</h5>
-                        {emailAlreadyTaken && (<h1 style={{color:"red"}}>Try a different email.  That one is taken</h1>)}
+                        {emailAlreadyTaken && (<h1 style={{color:'red'}}>Try a different email.  That one is taken</h1>)}
                         <Input type='text' onChange={(e)=>setEmail(e.target.value)} name='email'/>
     
                         <h5>Phone:</h5>
