@@ -10,9 +10,9 @@ function handleInputChange() {
   // setFormObject({...formObject, [name]: value})
 }
 
-// Unamious (3:1) Group Decision: funtion will clear all form input fields; and redirect user to Home.tsx //
-function handleFormClear() {
-  // ... //
+function handleFormClear(e) {
+  e.preventDefault();
+  history.push('/');
 };
 
 function handleFormSubmit() {
@@ -25,7 +25,7 @@ const Profile = () => {
   return (
     <Container py="-5">
       <div className="container">
-        <h1>This Page will be re-done, per group decision [Frederick will take care of it]
+        <h1>This Page will be re-done, per group decision [Frederick will take care of it.]
         </h1>
         <h1 className="text-center"> Profile </h1>
         <Row py="-5">
