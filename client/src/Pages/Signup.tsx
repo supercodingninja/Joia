@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Container} from '../LayoutComponents/Grid/Grid'
-import {Input, FormBtnOutline, FormBtn} from '../components/shared/Form/Form'
+import {Input, FormBtnOutline, FormBtn} from '../components/Form/Form'
 import {useAuthTokenStore, useIsAuthenticated, useAuthenticatedUser, useLogin, useLogout} from '../utils/auth';
 import API from '../utils/api';
 import { useHistory } from 'react-router-dom'
@@ -20,6 +20,10 @@ const Signup = () => {
     const [phone, setPhone] = useState('');
     const [password, setPassword] = useState('');
     const [emailAlreadyTaken, setEmailAlreadyTaken] = useState(false);
+
+    function handleOnClickByDoingNothing() {
+
+    }
 
     function handleFormClear(e) {
         e.preventDefault();
@@ -97,11 +101,11 @@ const Signup = () => {
                         <h5>Location:</h5>
                         <Input type='text' onChange={(e)=>setLocation(e.target.value)} name='location'/>
 
-                        <FormBtnOutline onClick={handleFormClear}>
+                        <FormBtnOutline onClick={handleOnClickByDoingNothing}>
                             Cancel
                         </FormBtnOutline>
     
-                        <FormBtn>
+                        <FormBtn onClick={handleOnClickByDoingNothing}>
                             Register
                         </FormBtn>
                     </form>

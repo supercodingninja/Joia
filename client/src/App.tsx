@@ -1,15 +1,16 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import React, { useRef } from 'react';
 import './App.css';
-import { Navbar } from './components/shared/Navbar/Navbar';
+import { Navbar } from './components/Navbar/Navbar';
 import Home from '../src/Pages/Home';
 import About from '../src/Pages/About'
 import ProductPost from './Pages/ProductPost'
 import Profile from '../src/Pages/Profile'
 import Login from '../src/Pages/Login';
 import Signup from '../src/Pages/Signup'
-import Footer from "./components/shared/Footer/Footer";
+import Footer from "./components/Footer/Footer";
 import { useAuthTokenStore, useLogin, useLogout}  from "./utils/auth";
+import AllArtworks from "./Pages/AllArtworks";
 
 
 // Including the useAuthTokenStore. //
@@ -31,6 +32,7 @@ function App () {
           <Route exact path="/about" component={About} />
           <Route exact path="/post" component={ProductPost} />
           <Route exact path="/account" component={Profile} />
+          <Route exact path="/allartworks" component={AllArtworks} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={Signup} />
       </Switch>
