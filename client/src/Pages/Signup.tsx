@@ -5,6 +5,7 @@ import {Input, FormBtnOutline, FormBtn} from '../components/shared/Form/Form'
 import {useLogin} from '../utils/auth';
 import API from '../utils/api';
 import { useHistory } from 'react-router-dom'
+import '../assets/mission-script-cufonfonts-webfont/style.css'
 
 const Signup = () => {
     // HOW DO WE USE THESE. //
@@ -65,16 +66,20 @@ const Signup = () => {
 
     return (
         <Container>
-                <h1 className='text-center py-2'>
+                <h1 className='text-center py-2' style={{font:'Milkshake'}}>
                     Discover <i><b>Joia</b></i>
                 </h1>
     
-                <p className='text-center mt-2 mb-2'>
-                    <i>Joia</i> is your jewel eCommerce website for local art, where you can find your gem for your Jewel or Jim!
+                <p className='text-center mt-2 mb-2' style={{font:'Mission Script'}}>
+                    <i>Joia</i> is your jewel eCommerce website for local art,
+                </p>
+                
+                <p className='text-center mt-2 mb-2' style={{font:'Mission Script'}}>
+                    Where you can find your gem for your Jewel or Jim!
                 </p>
     
                 <div className='container px-1 mb-1 pb-5'>
-                    <form onSubmit={handleFormSubmit} name='signupForm' className='py-2 mx-1 px-4'>
+                    <form onSubmit={handleFormSubmit} name='signupForm' className='py-2 mx-1 px-4' style={{width:'auto'}}>
                         
                         <div className='row align-items-center justify-content-center'>
                             <h5>First Name:</h5>
@@ -93,28 +98,28 @@ const Signup = () => {
                         <div className='row align-items-center justify-content-center'>
                             <h5>Email:</h5>
                             {emailAlreadyTaken && (<h1 style={{color:'red'}}>Try a different email.  That one is taken</h1>)}
-                            &nbsp;&nbsp;&nbsp;
-                            <Input type='text' onChange={(e)=>setEmail(e.target.value)} name='email'/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <Input type='text' onChange={(e)=>setEmail(e.target.value)} name='email' style={{width:'auto'}}/>
                         </div>
 
 
                         <div className='row align-items-center justify-content-center'>
                             <h5>Phone:</h5>
-                            &nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <Input type='text' onChange={(e)=>setPhone(e.target.value)} name='phone'/>
                         </div>
 
 
                         <div className='row align-items-center justify-content-center'>
                             <h5>Password:</h5>
-                            &nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <Input type='text' onChange={(e)=>setPassword(e.target.value)} name='password'/>
                         </div>
                             
 
                         <div className='row align-items-center justify-content-center'>   
                             <h5>Location:</h5>
-                            &nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <Input type='text' onChange={(e)=>setLocation(e.target.value)} name='location'/>
                         </div>
 
@@ -123,7 +128,7 @@ const Signup = () => {
                         </FormBtnOutline>
     
                         <FormBtn>
-                            Register
+                            Complete Sign-Up
                         </FormBtn>
                     </form>
                 </div>
