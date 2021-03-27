@@ -7,6 +7,10 @@ import { LOGIN_USER, LOGOUT_USER } from "../store/actions";
 
 function setAuthToken(token:any){
 
+    if(!token) {
+        console.error("setAuthToken was passed nothing");
+    }
+
     storeAuthToken( token );
     applyAuthToken( token );
 
@@ -125,8 +129,10 @@ export function useAuthTokenStore()  {
 export function useIsAuthenticated() {
 
     let sc = useStoreContext();
+
+    console.log("sc: ", sc);
     
-    const {userAuth: {token}} = sc;
+    const {userAuth: {token}} = sc.store;
 
     return token && token.exp > Date.now() / 1000;
 
@@ -135,7 +141,7 @@ export function useIsAuthenticated() {
 export function useAuthenticatedUser() {
     let sc = useStoreContext();
     if(sc === null) {return;}
-    const {userAuth: {user}} = sc;
+    const {userAuth: {user}} = sc.store;
 
     return user;
 
@@ -145,11 +151,14 @@ export function useLogin() {
 
     let sc = useStoreContext();
     if(sc === null) {return;}
-    const { dispatch } = sc;
+    //const { dispatch } = sc;
+    const dispatch = sc.dispatch;
 
     return async ( credentials: any ) => {
     
         const { data: { token: tokenString, user } } = await api.login( credentials );
+
+        console.log();
 
         const token = setAuthToken( tokenString );
 

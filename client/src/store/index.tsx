@@ -50,8 +50,9 @@ export function StoreProvider ( { children } : {children: any} ) {
 
 }
 
-export function useStoreContext(): StoreObjectInterface {
+export function useStoreContext(): any {
 
-    return useContext( StoreContext );
+    let retVal = useContext( StoreContext );
+    return retVal as any;
 
 }

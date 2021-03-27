@@ -6,39 +6,17 @@ import './Profile';
 import './Signup';
 import { useEffect, useState } from 'react';
 import api from '../utils/api';
+import { useHistory } from 'react-router';
 
 
 const Profile = () => {
 
-  const [thisUser, setThisUser] = useState();
+  const history = useHistory();
+  //const [thisUser, setThisUser] = useState();
 
   const user = useAuthenticatedUser();
 
-  // useEffect(() => {
-
-  //   async function doAsyncStuff() {
-
-  //     try {
-  //       const currentUserAxiosResponse = await api.authenticated();
-
-  //       setThisUser(currentUserAxiosResponse.data);
-
-  //       console.log("user: ", currentUserAxiosResponse.data);
-
-  //     } catch (e) {
-
-  //       console.log("doAsyncStuff failed:", e);
-  //     }
-  //   }
-
-  //   doAsyncStuff();  // no then or a catch because the function internally has 
-  //   // a try/catch around its entire body.  And nothing needs to be done
-  //   // immediately once this completes.  Even if the authenticated call was
-  //   // abysmally slow, it would take a crazy fast user to fill out the form
-  //   // and hit submit before the user information came asyncronously back to
-  //   // this page.
-  // }, []);
-
+  console.log("authUser = ", user);
 
   function doNothing() {
   }
@@ -77,25 +55,25 @@ const Profile = () => {
             <div className='py-2 mx-1 px-4' style={{width:'auto'}}>
               <div className='row align-items-center justify-content-center'>
                   <h5>Name:</h5>
-                  {thisUser.name}
+                  {user.name}
               </div>
 
               <div className='row align-items-center justify-content-center'>
                   <h5>Email:</h5>
-                  {thisUser.email}
+                  {user.email}
               </div>
 
 
               <div className='row align-items-center justify-content-center'>
                 <h5>Phone:</h5>
-                {thisUser.phone}
+                {user.phone}
                 
               </div>
 
 
               <div className='row align-items-center justify-content-center'>   
                 <h5>Location:</h5>
-                {thisUser.location}
+                {user.location}
               </div>
             </div>
           </Col>
