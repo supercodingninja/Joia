@@ -1,5 +1,5 @@
 import React from 'react'
-import { Input, FormBtn, FormBtnOutline } from '../shared/Form/Form'
+import { Input, FormBtn, FormBtnOutline } from '../Form/Form'
 import { Container, Col } from '../../LayoutComponents/Grid/Grid'
 
 // Handles updating component state when the user types into the input field

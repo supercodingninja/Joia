@@ -1,18 +1,14 @@
 import React, {useState} from 'react';
 import {Container} from '../LayoutComponents/Grid/Grid'
-import {Input, FormBtnOutline, FormBtn} from '../components/shared/Form/Form'
-// import {useAuthTokenStore, useIsAuthenticated, useAuthenticatedUser, useLogin, useLogout} from '../utils/auth';
 import {useLogin} from '../utils/auth';
+import {Input, FormBtnOutline, FormBtn} from '../components/Form/Form'
+import {useAuthTokenStore, useIsAuthenticated, useAuthenticatedUser, useLogin, useLogout} from '../utils/auth';
+
 import API from '../utils/api';
 import { useHistory } from 'react-router-dom'
 import '../assets/mission-script-cufonfonts-webfont/style.css'
 
 const Signup = () => {
-    // HOW DO WE USE THESE. //
-    // const authTokenStore = useAuthTokenStore();
-    // const isAuthenticated = useIsAuthenticated();
-    // const authenticatedUser = useAuthenticatedUser();
-    // const  logout = useLogout();
 
     // Get the helper login function from the `useLogin` hook. //
     const login = useLogin();
@@ -25,6 +21,10 @@ const Signup = () => {
     const [phone, setPhone] = useState('');
     const [password, setPassword] = useState('');
     const [emailAlreadyTaken, setEmailAlreadyTaken] = useState(false);
+
+    function handleOnClickByDoingNothing() {
+
+    }
 
     function handleFormClear(e) {
         e.preventDefault();
@@ -123,7 +123,7 @@ const Signup = () => {
                             <Input type='text' onChange={(e)=>setLocation(e.target.value)} name='location'/>
                         </div>
 
-                        <FormBtnOutline onClick={handleFormClear}>
+                        <FormBtnOutline onClick={handleOnClickByDoingNothing}>
                             Cancel
                         </FormBtnOutline>
     

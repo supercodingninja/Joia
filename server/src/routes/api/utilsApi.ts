@@ -41,7 +41,7 @@ router.route("/imageUpload")
             const uploadPathToUserLocation = "/uploads/";
             const uploadPathToUser = uploadPathToUserLocation + baseName;
             
-            res.end(`<html><head></head><body>You just uploaded this<hr></hr><img src="${uploadPathToUser}"</body></html>`);
+            res.json({uploadedTo: uploadPathToUser});
         }
     });
 

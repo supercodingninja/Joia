@@ -5,25 +5,68 @@ import {
   TextArea,
   FormBtn,
   FormBtnOutline,
-} from '../components/shared/Form/Form'
+} from '../components/Form/Form'
+import api from "../utils/api";
 
-function handleInputChange() {
-  // const { name, value } = event.target;
-  // setFormObject({...formObject, [name]: value})
-}
+import { useState } from 'react'
 
-function handleFormClear() {
-  // clear form function
-}
-
-function handleFormSubmit() {
-  // submit form function
-  // include display aler
-  // clearform after submitting
-  }
 
 const ProductPost = () => {
+
+  let [imagePath, setImagePath] = useState("./assets/img/enzo-tommasi-wlxJ4idMTUk-unsplash.jpg")
+  let [selectedFile, setSelectedFile] = useState()
+
+
+  function handleInputChange() {
+    // const { name, value } = event.target;
+    // setFormObject({...formObject, [name]: value})
+  }
+
+  function handleFormClear() {
+    // clear form function
+  }
+
+  function handleFormSubmit() {
+    // submit form function
+    // include display aler
+    // clearform after submitting
+  }
+
+  async function onFileUpload() {
+
+    if (!selectedFile) {
+      console.log("file upload was attemped when no file has been selected yet");
+      return;
+    }
+    // Create an object of formData
+    const formData = new FormData();
+
+    // Update the formData object
+    formData.append(
+      "myImage",
+      selectedFile,
+      selectedFile.name  // lint complains on this line that selectedFile is possibly undefined.  I beg to differ - look at line 37
+    );
+
+    // Details of the uploaded file
+    console.log(selectedFile);
+
+    let uploadPost = await api.axios.post("api/utils/imageUpload", formData);
+
+    console.log("It was uploaded to:", uploadPost.data.uploadedTo);
+
+    setImagePath(uploadPost.data.uploadedTo);
+
+  };
+
+  function onFileChange(event) {
+    setSelectedFile(event.target.files[0]);
+  };
+
+
+
   return (
+
     <Container py="-5">
       <div className="container">
         <h1 className="text-center"> Artworks Information </h1>
@@ -31,8 +74,15 @@ const ProductPost = () => {
           <Col size="md-6 sm-12">
             <img
               className="img-fluid pr-4 mt-3"
-              src="./assets/img/enzo-tommasi-wlxJ4idMTUk-unsplash.jpg"
+              src={imagePath}
             />
+            <div>
+              <input type="file" onChange={onFileChange} />
+              <button onClick={onFileUpload}>
+                Upload!
+            </button>
+            </div>
+
           </Col>
 
           <Col size="md-6 sm-12">
@@ -79,7 +129,7 @@ const ProductPost = () => {
               />
 
               <h5>Artist Name</h5>
-              <Input onChange={handleInputChange} name="location" />
+              <Input onChange={handleInputChange} name="location"></Input>
 
               <FormBtnOutline onClick={handleFormClear}>Cancel</FormBtnOutline>
 
@@ -89,6 +139,7 @@ const ProductPost = () => {
         </Row>
       </div>
     </Container>
+
   )
 }
 
