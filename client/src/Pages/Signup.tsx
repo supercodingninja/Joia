@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
-import {Container} from '../LayoutComponents/Grid/Grid'
-import {Input, FormBtnOutline, FormBtn} from '../components/Form/Form'
-
+import {Container} from '../LayoutComponents/Grid/Grid';
+import {Input, FormBtnOutline, FormBtn} from '../components/Form/Form';
+import {useLogin} from '../utils/auth';
 import API from '../utils/api';
-import { useHistory } from 'react-router-dom'
-import '../assets/mission-script-cufonfonts-webfont/style.css'
+import { useHistory } from 'react-router-dom';
+import '../assets/mission-script-cufonfonts-webfont/style.css';
 
 const Signup = () => {
 
