@@ -10,7 +10,7 @@ export async function seed(req: express.Request, res: express.Response)
             email:"email1@gmail.com",
             phone:"12345",
             location:"Seattle",
-            password:"secret"
+            password:"This!!!!"
         });
         await db.User.create({
             name:"Name2",

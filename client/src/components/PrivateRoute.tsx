@@ -1,8 +1,7 @@
-import { Component } from "react";
 import { Route, Redirect } from "react-router-dom";
 import { useIsAuthenticated } from "../utils/auth";
 
-export default function PrivateRoute ({ component, children, redirectTo = "/", ...props }: {component: Component, children: any, redirectTo: string}) {
+export default function PrivateRoute ({ component: Component, children, redirectTo = "/", ...props }: {component: any, children: any, redirectTo: string}) {
 
     const isAuth = useIsAuthenticated();
 

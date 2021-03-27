@@ -125,7 +125,7 @@ export function useAuthTokenStore()  {
 export function useIsAuthenticated() {
 
     let sc = useStoreContext();
-    if(sc === null) {return;}
+    
     const {userAuth: {token}} = sc;
 
     return token && token.exp > Date.now() / 1000;

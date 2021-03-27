@@ -54,8 +54,6 @@ const Signup = () => {
                  }
              }            
         }
-
-        history.push('/account')
     }
 
     return (
