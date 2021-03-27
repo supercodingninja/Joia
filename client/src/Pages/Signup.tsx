@@ -126,7 +126,7 @@ const Signup = () => {
                             Cancel
                         </FormBtnOutline>
     
-                        <FormBtn>
+                        <FormBtn onClick={handleOnClickByDoingNothing}>
                             Complete Sign-Up
                         </FormBtn>
                     </form>

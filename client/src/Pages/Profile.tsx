@@ -60,9 +60,9 @@ const Profile = () => {
               <Input onChange={handleInputChange} name="phone" />
 
               <h5>Place holder for artwork for sale list</h5>
-              <Input onChange={handleInputChange} name="phone" placeHolder="List of artwork for sale" /> 
-              <Input onChange={handleInputChange} name="phone" placeHolder="List of artwork for sale" />
-              <Input onChange={handleInputChange} name="phone" placeHolder="List of artwork for sale" /> 
+              <Input onChange={handleInputChange} name="phone" placeholder="List of artwork for sale" /> 
+              <Input onChange={handleInputChange} name="phone" placeholder="List of artwork for sale" />
+              <Input onChange={handleInputChange} name="phone" placeholder="List of artwork for sale" /> 
 
               <FormBtnOutline onClick={handleFormClear}>Sell Artwork</FormBtnOutline>
 

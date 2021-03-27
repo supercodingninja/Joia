@@ -9,6 +9,7 @@ import { useHistory } from "react-router-dom";
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [emailAlreadyTaken, setEmailAlreadyTaken] = useState(false);
     
     const history = useHistory();
 
@@ -34,9 +35,13 @@ const Login = () => {
 
             await login({ email, password });
 
+            history.push("/account");
+
         } catch(err) {
              // Handle error responses from the API
-             if( err.response && err.response.data ) console.log(err.response.data);
+             if( err.response && err.response.data ) {
+                 console.log(err.response.data);
+             }
         }
     }
 
@@ -51,8 +56,6 @@ const Login = () => {
 
                 <div className='row align-items-center justify-content-center'>
                     <h5>Email:</h5>
-                    {emailAlreadyTaken && (<h1 style={{color:'red'}}>Try a different email.  That one is taken</h1>)}
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <Input type='text' onChange={(e)=>setEmail(e.target.value)} name='email' style={{width:'auto'}}/>
                 </div>
                         
