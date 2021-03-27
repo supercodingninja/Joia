@@ -121,7 +121,7 @@ const Signup = () => {
                         <h5>Password:</h5>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <Input
-                            type='text'
+                            type='password'
                             onChange={(e) => setPassword(e.target.value)}
                             name='password' 
                             />
