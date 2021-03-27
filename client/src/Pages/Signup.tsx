@@ -75,7 +75,7 @@ const Signup = () => {
                 </p>
                 
                 <p className='text-center mt-2 mb-2' style={{font:'Mission Script'}}>
-                    Where you can find your gem for your Jewel or Jim!
+                    Where you can find/sell your gem, for your Jewel or Jim!
                 </p>
     
                 <div className='container px-1 mb-1 pb-5'>
