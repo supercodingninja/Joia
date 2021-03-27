@@ -6,14 +6,24 @@ import './Profile';
 import './Signup';
 import { useEffect, useState } from 'react';
 import api from '../utils/api';
+import { useHistory } from 'react-router';
 
 
 const Profile = () => {
 
-  const [thisUser, setThisUser] = useState();
+  const history = useHistory();
+  //const [thisUser, setThisUser] = useState();
 
   const user = useAuthenticatedUser();
 
+<<<<<<< HEAD
+=======
+  console.log("authUser = ", user);
+
+  function doNothing() {
+  }
+
+>>>>>>> 8bcea22b0551ab2c2308f02cb3f6c67c728f714c
   function handleInputChange() {
     // const { name, value } = event.target;
     // setFormObject({...formObject, [name]: value})
@@ -45,25 +55,25 @@ const Profile = () => {
             <div className='py-2 mx-1 px-4' style={{width:'auto'}}>
               <div className='row align-items-center justify-content-center'>
                   <h5>Name:</h5>
-                  {thisUser.name}
+                  {user.name}
               </div>
 
               <div className='row align-items-center justify-content-center'>
                   <h5>Email:</h5>
-                  {thisUser.email}
+                  {user.email}
               </div>
 
 
               <div className='row align-items-center justify-content-center'>
                 <h5>Phone:</h5>
-                {thisUser.phone}
+                {user.phone}
                 
               </div>
 
 
               <div className='row align-items-center justify-content-center'>   
                 <h5>Location:</h5>
-                {thisUser.location}
+                {user.location}
               </div>
             </div>
           </Col>
