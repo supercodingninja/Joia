@@ -100,8 +100,6 @@ const ProductPost = () => {
 
     api.postArt(artLocation, imagePath, title, description, type, category, size, price, thisUser._id)
 
-
-
     // clearform after submitting
     resetForm();
   }
