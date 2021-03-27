@@ -57,8 +57,7 @@ const Signup = () => {
                  {
                     setEmailAlreadyTaken(true);
                  }
-             }
-             
+             }            
         }
 
         history.push('./account');
