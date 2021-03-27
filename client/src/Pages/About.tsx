@@ -9,7 +9,7 @@ const About = () => {
 
         <div className="container">
           <p>
-            Defining "Joia" is defining you: a precious jewel or gem to be treasure; and your art defines you; so let the multi-verse know you're rare, you're vaulable, you're Joia!
+          <i>Joia</i>, pronounced as "Joy-ah," means gem or jewel.  Defining "Joia" is defining you: a precious jewel or gem to be treasure; and your art defines you; so let the multi-verse know you're rare, you're vaulable, you're Joia!
           </p>
 
           <p>
