@@ -9,7 +9,9 @@ import Profile from '../src/Pages/Profile'
 import Login from '../src/Pages/Login';
 import Signup from '../src/Pages/Signup'
 import Footer from "./components/Footer/Footer";
-import { useAuthTokenStore, useLogin, useLogout}  from "./utils/auth";
+import GuestRoute from './components/GuestRoute';
+import PrivateRoute from './components/PrivateRoute';
+import { useAuthTokenStore}  from "./utils/auth";
 import AllArtworks from "./Pages/AllArtworks";
 
 
@@ -19,7 +21,7 @@ import AllArtworks from "./Pages/AllArtworks";
 // Ref. https://reactjs.org/docs/react-without-es6.html; and https://github.com/supercodingninja/mern-jwt-auth-setup#prerequisites forked from ac524/mern-jwt-auth-setup //
 function App () {
   // Use the hook to reauthenticate stored tokens.
-  useAuthTokenStore()
+  useAuthTokenStore();
 
   /** Rest of your App component code here */
   // Reference https://jasonwatmore.com/post/2019/04/06/react-jwt-authentication-tutorial-example; and https://www.alibabacloud.com/blog/how-to-implement-authentication-in-reactjs-using-jwt_595820 //  
@@ -30,11 +32,11 @@ function App () {
       <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
-          <Route exact path="/post" component={ProductPost} />
-          <Route exact path="/account" component={Profile} />
-          <Route exact path="/allartworks" component={AllArtworks} />
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/signup" component={Signup} />
+          <PrivateRoute exact path="/post" component={ProductPost} redirectTo="/login" />
+          <PrivateRoute exact path="/account" component={Profile} redirectTo="/login" />
+          <PrivateRoute exact path="/allartworks" component={AllArtworks} redirectTo="/login" />
+          <GuestRoute exact path="/login" component={Login} redirectTo="/account" />
+          <GuestRoute exact path="/signup" component={Signup} redirectTo="/account" />
       </Switch>
 
       <Footer />      

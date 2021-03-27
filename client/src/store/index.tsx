@@ -6,9 +6,12 @@ import {
 } from "./actions";
 
 interface AppContextInterface {    
-    userAuth: any,
     store: any,
     dispatch: any
+}
+
+interface StoreObjectInterface {    
+    userAuth: any,
 }
 
 const StoreContext = createContext<AppContextInterface | null>(null);
@@ -43,11 +46,11 @@ export function StoreProvider ( { children } : {children: any} ) {
         userAuth: {}
     } );
 
-    return <StoreContentProvider value={{userAuth: 0, store: store, dispatch: dispatch}}>{ children }</StoreContentProvider>
+    return <StoreContentProvider value={{store: store, dispatch: dispatch}}>{ children }</StoreContentProvider>
 
 }
 
-export function useStoreContext() {
+export function useStoreContext(): StoreObjectInterface {
 
     return useContext( StoreContext );
 
