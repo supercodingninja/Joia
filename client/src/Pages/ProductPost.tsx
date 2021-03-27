@@ -9,8 +9,8 @@ import {
 import api from "../utils/api";
 
 import { useState } from 'react'
-import { useEffect } from 'react';
 import { useHistory } from 'react-router';
+import { useAuthenticatedUser } from '../utils/auth';
 
 
 const ProductPost = () => {
@@ -24,32 +24,9 @@ const ProductPost = () => {
   const [size, setSize] = useState("");
   const [price, setPrice] = useState("");
   const [artLocation, setArtLocation] = useState("");
-  const [thisUser, setThisUser] = useState();
 
+  const user = useAuthenticatedUser();
   const history = useHistory();
-
-  useEffect(() => {
-
-    async function doAsyncStuff() {
-
-      try {
-        const currentUserAxiosResponse = await api.authenticated();
-
-        setThisUser(currentUserAxiosResponse.data);
-
-      } catch (e) {
-
-        console.log("doAsyncStuff failed:", e);
-      }
-    }
-
-    doAsyncStuff();  // no then or a catch because the function internally has 
-    // a try/catch around its entire body.  And nothing needs to be done
-    // immediately once this completes.  Even if the authenticated call was
-    // abysmally slow, it would take a crazy fast user to fill out the form
-    // and hit submit before the user information came asyncronously back to
-    // this page.
-  }, []);
 
   function resetForm() {
     let formElement = document.getElementById("formid");
@@ -75,17 +52,10 @@ const ProductPost = () => {
     console.log("category =", category);
     console.log("size =", size);
     console.log("price =", price);
-    console.log("user = ", thisUser);
+    console.log("user = ", user);
 
-    if(!thisUser) {
-      // Better logic to inform the user would be better.
-      // but it wouldn't need to be too well done because our web site allows
-      // going straight to this form without logging in
-      // A better overall design would be to never allow navigation here unless
-      // a user is already logged in.  So ultimately, such validation would 
-      // probably be superfluous in real scenarios and a silent failure with
-      // just a log could suffice
-      console.log("you have to be logged in to post art");
+    if(!user) {
+      console.log("user isn't set.   Why?????????");
       return;
     }
 
@@ -98,7 +68,7 @@ const ProductPost = () => {
       return;
     }
 
-    api.postArt(artLocation, imagePath, title, description, type, category, size, price, thisUser._id)
+    api.postArt(artLocation, imagePath, title, description, type, category, size, price, user._id)
 
     // clearform after submitting
     resetForm();
