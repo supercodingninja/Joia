@@ -4,6 +4,7 @@
 import { Row, Col, Container } from '../LayoutComponents/Grid/Grid'
 import { Input, FormBtn, FormBtnOutline } from '../components/Form/Form'
 import './Profile';
+import './Signup';
 
 function handleInputChange() {
   // const { name, value } = event.target;
@@ -36,43 +37,63 @@ const Profile = () => {
             />
           </Col>
 
-          <Col size="md-8 sm-12">
-            <div className='py-2 mx-1 px-4' style={{width:'auto'}}>
-              <div className='row align-items-center justify-content-center'>
-                  <h5>First Name:</h5>
-                  &nbsp;&nbsp;&nbsp;
-                  <p>TBD</p>
-              </div>
+          {/* Passing the User's data from Sign.tsx to Profile.tsx */}
+          <Link to={{pathname: "/Signup", state: data}}>
+            this.props.history.push(
+              {
+                pathname: '/Signup',
+                state: data // Data is the array of {handleFormSubmit} //
+              }
+            )
+
+            render() {
+              
+              const { state } = this.props.Name;
+              const { state } = this.props.email;
+              const { state } = this.props.phone;
+              const { state } = this.props.location;
+              
+              return (
+                <Col size="md-8 sm-12">
+                  <div className='py-2 mx-1 px-4' style={{width:'auto'}}>
+                    <div className='row align-items-center justify-content-center'>
+                        <h5>First Name:</h5>
+                        &nbsp;&nbsp;&nbsp;
+                        <p>TBD</p>
+                    </div>
 
 
-              <div className='row align-items-center justify-content-center'>
-                  <h5>Last Name:</h5>
-                  &nbsp;&nbsp;&nbsp;
-                  <p>TBD</p>
-              </div>
+                    <div className='row align-items-center justify-content-center'>
+                        <h5>Last Name:</h5>
+                        &nbsp;&nbsp;&nbsp;
+                        <p>TBD</p>
+                    </div>
 
 
-              <div className='row align-items-center justify-content-center'>
-                  <h5>Email:</h5>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <p>TBD</p>
-              </div>
+                    <div className='row align-items-center justify-content-center'>
+                        <h5>Email:</h5>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <p>TBD</p>
+                    </div>
 
 
-              <div className='row align-items-center justify-content-center'>
-                  <h5>Phone:</h5>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <p>TBD</p>
-              </div>
+                    <div className='row align-items-center justify-content-center'>
+                      <h5>Phone:</h5>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <p>TBD</p>
+                  </div>
 
 
-              <div className='row align-items-center justify-content-center'>   
-                  <h5>Location:</h5>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <p>TBD</p>
-              </div>
-            </div>
-
+                    <div className='row align-items-center justify-content-center'>   
+                      <h5>Location:</h5>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <p>TBD</p>
+                  </div>
+                  </div>
+                </Col>
+              )
+            }
+          </Link>
             
             <form>
               <h5>This the h5 tag that says Place holder for artwork for sale list</h5>
