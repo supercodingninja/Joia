@@ -20,10 +20,6 @@ const Signup = () => {
     const [password, setPassword] = useState('');
     const [emailAlreadyTaken, setEmailAlreadyTaken] = useState(false);
 
-    function handleOnClickByDoingNothing() {
-
-    }
-
     function handleFormClear(e) {
         e.preventDefault();
         history.push('/');
@@ -59,12 +55,8 @@ const Signup = () => {
              }            
         }
 
-        history.push('/account');
+        history.push('/account')
     }
-
-    if (handleFormSubmit)  {
-        
-    } else handleFormClear(e);
 
     return (
         <Container>
@@ -125,11 +117,11 @@ const Signup = () => {
                             <Input type='text' onChange={(e)=>setLocation(e.target.value)} name='location'/>
                         </div>
 
-                        <FormBtnOutline onClick={handleOnClickByDoingNothing}>
+                        <FormBtnOutline onClick={handleFormClear}>
                             Cancel
                         </FormBtnOutline>
     
-                        <FormBtn>
+                        <FormBtn onClick={handleFormSubmit}>
                             Complete Sign-Up
                         </FormBtn>
                     </form>
