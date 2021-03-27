@@ -37,36 +37,56 @@ const Profile = () => {
           </Col>
 
           <Col size="md-8 sm-12">
+            <div className='py-2 mx-1 px-4' style={{width:'auto'}}>
+              <div className='row align-items-center justify-content-center'>
+                  <h5>First Name:</h5>
+                  &nbsp;&nbsp;&nbsp;
+                  <p>TBD</p>
+              </div>
+
+
+              <div className='row align-items-center justify-content-center'>
+                  <h5>Last Name:</h5>
+                  &nbsp;&nbsp;&nbsp;
+                  <p>TBD</p>
+              </div>
+
+
+              <div className='row align-items-center justify-content-center'>
+                  <h5>Email:</h5>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <p>TBD</p>
+              </div>
+
+
+              <div className='row align-items-center justify-content-center'>
+                  <h5>Phone:</h5>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <p>TBD</p>
+              </div>
+
+
+              <div className='row align-items-center justify-content-center'>   
+                  <h5>Location:</h5>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <p>TBD</p>
+              </div>
+            </div>
+
+            
             <form>
-              <h5>Name</h5>
-              <Input
-                onChange={handleInputChange}
-                name="Name"
-              />
-
-              <h5>Email</h5>
-              <Input
-                onChange={handleInputChange}
-                name="type"
-              />
-
-              <h5>Location</h5>
-              <Input
-                onChange={handleInputChange}
-                name="location"
-                />
-
-              <h5>Phone</h5>
-              <Input onChange={handleInputChange} name="phone" />
-
-              <h5>Place holder for artwork for sale list</h5>
+              <h5>This the h5 tag that says Place holder for artwork for sale list</h5>
               <Input onChange={handleInputChange} name="phone" placeHolder="List of artwork for sale" /> 
               <Input onChange={handleInputChange} name="phone" placeHolder="List of artwork for sale" />
-              <Input onChange={handleInputChange} name="phone" placeHolder="List of artwork for sale" /> 
+              <Input onChange={handleInputChange} name="phone" placeHolder="List of artwork for sale" />
 
-              <FormBtnOutline onClick={handleFormClear}>Sell Artwork</FormBtnOutline>
+              <FormBtnOutline onClick={handleFormClear}>
+                Sell Artwork
+              </FormBtnOutline>
 
-              <FormBtn onClick={handleFormSubmit}>Update Profile</FormBtn>
+              <FormBtn onClick={handleFormSubmit}>
+                Update Profile
+              </FormBtn>
             </form>
           </Col>
         </Row>
