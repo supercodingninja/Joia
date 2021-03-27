@@ -51,6 +51,7 @@ describe("an app test", () => {
         await mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/test", { useNewUrlParser: true });
         try {
             await db.User.collection.drop();
+            await db.Artwork.collection.drop();
         } catch(e) {
             console.log("drop User.collection failed, threw: ", e);
         };
@@ -89,5 +90,55 @@ describe("an app test", () => {
         let justTheOneUser = allUsers[0];
 
         expect(justTheOneUser.name).toBe("ATestAddedMe");        
+    });
+
+    it("crufty no-mocks real-test-database route to create a new art", async () => {
+
+        jest.setTimeout(10000);
+
+        const userRes = await request(app)
+        .post("/api/users")
+        .send({
+            name:"ATestAddedMe",
+            email:"email3@gmail.com",
+            phone:"12345",
+            location:"Seattle",
+            password:"333333"
+        });
+
+        let allUsers = await db.User.find({});
+
+        let justTheOneUser = allUsers[0];
+
+        console.log("!!!!!!!!!!!!!!!!!!!!! ", justTheOneUser.id)
+
+        // I avoid validating the user response and just assume it worked.
+        // It *should* work since it just validated that functionality with the
+        // above test.  The reason I did the above, though, was because I need 
+        // a valid user id to reference in the new art item i'm adding below
+               
+        const res = await request(app)
+        .post("/api/art")
+        .send({
+            user: justTheOneUser.id,
+            name:"Mona Lisa",
+            description: "blah",
+            category:"classic",
+            size:"oh like yay big",
+            price: "probably more than $5",
+            location:"Seattle",
+            imagePath: "http://whatever-i-dont-care"
+        });
+        
+        expect(res.status).toEqual(200);
+        
+        let allArts = await db.Artwork.find({});
+        
+        expect(allArts.length).toBe(1);
+        
+        let justTheOneArt = allArts[0];
+
+        expect(justTheOneArt.name).toBe("Mona Lisa");
+        expect(justTheOneArt.user.toString()).toEqual(justTheOneUser.id);
     });
 });

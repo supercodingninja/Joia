@@ -27,6 +27,8 @@ const Login = () => {
 
             await login({ email, password });
 
+            history.push("/account");
+
         } catch(err) {
             
             // Handle error responses from the API. //
