@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
-import {Container} from '../LayoutComponents/Grid/Grid';
-import {Input, FormBtnOutline, FormBtn} from '../components/Form/Form';
-import {useLogin} from '../utils/auth';
+import React, { useState } from 'react';
+import { Container } from '../LayoutComponents/Grid/Grid';
+import { Input, FormBtnOutline, FormBtn } from '../components/Form/Form';
+import { useLogin } from '../utils/auth';
 import API from '../utils/api';
 import { useHistory } from 'react-router-dom';
 import '../assets/mission-script-cufonfonts-webfont/style.css';
@@ -25,7 +25,7 @@ const Signup = () => {
         history.push('/');
     };
 
-    const handleFormSubmit = async ( e ) => {
+    const handleFormSubmit = async (e) => {
         e.preventDefault();
 
         try {
@@ -40,91 +40,114 @@ const Signup = () => {
             });
 
             // User has been successfully registered, now log them in with the same information. //
-            await login({email, password});
+            await login({ email, password });
 
-        } catch(err) {
+        } catch (err) {
 
-             // Handle error responses from the API. //
-             if(err.response && err.response.data) {
-                 console.log(err.response.data);
+            // Handle error responses from the API. //
+            if (err.response && err.response.data) {
+                console.log(err.response.data);
 
-                 if(err.response.data.email && err.response.data.email === 'Email already exists.')
-                 {
+                if (err.response.data.email && err.response.data.email === 'Email already exists.') {
                     setEmailAlreadyTaken(true);
-                 }
-             }            
+                }
+            }
         }
     }
 
     return (
         <Container>
-                <h1 className='text-center py-2' style={{font:'Milkshake'}}>
-                    Discover <i><b>Joia</b></i>
-                </h1>
-    
-                <p className='text-center mt-2 mb-2' style={{font:'Mission Script'}}>
-                    <i>Joia</i> is your jewel eCommerce website for local art,
+            <h1 className='text-center py-2' style={{ font: 'Milkshake' }}>
+                Discover <i><b>Joia</b></i>
+            </h1>
+
+            <p className='text-center mt-2 mb-2' style={{ font: 'Mission Script' }}>
+                <i>Joia</i> is your jewel eCommerce website for local art,
                 </p>
-                
-                <p className='text-center mt-2 mb-2' style={{font:'Mission Script'}}>
-                    Where you can find/sell your gem, for your Jewel or Jim!
+
+            <p className='text-center mt-2 mb-2' style={{ font: 'Mission Script' }}>
+                Where you can find/sell your gem, for your Jewel or Jim!
                 </p>
-    
-                <div className='container px-1 mb-1 pb-5'>
-                    <form onSubmit={handleFormSubmit} name='signupForm' className='py-2 mx-1 px-4' style={{width:'auto'}}>
-                        
-                        <div className='row align-items-center justify-content-center'>
-                            <h5>First Name:</h5>
+
+            <div className='container px-1 mb-1 pb-5'>
+                <form onSubmit={handleFormSubmit} name='signupForm' className='py-2 mx-1 px-4' style={{ width: 'auto' }}>
+
+                    <div className='row align-items-center justify-content-center'>
+                        <h5>First Name:</h5>
                             &nbsp;&nbsp;&nbsp;
-                            <Input type='text' onChange={(e)=>setFirstName(e.target.value)} name='firstName'/>
-                        </div>
+                            <Input
+                            type='text'
+                            onChange={(e) => setFirstName(e.target.value)}
+                            name='firstName' 
+                            placeholder="First name"/>
+                    </div>
 
-    
-                        <div className='row align-items-center justify-content-center'>
-                            <h5>Last Name:</h5>
+
+                    <div className='row align-items-center justify-content-center'>
+                        <h5>Last Name:</h5>
                             &nbsp;&nbsp;&nbsp;
-                            <Input type='text' onChange={(e)=>setLastName(e.target.value)} name='lastName'/>
-                        </div>
+                            <Input
+                            type='text'
+                            onChange={(e) => setLastName(e.target.value)}
+                            name='lastName' 
+                            placeholder="Last name"/>
+                    </div>
 
 
-                        <div className='row align-items-center justify-content-center'>
-                            <h5>Email:</h5>
-                            {emailAlreadyTaken && (<h1 style={{color:'red'}}>Try a different email.  That one is taken</h1>)}
+                    <div className='row align-items-center justify-content-center'>
+                        <h5>Email:</h5>
+                        {emailAlreadyTaken && (<h1 style={{ color: 'red' }}>Try a different email.  That one is taken</h1>)}
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <Input type='text' onChange={(e)=>setEmail(e.target.value)} name='email' style={{width:'auto'}}/>
-                        </div>
+                            <Input type='text'
+                            onChange={(e) => setEmail(e.target.value)}
+                            name='email'
+                            placeholder="email@email.com"
+                            style={{ width: 'auto' }} />
+                    </div>
 
 
-                        <div className='row align-items-center justify-content-center'>
-                            <h5>Phone:</h5>
+                    <div className='row align-items-center justify-content-center'>
+                        <h5>Phone:</h5>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <Input type='text' onChange={(e)=>setPhone(e.target.value)} name='phone'/>
-                        </div>
+                            <Input
+                            type='text'
+                            onChange={(e) => setPhone(e.target.value)}
+                            name='phone' 
+                            placeholder="555-555-5555"/>
+                    </div>
 
 
-                        <div className='row align-items-center justify-content-center'>
-                            <h5>Password:</h5>
+                    <div className='row align-items-center justify-content-center'>
+                        <h5>Password:</h5>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <Input type='text' onChange={(e)=>setPassword(e.target.value)} name='password'/>
-                        </div>
-                            
+                            <Input
+                            type='text'
+                            onChange={(e) => setPassword(e.target.value)}
+                            name='password' 
+                            />
+                    </div>
 
-                        <div className='row align-items-center justify-content-center'>   
-                            <h5>Location:</h5>
+
+                    <div className='row align-items-center justify-content-center'>
+                        <h5>Location:</h5>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <Input type='text' onChange={(e)=>setLocation(e.target.value)} name='location'/>
-                        </div>
+                            <Input
+                            type='text'
+                            onChange={(e) => setLocation(e.target.value)}
+                            name='location' 
+                            placeholder="City name"/>
+                    </div>
 
-                        <FormBtnOutline onClick={handleFormClear}>
-                            Cancel
+                    <FormBtnOutline onClick={handleFormClear}>
+                        Cancel
                         </FormBtnOutline>
-    
-                        <FormBtn onClick={handleFormSubmit}>
-                            Complete Sign-Up
+
+                    <FormBtn onClick={handleFormSubmit}>
+                        Complete Sign-Up
                         </FormBtn>
-                    </form>
-                </div>
-            </Container>
+                </form>
+            </div>
+        </Container>
     );
 }
 
