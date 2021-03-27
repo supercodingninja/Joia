@@ -1,7 +1,9 @@
 import React, {useState} from 'react';
 import {Container} from '../LayoutComponents/Grid/Grid'
+import {useLogin} from '../utils/auth';
 import {Input, FormBtnOutline, FormBtn} from '../components/Form/Form'
 import {useAuthTokenStore, useIsAuthenticated, useAuthenticatedUser, useLogin, useLogout} from '../utils/auth';
+
 import API from '../utils/api';
 import { useHistory } from "react-router-dom";
 
@@ -23,11 +25,9 @@ const Login = () => {
     // Get the helper login function from the `useLogin` hook.
     const login = useLogin();
 
-    const handleSubmit = async (e:any) => {
-        // This fails and it seems explained here:
-        // https://deepscan.io/docs/rules/react-func-component-invalid-ref-prop
+    const handleFormSubmit = async ( e ) => {
         e.preventDefault();
-        console.log("you submitted the form so handleSubmit fired off.");
+        console.log("Alright, Joia, let's, GO!");
 
      
 
@@ -42,23 +42,31 @@ const Login = () => {
     }
 
     return (
-        <Container>                
-            <h1 className="text-center py-5">Ready to login to sell your artwork?</h1>
+        <Container>               
+            <h1 className='text-center py-2' style={{font:'Milkshake'}}>Hey, Joia!</h1>
 
-            <p className="text-center mb-3 pb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+            <p className='text-center mt-2 mb-2' style={{font:'Mission Script'}}>Time to show the mulit-verses how rare you really are.</p>
 
-            <div className="container px-3 pb-5">
-                <form className="border border-warning py-5 mx-3 my-5 px-5" onSubmit={handleSubmit}>
+            <div className='container px-1 mb-1 pb-5'>
+                <form onSubmit={handleFormSubmit} name='signupForm' className='py-2 mx-1 px-4' style={{width:'auto'}}>
+
+                <div className='row align-items-center justify-content-center'>
                     <h5>Email:</h5>
-                    <Input type='text' onChange={(e)=>setEmail(e.target.value)} name='email'/>
-                    
-                    <h5>Password:</h5>
-                    <Input type='text' onChange={(e)=>setPassword(e.target.value)} name='password'/>
+                    {emailAlreadyTaken && (<h1 style={{color:'red'}}>Try a different email.  That one is taken</h1>)}
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <Input type='text' onChange={(e)=>setEmail(e.target.value)} name='email' style={{width:'auto'}}/>
+                </div>
+                        
+                <div className='row align-items-center justify-content-center'>
+                <h5>Password:</h5>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <Input type='text' onChange={(e)=>setPassword(e.target.value)} name='password'/>
+            </div>
 
-                    <FormBtnOutline onClick={handleOnClickByDoingNothing}>Cancel</FormBtnOutline>
-                
-                    <FormBtn onClick={handleOnClickByDoingNothing}>Login</FormBtn>
-                </form>
+                <FormBtnOutline onClick={handleFormClear}>Cancel</FormBtnOutline>
+            
+                <FormBtn>Login, and get started!</FormBtn>
+            </form>
             </div>
         </Container>
     )
