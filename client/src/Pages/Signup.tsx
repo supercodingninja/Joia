@@ -59,8 +59,12 @@ const Signup = () => {
              }            
         }
 
-        history.push('./account');
+        history.push('/account');
     }
+
+    if (handleFormSubmit)  {
+        
+    } else handleFormClear(e);
 
     return (
         <Container>
