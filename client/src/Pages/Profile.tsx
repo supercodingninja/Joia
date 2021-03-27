@@ -12,7 +12,6 @@ import { useHistory } from 'react-router';
 const Profile = () => {
 
   const history = useHistory();
-  //const [thisUser, setThisUser] = useState();
 
   const user = useAuthenticatedUser();
 
