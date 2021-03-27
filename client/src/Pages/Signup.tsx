@@ -1,11 +1,10 @@
 import React, {useState} from 'react';
-import {Container} from '../LayoutComponents/Grid/Grid'
-import {Input, FormBtnOutline, FormBtn} from '../components/Form/Form'
-import {useAuthTokenStore, useIsAuthenticated, useAuthenticatedUser, useLogin, useLogout} from '../utils/auth';
-
+import {Container} from '../LayoutComponents/Grid/Grid';
+import {Input, FormBtnOutline, FormBtn} from '../components/Form/Form';
+import {useLogin} from '../utils/auth';
 import API from '../utils/api';
-import { useHistory } from 'react-router-dom'
-import '../assets/mission-script-cufonfonts-webfont/style.css'
+import { useHistory } from 'react-router-dom';
+import '../assets/mission-script-cufonfonts-webfont/style.css';
 
 const Signup = () => {
 
@@ -20,10 +19,6 @@ const Signup = () => {
     const [phone, setPhone] = useState('');
     const [password, setPassword] = useState('');
     const [emailAlreadyTaken, setEmailAlreadyTaken] = useState(false);
-
-    function handleOnClickByDoingNothing() {
-
-    }
 
     function handleFormClear(e) {
         e.preventDefault();
@@ -60,7 +55,7 @@ const Signup = () => {
              }            
         }
 
-        history.push('./account');
+        history.push('/account')
     }
 
     return (
@@ -122,11 +117,11 @@ const Signup = () => {
                             <Input type='text' onChange={(e)=>setLocation(e.target.value)} name='location'/>
                         </div>
 
-                        <FormBtnOutline onClick={handleOnClickByDoingNothing}>
+                        <FormBtnOutline onClick={handleFormClear}>
                             Cancel
                         </FormBtnOutline>
     
-                        <FormBtn onClick={handleOnClickByDoingNothing}>
+                        <FormBtn onClick={handleFormSubmit}>
                             Complete Sign-Up
                         </FormBtn>
                     </form>
