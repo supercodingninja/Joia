@@ -22,13 +22,14 @@ export const TextArea = (props: any) => {
 interface IFormBtnProps {
     children: string;
     onClick: () => void;
+    disabled: boolean;
 }
 
 export const FormBtn = (props: IFormBtnProps) => {
-    const {children, onClick} = props;
+    const {children, onClick, disabled} = props;
     
     return (
-        <button onClick={onClick} style={{ float:"right", marginBottom: 10, marginRight: 10 }} className="btn btn-warning"> {children} </button>
+        <button onClick={onClick} disabled={disabled} style={{ float:"right", marginBottom: 10, marginRight: 10 }} className="btn btn-warning"> {children} </button>
     );
     
 }

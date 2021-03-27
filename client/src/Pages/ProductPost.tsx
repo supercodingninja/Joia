@@ -24,9 +24,17 @@ const ProductPost = () => {
   const [size, setSize] = useState("");
   const [price, setPrice] = useState("");
   const [artLocation, setArtLocation] = useState("");
+  const [disableSubmit, setDisableSubmit] = useState(false);
 
   const user = useAuthenticatedUser();
   const history = useHistory();
+
+  function maybeEnableSubmit() {
+    if(title && category && size && imagePath && description && type && price && artLocation){
+      setDisableSubmit(true);
+    }
+  }
+
 
   function resetForm() {
     let formElement = document.getElementById("formid");
@@ -132,48 +140,48 @@ const ProductPost = () => {
             <form id="formid" onSubmit={handleFormSubmit}>
               <h5>Artwork title</h5>
               <Input
-                onChange={e => setTitle(e.target.value)}
+                onChange={e => {setTitle(e.target.value); maybeEnableSubmit()}}
                 name="title"
                 placeholder="Artwork title"
               />
 
               <h5>Description</h5>
               <TextArea
-                onChange={e => setDescription(e.target.value)}
+                onChange={e => { setDescription(e.target.value); maybeEnableSubmit(); }}
                 name="description"
                 placeholder="Description"
               />
 
               <h5>Type</h5>
               <Input
-                onChange={e => setType(e.target.value)}
+                onChange={e => {setType(e.target.value); maybeEnableSubmit(); }}
                 name="type"
                 placeholder="Type"
               />
 
               <h5>Category</h5>
               <Input
-                onChange={e => setCategory(e.target.value)}
+                onChange={e => { setCategory(e.target.value); maybeEnableSubmit(); }}
                 name="category"
                 placeholder="Select Category"
               />
 
               <h5>Size</h5>
-              <Input onChange={e => setSize(e.target.value)} name="size" />
+              <Input onChange={e => { setSize(e.target.value); maybeEnableSubmit(); }} name="size" />
 
               <h5>Price</h5>
-              <Input onChange={e => setPrice(e.target.value)} name="price" />
+              <Input onChange={e => { setPrice(e.target.value); maybeEnableSubmit(); } } name="price" />
 
               <h5>Location</h5>
               <Input
-                onChange={e => setArtLocation(e.target.value)}
+                onChange={e => {setArtLocation(e.target.value); maybeEnableSubmit();}}
                 name="location"
                 placeholder="Select location"
               />
 
               <FormBtnOutline onClick={handleFormClear}>Cancel</FormBtnOutline>
 
-              <FormBtn onClick={doNothingOnClick}>Submit</FormBtn>
+              <FormBtn disabled={disableSubmit} onClick={doNothingOnClick}>Submit</FormBtn>
             </form>
           </Col>
         </Row>
