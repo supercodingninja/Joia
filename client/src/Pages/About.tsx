@@ -34,14 +34,14 @@ const About = () => {
         <h1 className="text-center mb-3"> How to post your artwork </h1>
 
         <div className="text-center">
-          <p>1- User create an account.</p>
+          <p>1- Click register to create an account.</p>
 
           <p>
-            2- After signup go to Profile page and click on sell product button.
+            2- After signup, click on the sell product button.
           </p>
 
           <p>
-            3- Fill out artwork information in art information form and select
+            3- Fill out the artwork information in the form and select
             submit.
           </p>
         </div>
@@ -53,22 +53,22 @@ const About = () => {
         <div className="container">
           <p>
             <span className="font-weight-bold mr-3">Andrew Olson</span>
-            Text place holder
+            Technical Lead, Tests and Diagnostics, Database Developer.
           </p>
 
           <p>
             <span className="font-weight-bold mr-3">Connor Favero</span>
-            Text place holder
+            Quality Assurance, Front-end Developer, Public Relations.
           </p>
 
           <p>
             <span className="font-weight-bold mr-3">Frederick Thomas, Super Coding Ninja™</span>
-            Text place holder
+            Project Manager, Repository Maintenance, Back-end Registration.
           </p>
 
           <p>
             <span className="font-weight-bold mr-3">Rattanak Leng</span>
-            Text place holder
+            Product Design, Front-end lead, Program Manager.
           </p>
         </div>
       </Container>

@@ -19,6 +19,12 @@ export const Hero = () => {
             </div>
           </Link>
 
+          <Link to="/allartworks" className="mx-auto mt-4" >
+            <div>
+              <ButtonPrimary text={'View recent artworks'} />
+            </div>
+          </Link>
+
         </div>
       </div>
 

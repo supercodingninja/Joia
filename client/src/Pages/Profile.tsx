@@ -46,6 +46,7 @@ const Profile = () => {
             <img
               className="img-fluid pr-4 mt-3"
               src="./assets/img/profile.jpg"
+              alt="Uploaded artwork"
             />
           </Col>
 

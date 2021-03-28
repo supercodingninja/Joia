@@ -57,13 +57,20 @@ const Login = () => {
                     <h5>Email:</h5>
                     {/* { && (<h1 style={{color:'red'}}>Try a different email.  That one is taken</h1>)} */}
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <Input type='text' onChange={(e)=>setEmail(e.target.value)} name='email' style={{width:'auto'}}/>
+                    <Input 
+                    type='text' 
+                    onChange={(e)=>setEmail(e.target.value)} 
+                    name='email' 
+                    style={{width:'auto'}}/>
                 </div>
                         
                 <div className='row align-items-center justify-content-center'>
                 <h5>Password:</h5>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <Input type='text' onChange={(e)=>setPassword(e.target.value)} name='password'/>
+                <Input 
+                type='password' 
+                onChange={(e)=>setPassword(e.target.value)} 
+                name='password'/>
             </div>
 
                 <FormBtnOutline onClick={handleFormClear}>Cancel</FormBtnOutline>
