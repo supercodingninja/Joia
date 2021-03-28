@@ -12,7 +12,6 @@ import { useHistory } from 'react-router';
 const Profile = () => {
 
   const history = useHistory();
-  //const [thisUser, setThisUser] = useState();
 
   const user = useAuthenticatedUser();
 
@@ -39,12 +38,16 @@ const Profile = () => {
   
 
   return (
-    <Container py='-5'>
-      <div className='container'>
-        <h1 className='text-center'> Profile </h1>
-        <Row py='-5'>
-          <Col size='md-4 sm-12'>
-            <img className='img-fluid pr-4 mt-3' alt='Art' src='./assets/img/profile.jpg'/>
+    <Container py="-5">
+      <div className="container">
+        <h1 className="text-center"> Profile </h1>
+        <Row py="-5">
+          <Col size="md-4 sm-12">
+            <img
+              className="img-fluid pr-4 mt-3"
+              src="./assets/img/profile.jpg"
+              alt="Uploaded artwork"
+            />
           </Col>
 
           
