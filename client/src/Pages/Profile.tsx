@@ -17,27 +17,18 @@ const Profile = () => {
 
   console.log("authUser = ", user);
   
-  function HelloWorldComponent() {
-    return <div style={divStyle}>Hello World!</div>;
-  }
 
-  function handleInputChange() {
-    // const { name, value } = event.target;
-    // setFormObject({...formObject, [name]: value})
-  }
   
   function handleFormClear(e) {
     e.preventDefault();
     history.push('/account'); // USE MODAL INSTEAD, using the functionality to Pass the User's data from Sign.tsx to Profile.tsx;and then history.push('/account')
   };
   
-  function handleFormSubmit() {
-  // submit form function
-  // include display aler
-  // clearform after submitting
+  const handleFormSubmit = async (e) => {
+        e.preventDefault();
+        history.push('/post');
   }
   
-
   return (
     <Container py="-4">
       <div className="container">
@@ -56,9 +47,9 @@ const Profile = () => {
               <div>
                 {/* <div><h5><b>Name:</b>&nbsp;&nbsp;&nbsp;{user.name}</h5></div><br></br> */}
             
-                <div><h5><b>Location:</b>&nbsp;&nbsp;&nbsp;{user.location}</h5></div><br></br>
+                <div><h5><b>Location:</b>&nbsp;&nbsp;&nbsp;{user.location}</h5></div><br></br> {/* @Conner, {user.location}, here, is just a placeholder for your <Link> */}
                 
-                <div><h5><b>Email:</b>&nbsp;&nbsp;&nbsp;{user.email}</h5></div><br></br>
+                <div><h5><b>Email:</b>&nbsp;&nbsp;&nbsp;{user.email}</h5></div><br></br> {/* @Conner, {user.location}, here, is just a placeholder for your <Link> */}
 
                 <div></div><h5><b>Phone:</b>&nbsp;&nbsp;&nbsp;{user.phone}</h5></div>
             </div>
