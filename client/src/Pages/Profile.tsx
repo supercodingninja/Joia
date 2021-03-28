@@ -22,11 +22,13 @@ const Profile = () => {
     history.push('/post');
   }
 
-  const useLogout = (): logout = (e) => {
-    e.preventDefault();
-    localStorage.clear();
-    history.push('/login');
-  }
+  // const useLogout = (): logout = (e) => {
+  //   e.preventDefault();
+  //   localStorage.clear();
+  //   history.push('/login');
+  // }
+
+  const logout = useLogout;
   
 
   function handleFormClear(e) {
