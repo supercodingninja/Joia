@@ -54,22 +54,19 @@ const Profile = () => {
           <form onSubmit={handleFormSubmit} className='py-2 mx-1 px-4'>
             <div className='align-items-center justify-content-center'>
               <div className='row'>
-                <h5><b>Name:</b>&nbsp;&nbsp;&nbsp;{user.name}</h5>
+                {/* <h5><b>Name:</b>&nbsp;&nbsp;&nbsp;{user.name}</h5>
                   
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */}
 
-                <h5><b>Location:</b>&nbsp;&nbsp;&nbsp;{user.location}</h5>
-              </div>
-                
+                <h5><b>Location:</b>&nbsp;&nbsp;{user.location}</h5>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               
-              <br></br>
-
-              <div className='row'>
-                <h5><b>Email:</b>&nbsp;&nbsp;&nbsp;{user.email}</h5>
+                <h5><b>Email:</b>&nbsp;&nbsp;{user.email}</h5>
                   
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-                <h5><b>Phone:</b>&nbsp;&nbsp;&nbsp;{user.phone}</h5>
+                <h5><b>Phone:</b>&nbsp;&nbsp;{user.phone}</h5>
               </div> 
             </div>
 
