@@ -41,7 +41,7 @@ const Profile = () => {
   return (
     <Container py="-4">
       <div className="container">
-        <h1 className="text-center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome, {user.name}</h1>
+        <h1 className="text-center">Welcome, {user.name}</h1>
         <Row py="-3">
           <Col size="md-4 sm-12">
             <img
@@ -52,22 +52,15 @@ const Profile = () => {
           </Col>
             
           <form onSubmit={handleFormSubmit} className='py-2 mx-1 px-4'>
-            <div className='align-items-center justify-content-center'>
-              <div className='row'>
-                {/* <h5><b>Name:</b>&nbsp;&nbsp;&nbsp;{user.name}</h5>
-                  
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */}
+            <div className='row align-items-center justify-content-center'>
+              <div>
+                {/* <div><h5><b>Name:</b>&nbsp;&nbsp;&nbsp;{user.name}</h5></div><br></br> */}
+            
+                <div><h5><b>Location:</b>&nbsp;&nbsp;&nbsp;{user.location}</h5></div><br></br>
+                
+                <div><h5><b>Email:</b>&nbsp;&nbsp;&nbsp;{user.email}</h5></div><br></br>
 
-                <h5><b>Location:</b>&nbsp;&nbsp;{user.location}</h5>
-
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              
-                <h5><b>Email:</b>&nbsp;&nbsp;{user.email}</h5>
-                  
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-                <h5><b>Phone:</b>&nbsp;&nbsp;{user.phone}</h5>
-              </div> 
+                <div></div><h5><b>Phone:</b>&nbsp;&nbsp;&nbsp;{user.phone}</h5></div>
             </div>
 
             <br></br>
