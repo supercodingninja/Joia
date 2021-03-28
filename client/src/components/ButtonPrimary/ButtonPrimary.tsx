@@ -6,10 +6,10 @@ interface IButtonPrimaryProps {
   onClick?: () => void;
 }
 
-export const ButtonPrimary  = ( props: IButtonPrimaryProps) => {
-  const {text, onClick} = props;
-  
+export function ButtonPrimary(props: IButtonPrimaryProps) {
+  const { text, onClick } = props;
+
   return (
-      <button className="btn btn-warning" onClick={onClick}>{text}</button>
+    <button className="btn btn-warning" onClick={onClick}>{text}</button>
   );
 }
