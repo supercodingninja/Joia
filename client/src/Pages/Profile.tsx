@@ -16,8 +16,9 @@ const Profile = () => {
   const user = useAuthenticatedUser();
 
   console.log("authUser = ", user);
-
-  function doNothing() {
+  
+  function HelloWorldComponent() {
+    return <div style={divStyle}>Hello World!</div>;
   }
 
   function handleInputChange() {
@@ -38,10 +39,10 @@ const Profile = () => {
   
 
   return (
-    <Container py="-5">
+    <Container py="-4">
       <div className="container">
-        <h1 className="text-center"> Profile </h1>
-        <Row py="-5">
+        <h1 className="text-center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome, {user.name}</h1>
+        <Row py="-3">
           <Col size="md-4 sm-12">
             <img
               className="img-fluid pr-4 mt-3"
@@ -49,52 +50,56 @@ const Profile = () => {
               alt="Uploaded artwork"
             />
           </Col>
-
-          
-          <Col size='md-8 sm-12'>
-            <div className='py-2 mx-1 px-4' style={{width:'auto'}}>
-              <div className='row align-items-center justify-content-center'>
-                  <h5>Name:</h5>
-                  {user.name}
-              </div>
-
-              <div className='row align-items-center justify-content-center'>
-                  <h5>Email:</h5>
-                  {user.email}
-              </div>
-
-
-              <div className='row align-items-center justify-content-center'>
-                <h5>Phone:</h5>
-                {user.phone}
-                
-              </div>
-
-
-              <div className='row align-items-center justify-content-center'>   
-                <h5>Location:</h5>
-                {user.location}
-              </div>
-            </div>
-          </Col>
             
-            <form onSubmit={handleFormSubmit}>
-              <h5>This the h5 tag that says Place holder for artwork for sale list</h5>
-              <Input onChange={handleInputChange} name='phone' placeHolder='List of artwork for sale' /> 
-              <Input onChange={handleInputChange} name='phone' placeHolder='List of artwork for sale' />
-              <Input onChange={handleInputChange} name='phone' placeHolder='List of artwork for sale' />
+          <form onSubmit={handleFormSubmit} className='py-2 mx-1 px-4'>
+            <div className='align-items-center justify-content-center'>
+              <div className='row'>
+                <h5><b>Name:</b>&nbsp;&nbsp;&nbsp;{user.name}</h5>
+                  
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <h5><b>Location:</b>&nbsp;&nbsp;&nbsp;{user.location}</h5>
+              </div>
+                
+              
+              <br></br>
+
+              <div className='row'>
+                <h5><b>Email:</b>&nbsp;&nbsp;&nbsp;{user.email}</h5>
+                  
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <h5><b>Phone:</b>&nbsp;&nbsp;&nbsp;{user.phone}</h5>
+              </div> 
+            </div>
+
+            <br></br>
+
+            <div className='align-items-center justify-content-center'>
+              <div className='row align-items-center justify-content-center'><h5><b>Artwork:</b>&nbsp;&nbsp;&nbsp;{user.location}</h5>&nbsp;&nbsp;&nbsp;<FormBtnOutline onClick={handleFormClear}>Update Artwork</FormBtnOutline></div><br></br>
+              
+              <div className='row align-items-center justify-content-center'><h5><b>Artwork:</b>&nbsp;&nbsp;&nbsp;{user.location}</h5>&nbsp;&nbsp;&nbsp;<FormBtnOutline onClick={handleFormClear}>Update Artwork</FormBtnOutline></div><br></br>
+              
+              <div className='row align-items-center justify-content-center'><h5><b>Artwork:</b>&nbsp;&nbsp;&nbsp;{user.location}</h5>&nbsp;&nbsp;&nbsp;<FormBtnOutline onClick={handleFormClear}>Update Artwork</FormBtnOutline></div><br></br>
+            </div>
+            
+            <div className='row align-items-center justify-content-center'>
+              <FormBtn onClick={handleFormClear}>
+                Update Profile
+              </FormBtn>
+
+              &nbsp;&nbsp;&nbsp;
 
               <FormBtnOutline onClick={handleFormSubmit}>
                 Sell Artwork
               </FormBtnOutline>
 
-              <FormBtn onClick={handleFormClear}>
-                Update Profile
-              </FormBtn>
+              &nbsp;&nbsp;&nbsp;
              
               <FormBtn onClick={useLogout}>
                 Logout
               </FormBtn>
+            </div>
             </form>
         </Row>
       </div>
