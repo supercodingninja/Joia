@@ -21,18 +21,9 @@ const Profile = () => {
     e.preventDefault();
     history.push('/post');
   }
-
-  // const useLogout = (): logout = (e) => {
-  //   e.preventDefault();
-  //   localStorage.clear();
-  //   history.push('/login');
-  // }
-
-  function LogoutButton() {
-    const logout = useLogout();
-  }
-  
-
+ 
+   const logout = useLogout();
+ 
   function handleFormClear(e) {
     e.preventDefault();
     history.push('/account'); // USE MODAL INSTEAD, using the functionality to Pass the User's data from Sign.tsx to Profile.tsx;and then history.push('/account')
