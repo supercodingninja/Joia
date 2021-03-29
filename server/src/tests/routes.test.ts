@@ -42,13 +42,18 @@ describe("an app test", () => {
             // here, it is used because server.close is not async-style
             // it is callback-style (boooo)
             done();
-        });        
+        });
+
+        
     });
 
     beforeAll(async () => {
         // TODO switch to a use mocking for the backend
         // ferrealz database IO is no good for testing
-        await mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/test", { useNewUrlParser: true });
+        await mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/test", { useNewUrlParser: true, useUnifiedTopology: true });        
+    });
+
+    beforeEach(async () => {
         try {
             await db.User.collection.drop();
             await db.Artwork.collection.drop();
@@ -110,8 +115,6 @@ describe("an app test", () => {
 
         let justTheOneUser = allUsers[0];
 
-        console.log("!!!!!!!!!!!!!!!!!!!!! ", justTheOneUser.id)
-
         // I avoid validating the user response and just assume it worked.
         // It *should* work since it just validated that functionality with the
         // above test.  The reason I did the above, though, was because I need 
@@ -140,5 +143,131 @@ describe("an app test", () => {
 
         expect(justTheOneArt.name).toBe("Mona Lisa");
         expect(justTheOneArt.user.toString()).toEqual(justTheOneUser.id);
+    });
+
+    it("crufty no-mocks real-test-database route to create 2 arts both by a single user", async () => {
+
+        jest.setTimeout(10000);
+
+        const userRes = await request(app)
+        .post("/api/users")
+        .send({
+            name:"ATestAddedMe2",
+            email:"email4@gmail.com",
+            phone:"12345",
+            location:"Seattle",
+            password:"password"
+        });
+
+        let allUsers = await db.User.find({});
+
+        let justTheOneUser = allUsers[0];
+
+        const artSubmit_res1 = await request(app)
+        .post("/api/art")
+        .send({
+            user: justTheOneUser.id,
+            name:"Mona Lisa",
+            description: "blah",
+            category:"classic",
+            size:"oh like yay big",
+            price: "probably more than $5",
+            location:"Seattle",
+            imagePath: "http://whatever-i-dont-care"
+        });
+        
+        expect(artSubmit_res1.status).toEqual(200);
+
+        const artSubmit_res2 = await request(app)
+        .post("/api/art")
+        .send({
+            user: justTheOneUser.id,
+            name:"Mona Lisa2",
+            description: "blah2",
+            category:"classic2",
+            size:"oh like yay big2",
+            price: "probably more than $5.01",
+            location:"Seattle",
+            imagePath: "http://whatever-i-dont-care"
+        });
+        
+        expect(artSubmit_res2.status).toEqual(200);
+
+        // this does the obvious direct Mmongoose api which the route better use
+        let allArtsbyThatUser = await db.Artwork.find({user: justTheOneUser.id});
+        
+        expect(allArtsbyThatUser.length).toBe(2);
+        
+        let Art1 = allArtsbyThatUser[0];
+        let Art2 = allArtsbyThatUser[1];
+
+        expect(Art1.name).toBe("Mona Lisa");
+        expect(Art2.name).toBe("Mona Lisa2");
+        expect(Art1.user.toString()).toEqual(justTheOneUser.id);
+        expect(Art2.user.toString()).toEqual(justTheOneUser.id);
+    });
+
+    it("crufty no-mocks real-test-database route to get all art by a particular user", async () => {
+
+        jest.setTimeout(10000);
+
+        const lUser = await db.User.create({
+            name:"ATestAddedMe2",
+            email:"email4@gmail.com",
+            phone:"12345",
+            location:"Seattle",
+            password:"password"
+        });
+
+        // create both the 2 arts created by the above user in the database
+
+        const art1 = await db.Artwork.create({
+            user: lUser._id,
+            name:"Mona Lisa1",
+            description: "blah2",
+            category:"classic2",
+            size:"oh like yay big2",
+            price: "probably more than $5.01",
+            location:"Seattle",
+            imagePath: "http://whatever-i-dont-care"
+        });
+
+        const art2 = await db.Artwork.create({
+            user: lUser._id,
+            name:"Mona Lisa2",
+            description: "blah3",
+            category:"classic3",
+            size:"oh like yay big3",
+            price: "probably more than $5.02",
+            location:"Seattle",
+            imagePath: "http://whatever-i-dont-care"
+        });
+
+        
+        const artByThatUserResponse = await request(app)
+        .get("/api/cruddodge/artbyuser/" + lUser.id)
+                
+        expect(artByThatUserResponse.status).toEqual(200);
+
+        let routeReturnedArtByUser = artByThatUserResponse.body;
+
+        expect(routeReturnedArtByUser.length).toBe(2);
+
+        let routeReturnedArtByUserSortedByName = routeReturnedArtByUser.sort((art1:any,art2:any) => {
+            if(art1.name < art2.name) {
+                return -1;
+            }
+            if(art1.name > art2.name) {
+                return 1;
+            }
+        });
+              
+        let Art1 = routeReturnedArtByUserSortedByName[0];
+        let Art2 = routeReturnedArtByUserSortedByName[1];
+
+        // this test DOES NOT ASSUME that Mongo always pulls matches by order of insertion 
+        // HAVING SORTED THESE BY NAME ORDER ensures that
+        expect(Art1.name).toBe("Mona Lisa1");
+        expect(Art2.name).toBe("Mona Lisa2");
     });
 });

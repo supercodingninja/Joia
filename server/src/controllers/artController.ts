@@ -14,11 +14,18 @@ export async function create(req: express.Request, res: express.Response) {
     try {
         let newArt = await db.Artwork.create(req.body);
 
-        //These console.log's are spammy in the tests
-        //console.log("req.body in createuser: ", req.body);
-
-        //console.log("newUser: ", newUser);
         res.json(newArt);
+    } catch(err) {
+        res.status(422).json(err);
+    }
+}
+
+export async function findAllByUser(req: express.Request, res: express.Response) {
+    try {
+        const userId = req.params.userid;
+        let allArtByUser = await db.Artwork.find({user: userId});
+        
+        res.json(allArtByUser);
     } catch(err) {
         res.status(422).json(err);
     }
