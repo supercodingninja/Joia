@@ -1,6 +1,9 @@
 import axios from "axios";
 
 class API {
+    getAllArtByUser(id: any) {
+        throw new Error('Method not implemented.');
+    }
 
     axios;
 
