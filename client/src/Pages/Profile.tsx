@@ -1,7 +1,7 @@
 // // import React from 'react';
 import { Row, Col, Container } from '../LayoutComponents/Grid/Grid'
 import { Input, FormBtn, FormBtnOutline } from '../components/Form/Form'
-import {useAuthenticatedUser, useLogout} from '../utils/auth';
+import {useAuthenticatedUser} from '../utils/auth';
 import './Profile';
 import './Signup';
 import { useEffect, useState } from 'react';
@@ -22,18 +22,9 @@ const Profile = () => {
     history.push('/post');
   }
 
-  // const useLogout = (): logout = (e) => {
-  //   e.preventDefault();
-  //   localStorage.clear();
-  //   history.push('/login');
-  // }
-
-  const logout = useLogout;
-  
-
   function handleFormClear(e) {
     e.preventDefault();
-    history.push('/account'); // USE MODAL INSTEAD, using the functionality to Pass the User's data from Sign.tsx to Profile.tsx;and then history.push('/account')
+    history.push('/account'); // USE MODAL INSTEAD, using the functionality to Pass the User's data from Sign.tsx to Profile.tsx;and then 
   };
   
   return (
@@ -84,9 +75,6 @@ const Profile = () => {
 
               &nbsp;&nbsp;&nbsp;
              
-              <FormBtn onClick={logout}>
-                Logout
-              </FormBtn>
             </div>
             </form>
         </Row>

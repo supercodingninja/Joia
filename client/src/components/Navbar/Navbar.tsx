@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ButtonPrimary } from '../ButtonPrimary/ButtonPrimary'
 import { ButtonSecondary } from '../ButtonSecondary/ButtonSecondary'
+import LoginOrLogout from '../LoginOrLogout/LoginOrLogout'
 import './Navbar.css'
 
 export const Navbar = () => {
@@ -105,19 +106,7 @@ export const Navbar = () => {
             </li>
 
             <li>
-              <Link to="/login" className="nav-links">
-                <ButtonSecondary text="Login" onClick={closeMobileMenu} />
-              </Link>
-            </li>
-
-            <li>
-              <Link to="/" className="nav-links">
-                <ButtonPrimary text="Register" onClick={closeMobileMenu} />
-              </Link>
-            </li>
-
-            <li>
-              <ButtonSecondary onClick={handleLockout} text="Logout" />
+                <LoginOrLogout loginMode={true} onClick={closeMobileMenu} />
             </li>
           </ul>
         </div>
