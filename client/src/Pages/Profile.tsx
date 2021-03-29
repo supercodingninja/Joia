@@ -16,32 +16,31 @@ const Profile = () => {
   const user = useAuthenticatedUser();
 
   console.log("authUser = ", user);
-
-  function doNothing() {
-  }
-
-  function handleInputChange() {
-    // const { name, value } = event.target;
-    // setFormObject({...formObject, [name]: value})
-  }
   
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+    history.push('/post');
+  }
+
+  // const useLogout = (): logout = (e) => {
+  //   e.preventDefault();
+  //   localStorage.clear();
+  //   history.push('/login');
+  // }
+
+  const logout = useLogout;
+  
+
   function handleFormClear(e) {
     e.preventDefault();
     history.push('/account'); // USE MODAL INSTEAD, using the functionality to Pass the User's data from Sign.tsx to Profile.tsx;and then history.push('/account')
   };
   
-  function handleFormSubmit() {
-  // submit form function
-  // include display aler
-  // clearform after submitting
-  }
-  
-
   return (
-    <Container py="-5">
+    <Container py="-4">
       <div className="container">
-        <h1 className="text-center"> Profile </h1>
-        <Row py="-5">
+        <h1 className="text-center">Welcome, {user.name}</h1>
+        <Row py="-3">
           <Col size="md-4 sm-12">
             <img
               className="img-fluid pr-4 mt-3"
@@ -49,48 +48,46 @@ const Profile = () => {
               alt="Uploaded artwork"
             />
           </Col>
-
-          
-          <Col size="md-8 sm-12">
-            <div className='py-2 mx-1 px-4' style={{width:'auto'}}>
-              <div className='row align-items-center justify-content-center'>
-                  <h5>Name:</h5>
-                  {user.name}
-              </div>
-
-              <div className='row align-items-center justify-content-center'>
-                  <h5>Email:</h5>
-                  {user.email}
-              </div>
-
-
-              <div className='row align-items-center justify-content-center'>
-                <h5>Phone:</h5>
-                {user.phone}
-                
-              </div>
-
-
-              <div className='row align-items-center justify-content-center'>   
-                <h5>Location:</h5>
-                {user.location}
-              </div>
-            </div>
-          </Col>
             
-            <form onSubmit={handleFormSubmit}>
-              <h5>This the h5 tag that says Place holder for artwork for sale list</h5>
-              <Input onChange={handleInputChange} name="phone" placeHolder="List of artwork for sale" /> 
-              <Input onChange={handleInputChange} name="phone" placeHolder="List of artwork for sale" />
-              <Input onChange={handleInputChange} name="phone" placeHolder="List of artwork for sale" />
+          <form onSubmit={handleFormSubmit} className='py-2 mx-1 px-4'>
+            <div className='row align-items-center justify-content-center'>
+              <div>
+                {/* <div><h5><b>Name:</b>&nbsp;&nbsp;&nbsp;{user.name}</h5></div><br></br> */}
+            
+                <div><h5><b>Location:</b>&nbsp;&nbsp;&nbsp;{user.location}</h5></div><br></br> {/* @Conner, {user.location}, here, is just a placeholder for your <Link> */}
+                
+                <div><h5><b>Email:</b>&nbsp;&nbsp;&nbsp;{user.email}</h5></div><br></br> {/* @Conner, {user.location}, here, is just a placeholder for your <Link> */}
 
-              <FormBtnOutline onClick={doNothing}>
-                Sell Artwork
-              </FormBtnOutline>
+                <div></div><h5><b>Phone:</b>&nbsp;&nbsp;&nbsp;{user.phone}</h5></div>
+            </div>
 
+            <br></br>
+
+            <div className='align-items-center justify-content-center'>
+              <div className='row align-items-center justify-content-center'><h5><b>Artwork:</b>&nbsp;&nbsp;&nbsp;{user.location}</h5>&nbsp;&nbsp;&nbsp;<FormBtnOutline onClick={handleFormClear}>Update Artwork</FormBtnOutline></div><br></br>
+              
+              <div className='row align-items-center justify-content-center'><h5><b>Artwork:</b>&nbsp;&nbsp;&nbsp;{user.location}</h5>&nbsp;&nbsp;&nbsp;<FormBtnOutline onClick={handleFormClear}>Update Artwork</FormBtnOutline></div><br></br>
+              
+              <div className='row align-items-center justify-content-center'><h5><b>Artwork:</b>&nbsp;&nbsp;&nbsp;{user.location}</h5>&nbsp;&nbsp;&nbsp;<FormBtnOutline onClick={handleFormClear}>Update Artwork</FormBtnOutline></div><br></br>
+            </div>
+            
+            <div className='row align-items-center justify-content-center'>
               <FormBtn onClick={handleFormClear}>
                 Update Profile
               </FormBtn>
+
+              &nbsp;&nbsp;&nbsp;
+
+              <FormBtnOutline onClick={handleFormSubmit}>
+                Sell Artwork
+              </FormBtnOutline>
+
+              &nbsp;&nbsp;&nbsp;
+             
+              <FormBtn onClick={logout}>
+                Logout
+              </FormBtn>
+            </div>
             </form>
         </Row>
       </div>
@@ -98,118 +95,4 @@ const Profile = () => {
   )
 }
 
-export default Profile
-
-// ANDREW, BELOW IS THE ORIGINAL CODE, WHICH WAS COMMENTED OUT; AND ABOVE THIS LINE, IS YOUR CODE + MY BOTH OF OUR IMPORTS. //
-// PLEASE FEEL FREE TO MAKE THE CODE HOW YOU SEE FIT. //
-// function handleInputChange() {
-//   // const { name, value } = event.target;
-//   // setFormObject({...formObject, [name]: value})
-// }
-
-// function handleFormClear(e) {
-//   e.preventDefault();
-//   // history.push('/'); // // USE MODAL INSTEAD, using the functionality to Pass the User's data from Sign.tsx to Profile.tsx;and then history.push('/account')
-// };
-
-// function handleFormSubmit() {
-// // submit form function
-// // include display aler
-// // clearform after submitting
-// }
-
-// const Profile = () => {
-//   return (
-//     <Container py="-5">
-//       <div className="container">
-//         <h1>This Page will be re-done, per group decision [Frederick will take care of it.]
-//         </h1>
-//         <h1 className="text-center"> Profile </h1>
-//         <Row py="-5">
-//           <Col size="md-4 sm-12">
-//             <img
-//               className="img-fluid pr-4 mt-3"
-//               src="./assets/img/profile.jpg"
-//             />
-//           </Col>
-
-//           {/* Passing the User's data from Sign.tsx to Profile.tsx */}
-//           <Link to={{pathname: "/Signup", state: data}}>
-//             this.props.history.push(
-//               {
-//                 pathname: '/Signup',
-//                 state: data // Data is the array of {handleFormSubmit} //
-//               }
-//             )
-
-//             render() {
-              
-//               const { state } = this.props.Name;
-//               const { state } = this.props.email;
-//               const { state } = this.props.phone;
-//               const { state } = this.props.location;
-              
-//               return (
-//                 <Col size="md-8 sm-12">
-//                   <div className='py-2 mx-1 px-4' style={{width:'auto'}}>
-//                     <div className='row align-items-center justify-content-center'>
-//                         <h5>First Name:</h5>
-//                         &nbsp;&nbsp;&nbsp;
-//                         <p>TBD</p>
-//                     </div>
-
-
-//                     <div className='row align-items-center justify-content-center'>
-//                         <h5>Last Name:</h5>
-//                         &nbsp;&nbsp;&nbsp;
-//                         <p>TBD</p>
-//                     </div>
-
-
-//                     <div className='row align-items-center justify-content-center'>
-//                         <h5>Email:</h5>
-//                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-//                         <p>TBD</p>
-//                     </div>
-
-
-//                     <div className='row align-items-center justify-content-center'>
-//                       <h5>Phone:</h5>
-//                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-//                       <p>TBD</p>
-//                   </div>
-
-
-//                     <div className='row align-items-center justify-content-center'>   
-//                       <h5>Location:</h5>
-//                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-//                       <p>TBD</p>
-//                   </div>
-//                   </div>
-//                 </Col>
-//               )
-//             }
-//           </Link>
-            
-//             <form>
-//               <h5>This the h5 tag that says Place holder for artwork for sale list</h5>
-//               <Input onChange={handleInputChange} name="phone" placeHolder="List of artwork for sale" /> 
-//               <Input onChange={handleInputChange} name="phone" placeHolder="List of artwork for sale" />
-//               <Input onChange={handleInputChange} name="phone" placeHolder="List of artwork for sale" />
-
-//               <FormBtnOutline onClick={handleFormClear}>
-//                 Sell Artwork
-//               </FormBtnOutline>
-
-//               <FormBtn onClick={handleFormSubmit}>
-//                 Update Profile
-//               </FormBtn>
-//             </form>
-//           </Col>
-//         </Row>
-//       </div>
-//     </Container>
-//   )
-// }
-
-// export default Profile;
+export default Profile;
