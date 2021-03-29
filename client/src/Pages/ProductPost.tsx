@@ -19,43 +19,21 @@ const ProductPost = () => {
   const [selectedFile, setSelectedFile] = useState()
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
-  const [type, setType] = useState('')
+  // const [type, setType] = useState('')
   const [category, setCategory] = useState('')
   const [size, setSize] = useState('')
   const [price, setPrice] = useState('')
   const [artLocation, setArtLocation] = useState('')
   const [imgUpload, setImgUpload] = useState(false)
 
-  // const [artworkState, setArtworkState] = useState({
-  //   title: '',
-  //   description: '',
-  //   category: '',
-  //   size: '',
-  //   price: '',
-  //   artLocation: '',
-  //   imagePath: '',
-  // })
-
-  // const {
-  //   title,
-  //   description,
-  //   category,
-  //   size,
-  //   price,
-  //   artLocation,
-  //   imagePath,
-  // } = artworkState
-
-  // const onChange = e =>
-
   const user = useAuthenticatedUser()
-  const history = useHistory()
+  // const history = useHistory()
 
-  function resetForm() {
-    let formElement = document.getElementById('formid')
-    console.log('form: ', formElement)
-    //formElement.reset();
-  }
+  // function resetForm() {
+  //   let formElement = document.getElementById('formid')
+  //   console.log('form: ', formElement)
+  //   //formElement.reset();
+  // }
 
   function handleFormClear() {
     // clear form function
@@ -73,7 +51,7 @@ const ProductPost = () => {
     console.log('imagePath = ', imagePath)
     console.log('title =', title)
     console.log('description =', description)
-    console.log('type =', type)
+    // console.log('type =', type)
     console.log('category =', category)
     console.log('size =', size)
     console.log('price =', price)
@@ -99,7 +77,6 @@ const ProductPost = () => {
       imagePath,
       title,
       description,
-      type,
       category,
       size,
       price,
@@ -107,7 +84,16 @@ const ProductPost = () => {
     )
 
     // clearform after submitting
-    resetForm()
+    // window.location.href = '/post'
+
+    setTitle('')  
+    // const [description, setDescription] = useState('')
+    // const [type, setType] = useState('')
+    // const [category, setCategory] = useState('')
+    // const [size, setSize] = useState('')
+    // const [price, setPrice] = useState('')
+    // const [artLocation, setArtLocation] = useState('')
+    // const [imgUpload, setImgUpload] = useState(false)
   }
 
   async function onFileUpload() {
