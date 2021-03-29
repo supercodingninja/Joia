@@ -54,5 +54,4 @@ export function useStoreContext(): any {
 
     let retVal = useContext( StoreContext );
     return retVal as any;
-
 }
