@@ -1,6 +1,9 @@
 import axios from "axios";
 
 class API {
+    getAllArtByUser(id: any) {
+        throw new Error('Method not implemented.');
+    }
 
     axios;
 
@@ -89,7 +92,7 @@ class API {
         return this.axios.get("/api/art");
     }
 
-    postArt(artLocation: string, imagePath: string, title: string, description: string, type: string, category: string, size: string, price: string, user_id: string) {
+    postArt(artLocation: string, imagePath: string, title: string, description: string, category: string, size: string, price: string, user_id: string) {
 
         return this.axios.post("/api/art",
         {
