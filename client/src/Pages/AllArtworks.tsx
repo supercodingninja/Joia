@@ -43,7 +43,6 @@ export default function AllArtworks() {
 
 
 
-
 /*
 
 import React, { useEffect, useState } from 'react'

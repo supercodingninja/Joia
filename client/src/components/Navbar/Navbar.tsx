@@ -11,7 +11,13 @@ export const Navbar = () => {
   // const [showButton, setShowButton] = useState(true)
 
   const handleClick = () => setClick(!click) // make it toggle between true and false
+
   const closeMobileMenu = () => setClick(false)
+  
+  const handleLockout = () => {
+    localStorage.clear()
+    window.location.href = '/login'
+  }
 
   // const showButtonMode = () => {
   //   window.innerWidth <= 960 ? setShowButton(false) : setShowButton(true)
@@ -53,7 +59,13 @@ export const Navbar = () => {
             </li>
 
             <li className="nav-item">
-              <a href="mailto: joia@live.com" className="nav-links" onClick={closeMobileMenu}>Contact Us</a>
+              <a
+                href="mailto: joia@live.com"
+                className="nav-links"
+                onClick={closeMobileMenu}
+              >
+                Contact Us
+              </a>
             </li>
 
             <li className="nav-item">
@@ -63,27 +75,39 @@ export const Navbar = () => {
             </li>
 
             <li className="nav-item">
-              <Link to="/allartworks" className="nav-links" onClick={closeMobileMenu}>
+              <Link
+                to="/allartworks"
+                className="nav-links"
+                onClick={closeMobileMenu}
+              >
                 All Art
               </Link>
             </li>
 
             <li className="nav-item">
-              <Link to="/account" className="nav-links" onClick={closeMobileMenu}>
+              <Link
+                to={localStorage.getItem('jwtToken') ? '/account' : '/login'}
+                className="nav-links"
+                onClick={closeMobileMenu}
+              >
                 Account
               </Link>
             </li>
 
             <li>
               <Link to="/login" className="nav-links">
-                <ButtonSecondary onClick={closeMobileMenu} text="login" />
+                <ButtonSecondary text="Login" onClick={closeMobileMenu} />
               </Link>
             </li>
 
             <li>
-              <Link to="/signup" className="nav-links">
-                <ButtonPrimary onClick={closeMobileMenu} text="Register" />
+              <Link to="/" className="nav-links">
+                <ButtonPrimary text="Register" onClick={closeMobileMenu} />
               </Link>
+            </li>
+
+            <li>
+              <ButtonSecondary onClick={handleLockout} text="Logout" />
             </li>
           </ul>
         </div>

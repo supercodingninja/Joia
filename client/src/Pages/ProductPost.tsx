@@ -25,9 +25,29 @@ const ProductPost = () => {
   const [price, setPrice] = useState('')
   const [artLocation, setArtLocation] = useState('')
   const [imgUpload, setImgUpload] = useState(false)
-const [inputInfo, setInpuInfo] = useState({
-  
-})
+
+  // const [artworkState, setArtworkState] = useState({
+  //   title: '',
+  //   description: '',
+  //   category: '',
+  //   size: '',
+  //   price: '',
+  //   artLocation: '',
+  //   imagePath: '',
+  // })
+
+  // const {
+  //   title,
+  //   description,
+  //   category,
+  //   size,
+  //   price,
+  //   artLocation,
+  //   imagePath,
+  // } = artworkState
+
+  // const onChange = e =>
+
   const user = useAuthenticatedUser()
   const history = useHistory()
 
@@ -40,8 +60,6 @@ const [inputInfo, setInpuInfo] = useState({
   function handleFormClear() {
     // clear form function
   }
-
-  
 
   function doNothingOnClick() {
     // if (imgUpload === false) {
@@ -75,7 +93,7 @@ const [inputInfo, setInpuInfo] = useState({
       alert('Please upload an artwork image')
       return
     }
-    
+
     api.postArt(
       artLocation,
       imagePath,
@@ -160,14 +178,6 @@ const [inputInfo, setInpuInfo] = useState({
                 onChange={(e) => setDescription(e.target.value)}
                 name="description"
                 placeholder="Description"
-                required
-              />
-
-              <h5>Type</h5>
-              <Input
-                onChange={(e) => setType(e.target.value)}
-                name="type"
-                placeholder="Type"
                 required
               />
 
