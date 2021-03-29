@@ -1,29 +1,90 @@
 import React, { useEffect, useState } from 'react'
-import ArtItem from '../components/ArtItem';
+import ArtItem from '../components/ArtItem'
 import api from '../utils/api'
 
 export default function AllArtworks() {
-    const [allArt, setAllArt] = useState([]);
+  const [allArt, setAllArt] = useState([])
 
-    useEffect(() => {
-        const asyncBody = async () => {
-            let allArt = await api.getAllArt();
-            setAllArt(allArt.data);
-        }
+  useEffect(() => {
+    const asyncBody = async () => {
+      let allArt = await api.getAllArt()
+      setAllArt(allArt.data)
+      console.log(allArt)
+    }
 
-        asyncBody().then(() => console.log("done getting all art"));
+    asyncBody().then(() => console.log('done getting all art'))
+  }, [])
 
-    }, []);
+  return (
+    <div className="container">
+      <h1 className="text-center my-5">
+        The singular word &quot;artwork&quot; is pluralized in English as
+        &quot;artworks&quot;, right?
+      </h1>
 
-    return (
-
-        <>
-            <h1>the singular word &quot;artwork&quot; is pluralized in English as &quot;artworks&quot;, right?</h1>
-            <h2>yo dis be all art.</h2>
-            <ul>
-            {allArt.map((anArt,i) => <ArtItem name={anArt.name} imagePath={anArt.imagePath}></ArtItem>)}
-            </ul>
-        </>
-
-    )
+      {allArt.map((anArt) => (
+        <div className="container">
+          <ArtItem
+            name={anArt.name}
+            description={anArt.description}
+            category={anArt.category}
+            size={anArt.size}
+            price={anArt.price}
+            location={anArt.location}
+            artistName={anArt.artistName}
+            contact={anArt.contact}
+            imagePath={anArt.imagePath}
+          />
+        </div>
+      ))}
+    </div>
+  )
 }
+
+
+
+/*
+
+import React, { useEffect, useState } from 'react'
+import ArtItem from '../components/ArtItem'
+import api from '../utils/api'
+
+export default function AllArtworks() {
+  const [allArt, setAllArt] = useState([])
+  const [allUserArt, setAllUserArt] = useState([])
+
+  useEffect(() => {
+    const asyncBody = async () => {
+      let userArt = await api.getAllArtByUser(user.id)
+      setAll(userArt)
+    }
+
+    asyncBody().then(() => console.log('done getting all art'))
+  }, [])
+
+  return (
+    <div className="container">
+      <h1 className="text-center my-5">
+        The singular word &quot;artwork&quot; is pluralized in English as
+        &quot;artworks&quot;, right?
+      </h1>
+
+      {allArt.map((anArt) => (
+        <div className="container">
+          <ArtItem
+            name={anArt.name}
+            description={anArt.description}
+            category={anArt.category}
+            size={anArt.size}
+            price={anArt.price}
+            location={anArt.location}
+            artistName={anArt.artistName}
+            contact={anArt.contact}
+            imagePath={anArt.imagePath}
+          />
+        </div>
+      ))}
+    </div>
+  )
+}
+*/
