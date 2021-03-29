@@ -28,7 +28,9 @@ const Profile = () => {
   //   history.push('/login');
   // }
 
-  const logout = useLogout;
+  function LogoutButton() {
+    const logout = useLogout();
+  }
   
 
   function handleFormClear(e) {
