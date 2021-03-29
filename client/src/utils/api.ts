@@ -1,9 +1,6 @@
 import axios from "axios";
 
 class API {
-    getAllArtByUser(id: any) {
-        throw new Error('Method not implemented.');
-    }
 
     axios;
 
@@ -62,29 +59,12 @@ class API {
 
     }
 
-    async fake_getAllArt(){
-        return {data: [
-            {
-                name: "something",
-                description: "blah, blah, blah",
-                category: "dum",
-                size: "big",
-                price: "$1,000",
-                location: "somewhere",
-                date: Date.now(),
-                imagepath: "https://ruinmyweek.com/wp-content/uploads/2016/05/really-funny-memes-y-u-no-guy-delicious-food.jpg"
-            },
-            {
-                name: "something else",
-                description: "meh...",
-                category: "dum2",
-                size: "big2",
-                price: "$1,001",
-                location: "somewhere else",
-                date: Date.now(),
-                imagepath: "https://i.pinimg.com/originals/10/e3/56/10e356d780f21a96292e69865fbc64b9.jpg"
-            }
-        ]};
+    getAllArtByUser(id:string) {
+        return this.axios("/api/cruddodge/artbyuser/" + id);
+    }
+
+    getUserById(id:string) {
+        return this.axios("/api/users/"+ id);
     }
 
     getAllArt(){
