@@ -75,9 +75,12 @@ const Profile = () => {
               </FormBtnOutline>
 
               &nbsp;&nbsp;&nbsp;
-             
+              
+              <FormBtn onClick={logout}>
+                Logout
+              </FormBtn>
             </div>
-            </form>
+          </form>
         </Row>
       </div>
     </Container>
