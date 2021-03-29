@@ -18,21 +18,19 @@ export default function AllArtworks() {
   return (
     <div className="container">
       <h1 className="text-center my-5">
-        The singular word &quot;artwork&quot; is pluralized in English as
-        &quot;artworks&quot;, right?
+        All art posted to this site
       </h1>
 
       {allArt.map((anArt) => (
         <div className="container">
           <ArtItem
+            showcontactinfo={true}
+            userid={anArt.user}
             name={anArt.name}
             description={anArt.description}
             category={anArt.category}
             size={anArt.size}
             price={anArt.price}
-            location={anArt.location}
-            artistName={anArt.artistName}
-            contact={anArt.contact}
             imagePath={anArt.imagePath}
           />
         </div>
