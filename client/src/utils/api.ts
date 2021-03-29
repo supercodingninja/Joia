@@ -89,6 +89,12 @@ class API {
         return this.axios.get("/api/art");
     }
 
+    getAllArtByUser(id:string){
+        console.log("getAllArtByUser was passed:", id);
+        // this function is effectively async because it returns a promise
+        return this.axios.get(`/api/cruddodge/artbyuser/${id}`);
+    }
+
     postArt(artLocation: string, imagePath: string, title: string, description: string, type: string, category: string, size: string, price: string, user_id: string) {
 
         return this.axios.post("/api/art",

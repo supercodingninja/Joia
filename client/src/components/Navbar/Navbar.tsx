@@ -69,6 +69,12 @@ export const Navbar = () => {
             </li>
 
             <li className="nav-item">
+              <Link to="/allartworksbyuser" className="nav-links" onClick={closeMobileMenu}>
+                All Art By Current User
+              </Link>
+            </li>
+
+            <li className="nav-item">
               <Link to="/account" className="nav-links" onClick={closeMobileMenu}>
                 Account
               </Link>
