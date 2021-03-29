@@ -1,11 +1,9 @@
 // // import React from 'react';
 import { Row, Col, Container } from '../LayoutComponents/Grid/Grid'
-import { Input, FormBtn, FormBtnOutline } from '../components/Form/Form'
+import {FormBtn, FormBtnOutline } from '../components/Form/Form'
 import {useAuthenticatedUser, useLogout} from '../utils/auth';
 import './Profile';
 import './Signup';
-import { useEffect, useState } from 'react';
-import api from '../utils/api';
 import { useHistory } from 'react-router';
 
 
