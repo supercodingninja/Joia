@@ -19,13 +19,13 @@ const Profile = () => {
     e.preventDefault();
     history.push('/post');
   }
- 
+
    const logout = useLogout();
  
   function handleFormClear(e) {
     e.preventDefault();
     // USE MODAL INSTEAD, using the functionality to Pass the User's data from Sign.tsx to Profile.tsx;and then history.push('/account') //
-    
+
   };
   
   return (
@@ -76,9 +76,6 @@ const Profile = () => {
 
               &nbsp;&nbsp;&nbsp;
              
-              <FormBtn onClick={logout}>
-                Logout
-              </FormBtn>
             </div>
             </form>
         </Row>

@@ -13,6 +13,7 @@ import GuestRoute from './components/GuestRoute';
 import PrivateRoute from './components/PrivateRoute';
 import { useAuthTokenStore}  from "./utils/auth";
 import AllArtworks from "./Pages/AllArtworks";
+import AllArtworksByUser from "./Pages/AllArtworksByUser";
 
 
 // Including the useAuthTokenStore. //
@@ -35,6 +36,7 @@ function App () {
           <PrivateRoute exact path="/post" component={ProductPost} redirectTo="/login" />
           <PrivateRoute exact path="/account" component={Profile} redirectTo="/login" />
           <PrivateRoute exact path="/allartworks" component={AllArtworks} redirectTo="/login" />
+          <PrivateRoute exact path="/allartworksbyuser" component={AllArtworksByUser} redirectTo="/login" />
           <GuestRoute exact path="/login" component={Login} redirectTo="/account" />
           <GuestRoute exact path="/signup" component={Signup} redirectTo="/account" />
       </Switch>

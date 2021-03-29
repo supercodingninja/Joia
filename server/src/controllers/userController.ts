@@ -24,4 +24,14 @@ export async function create(req: express.Request, res: express.Response) {
     }
 }
 
+export async function findById(req: express.Request, res: express.Response) {
+    try {
+       let id = req.params.id;
+        let foundUser = await db.User.findById(id);
+        res.json(foundUser)
+    } catch(err) {
+        res.status(422).json(err);
+    }
+}
+
 export default {};
