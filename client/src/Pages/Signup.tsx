@@ -140,11 +140,11 @@ const Signup = () => {
 
                     <FormBtnOutline onClick={handleFormClear}>
                         Cancel
-                        </FormBtnOutline>
+                    </FormBtnOutline>
 
                     <FormBtn onClick={handleFormSubmit}>
                         Complete Sign-Up
-                        </FormBtn>
+                    </FormBtn>
                 </form>
             </div>
         </Container>
