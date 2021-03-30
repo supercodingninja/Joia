@@ -37,6 +37,7 @@ export default function ArtItem({showcontactinfo, userid, name, imagePath, descr
         location: {authorUser.location} <br/>
         email: {authorUser.email} <br/>
         phone: {authorUser.phone} <br/>
+        ID: {authorUser._id} <br/>
         </div>
         )}
         </li>

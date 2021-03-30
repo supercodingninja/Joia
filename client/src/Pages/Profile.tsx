@@ -5,6 +5,7 @@ import {useAuthenticatedUser, useLogout} from '../utils/auth';
 import './Profile';
 import './Signup';
 import { useHistory } from 'react-router';
+import SpecificArt from '../components/SpecificArt';
 
 
 const Profile = () => {
@@ -56,6 +57,9 @@ const Profile = () => {
             <br></br>
 
             <div className='align-items-center justify-content-center'>
+
+              {/* <SpecificArt user_id={user._id} /> */}
+
               <div className='row align-items-center justify-content-center'><h5><b>Artwork:</b>&nbsp;&nbsp;&nbsp;{user.location}</h5>&nbsp;&nbsp;&nbsp;<FormBtnOutline onClick={handleFormClear}>Update Artwork</FormBtnOutline></div><br></br>
               
               <div className='row align-items-center justify-content-center'><h5><b>Artwork:</b>&nbsp;&nbsp;&nbsp;{user.location}</h5>&nbsp;&nbsp;&nbsp;<FormBtnOutline onClick={handleFormClear}>Update Artwork</FormBtnOutline></div><br></br>
