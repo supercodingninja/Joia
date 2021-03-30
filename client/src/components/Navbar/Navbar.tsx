@@ -14,7 +14,7 @@ export const Navbar = () => {
   const handleClick = () => setClick(!click) // make it toggle between true and false
 
   const closeMobileMenu = () => setClick(false)
-  
+
   const handleLockout = () => {
     localStorage.clear()
     window.location.href = '/login'
@@ -79,8 +79,9 @@ export const Navbar = () => {
               <Link
                 to="/allartworksbyuser"
                 className="nav-links"
-                onClick={closeMobileMenu}>
-                All Art For This User
+                onClick={closeMobileMenu}
+              >
+                User Artwork
               </Link>
             </li>
 
@@ -111,7 +112,9 @@ export const Navbar = () => {
             </li>
 
             <li>
+              <Link to="..." className="nav-links">
                 <LoginOrLogout loginMode={true} onClick={closeMobileMenu} />
+              </Link>
             </li>
           </ul>
         </div>
