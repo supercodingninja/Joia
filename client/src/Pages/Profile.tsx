@@ -1,6 +1,7 @@
+
 // // import React from 'react';
 import { Row, Col, Container } from '../LayoutComponents/Grid/Grid'
-import {FormBtn, FormBtnOutline } from '../components/Form/Form'
+import {FormBtn, FormBtnOutline} from '../components/Form/Form'
 import {useAuthenticatedUser, useLogout} from '../utils/auth';
 import './Profile';
 import './Signup';
@@ -20,13 +21,13 @@ const Profile = () => {
     history.push('/post');
   }
 
-   const logout = useLogout();
- 
-  function handleFormClear(e) {
-    e.preventDefault();
-    // USE MODAL INSTEAD, using the functionality to Pass the User's data from Sign.tsx to Profile.tsx;and then history.push('/account') //
+  const logout = useLogout();
+  
 
-  };
+  // function handleFormClear(e) {
+  //   e.preventDefault();
+  //   history.push('/account'); // USE MODAL INSTEAD, using the functionality to Pass the User's data from Sign.tsx to Profile.tsx;and then history.push('/account')
+  // };
   
   return (
     <Container py="-4">
@@ -46,9 +47,9 @@ const Profile = () => {
               <div>
                 {/* <div><h5><b>Name:</b>&nbsp;&nbsp;&nbsp;{user.name}</h5></div><br></br> */}
             
-                <div><h5><b>Location:</b>&nbsp;&nbsp;&nbsp;{user.location}</h5></div><br></br> {/* @Conner, {user.location}, here, is just a placeholder for your <Link> */}
+                <div><h5><b>Location:</b>&nbsp;&nbsp;&nbsp;{user.location}</h5></div><br></br> 
                 
-                <div><h5><b>Email:</b>&nbsp;&nbsp;&nbsp;{user.email}</h5></div><br></br> {/* @Conner, {user.location}, here, is just a placeholder for your <Link> */}
+                <div><h5><b>Email:</b>&nbsp;&nbsp;&nbsp;{user.email}</h5></div><br></br> 
 
                 <div></div><h5><b>Phone:</b>&nbsp;&nbsp;&nbsp;{user.phone}</h5></div>
             </div>
@@ -64,9 +65,9 @@ const Profile = () => {
             </div>
             
             <div className='row align-items-center justify-content-center'>
-              <FormBtn onClick={handleFormClear}>
+              {/* <FormBtn onClick={handleFormClear}>
                 Update Profile
-              </FormBtn>
+              </FormBtn> */}
 
               &nbsp;&nbsp;&nbsp;
 
@@ -75,12 +76,12 @@ const Profile = () => {
               </FormBtnOutline>
 
               &nbsp;&nbsp;&nbsp;
-              
+             
               <FormBtn onClick={logout}>
                 Logout
               </FormBtn>
             </div>
-          </form>
+            </form>
         </Row>
       </div>
     </Container>
