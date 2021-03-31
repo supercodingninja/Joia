@@ -36,11 +36,11 @@ This project can be used for projects, non-profit organizations, academic clubs;
 
 
 ## Contribution Guidelines
-###### [Back to Table of Contents](#Table-of-Contents)
+
 I hope you enjoy this repository, and the application's link, given above and below (I love developing new projects).  Please read and follow license instructions.  Thank you for viewing!
 
 ## Installation Instructions
-###### [Back to Table of Contents](#Table-of-Contents)
+
 1.  Ensure that your application includes the require dependencies, by typing the command in your integrated terminal
     -   npm install inquirer
     -   sass source/stylesheets/index.scss build/stylesheets/index.css
